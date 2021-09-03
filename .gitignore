@@ -1,0 +1,8 @@
+# cache files take up too much space and can be made per build #
+Library/Il2cpp_cache/*
+Library/Il2cppBuildCache/*
+Library/PackageCache/*
+Library/PlayerDataCache/*
+Library/ShaderCache/*
+Library/StateCache/*
+Library/webgl_cache/*
