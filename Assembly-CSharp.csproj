@@ -59,6 +59,8 @@
     <Compile Include="Assets\Scripts\Transition.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\InteractableDoor.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\ParralaxBounds.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

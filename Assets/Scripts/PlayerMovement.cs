@@ -7,17 +7,17 @@ public class PlayerMovement : MonoBehaviour
     public States current_state;
     public enum States
     {
-        Idle = 0b_0000_0000,  // 0
-        Walking = 0b_0000_0001,  // 1
-        Jumping = 0b_0000_0010,  // 2
-        Falling = 0b_0000_0100,  // 4
-        Attacking = 0b_0000_1000,  // 8
+        Idle = 0b_0000_0000,        // 0
+        Walking = 0b_0000_0001,     // 1
+        Jumping = 0b_0000_0010,     // 2
+        Falling = 0b_0000_0100,     // 4
+        Attacking = 0b_0000_1000,   // 8
+        Wall = 0b_0001_0000,        // 16
     }
     public bool direction; //right = false, left = true
     public bool doublejumped;
     public float speed = 1;
     public float jumpforce = 1;
-
     //onslope checks if it is moving along the slope
     private bool onslope = false;
 
@@ -30,9 +30,8 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer sr;
     public Animator anim;
 
-    public GameObject raytest;
-
-    private float feetoffset = 0.2f; //value to make sure the player's feet are on the ground for semi solid platforms
+    //public GameObject raytest;
+    public GameObject Wall = null;
     private int animstate = 0;
 
     // Start is called before the first frame update
@@ -53,8 +52,24 @@ public class PlayerMovement : MonoBehaviour
             nomovement = false;
             direction = false;
 
-            current_state |= States.Walking;
-            sr.flipX = false;
+            if(Wall)
+            {
+                if(WalkingToWall())
+                {
+                    current_state |= States.Wall;
+                    current_state |= States.Walking;
+                    sr.flipX = true;
+                }
+            }
+            else
+            {
+                if((current_state & States.Wall) == States.Wall)
+                {
+                    current_state -= States.Wall;
+                }
+                current_state |= States.Walking;
+                sr.flipX = false;
+            }
         }
 
         if (Input.GetButton("Left"))
@@ -62,8 +77,24 @@ public class PlayerMovement : MonoBehaviour
             nomovement = false;
             direction = true;
 
-            current_state |= States.Walking;
-            sr.flipX = true;
+            if (Wall)
+            {
+                if (WalkingToWall())
+                {
+                    current_state |= States.Wall;
+                    current_state |= States.Walking;
+                    sr.flipX = false;
+                }
+            }
+            else
+            {
+                if ((current_state & States.Wall) == States.Wall)
+                {
+                    current_state -= States.Wall;
+                }
+                current_state |= States.Walking;
+                sr.flipX = true;
+            }
         }
 
         //Check if the player is trying to interact with a object
@@ -103,9 +134,20 @@ public class PlayerMovement : MonoBehaviour
 
         //Animation controller
         animstate = 0;
-        if ((current_state & States.Falling) == States.Falling && (current_state & States.Jumping) != States.Jumping && !onslope)
+        if((current_state & States.Wall) == States.Wall)
         {
-            animstate = 2;
+            animstate = 3;
+        }
+        else if ((current_state & States.Falling) == States.Falling && (current_state & States.Jumping) != States.Jumping && !onslope)
+        {
+            if(rb.velocity.y <= -3.1f) //smooth the transition by making it happen later in the jump arc
+            {
+                animstate = 2;
+            }
+        }
+        else if((current_state & States.Falling) != States.Falling && (current_state & States.Jumping) == States.Jumping)
+        {
+            animstate = 0;
         }
         else if((current_state & States.Walking) == States.Walking)
         {
@@ -123,6 +165,10 @@ public class PlayerMovement : MonoBehaviour
         else if(animstate == 2 && anim.GetInteger("State") != 2)
         {
             anim.SetInteger("State", 2);
+        }
+        else if (animstate == 3 && anim.GetInteger("State") != 3)
+        {
+            anim.SetInteger("State", 3);
         }
     }
 
@@ -163,6 +209,21 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public bool WalkingToWall()
+    {
+        float xdiff = Wall.transform.position.x - transform.position.x;
+        if(xdiff < 0 && direction == true)
+        {
+            return true;
+        }
+        else if(xdiff > 0 && direction == false)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
     public void Walk()
     {
         if (direction == false)
@@ -193,7 +254,7 @@ public class PlayerMovement : MonoBehaviour
         Vector2 newpos = new Vector2(current.x, current.y);
 
         Vector2 pretendposition = new Vector2(newpos.x, newpos.y - (transform.localScale.y * 0.3f));
-        raytest.transform.position = pretendposition;
+        //raytest.transform.position = pretendposition;
         RaycastHit2D hit = Physics2D.Raycast(pretendposition, -Vector2.up, 2.0f, 1 << LayerMask.NameToLayer("Sloped"));
 
         if (hit.collider != null && hit.point.y < pretendposition.y)
@@ -201,7 +262,7 @@ public class PlayerMovement : MonoBehaviour
             //on hit snap to the new position and set gravity/y velocity to 0 sso we do not fall through
             rb.gravityScale = 0;
             rb.velocity = new Vector2(rb.velocity.x, 0);
-            newpos = new Vector2(hit.point.x, hit.point.y + (transform.localScale.y * 0.5f) + feetoffset);
+            newpos = new Vector2(hit.point.x, hit.point.y + (transform.localScale.y * 0.5f));
         }
         else
         {
@@ -217,7 +278,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     rb.gravityScale = 0;
                     rb.velocity = new Vector2(rb.velocity.x, 0);
-                    newpos = new Vector2(hit.point.x - (transform.localScale.x * 0.25f), hit.point.y + (transform.localScale.y * 0.5f) + feetoffset);
+                    newpos = new Vector2(hit.point.x - (transform.localScale.x * 0.25f), hit.point.y + (transform.localScale.y * 0.5f));
 
                     return newpos;
                 }
@@ -230,7 +291,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     rb.gravityScale = 0;
                     rb.velocity = new Vector2(rb.velocity.x, 0);
-                    newpos = new Vector2(hit.point.x + (transform.localScale.x * 0.25f), hit.point.y + (transform.localScale.y * 0.5f) + feetoffset);
+                    newpos = new Vector2(hit.point.x + (transform.localScale.x * 0.25f), hit.point.y + (transform.localScale.y * 0.5f));
 
                     return newpos;
                 }
@@ -275,12 +336,21 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-
-
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Wall"))
+        {
+            if((current_state & States.Jumping) == States.Jumping || (current_state & States.Falling) != States.Falling)
+            {
+                Wall = collision.gameObject;
+            }
+        }
     }
 
     public void OnCollisionExit2D(Collision2D collision)
     {
+        if(Wall)
+        {
+            Wall = null;
+        }
         current_state |= States.Falling;
     }
 
@@ -295,7 +365,7 @@ public class PlayerMovement : MonoBehaviour
             if (playerbottom > platformtop)
             {
                 gameObject.transform.position = new Vector3(gameObject.transform.position.x, 
-                                                            platformtop + (gameObject.transform.localScale.y * 0.5f) + feetoffset, 
+                                                            platformtop + (gameObject.transform.localScale.y * 0.5f), 
                                                             gameObject.transform.position.z);
                 rb.velocity = new Vector2(rb.velocity.x, 0);
                 rb.gravityScale = 0;

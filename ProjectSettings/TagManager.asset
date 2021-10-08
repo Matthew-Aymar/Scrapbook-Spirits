@@ -16,7 +16,7 @@ TagManager:
   - Sloped
   - Door
   - Transition
-  - 
+  - Wall
   - 
   - 
   - 
@@ -39,6 +39,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Sky
+    uniqueID: 198765399
+    locked: 0
+  - name: Treeline
+    uniqueID: 1758081623
+    locked: 0
+  - name: Level
+    uniqueID: 2899556393
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 2051329737
+    locked: 0
+  - name: Foreground
+    uniqueID: 284437601
     locked: 0
