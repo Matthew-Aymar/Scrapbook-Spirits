@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - CurrentSlope
+  - Teleport
+  - Card
+  - Deck
   layers:
   - Default
   - TransparentFX
@@ -17,10 +20,10 @@ TagManager:
   - Door
   - Transition
   - Wall
-  - 
-  - 
-  - 
-  - 
+  - Fire
+  - Player
+  - Enemy
+  - UI
   - 
   - 
   - 
