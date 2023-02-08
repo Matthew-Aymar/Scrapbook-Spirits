@@ -1,0 +1,610 @@
+fileFormatVersion: 2
+guid: 90059db9111f0fb4d99672cec55b21e3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4746238163233222706
+    second: bg_battle-Sheet_0
+  - first:
+      213: -1692995914124732111
+    second: bg_battle-Sheet_1
+  - first:
+      213: -6098353600905881939
+    second: bg_battle-Sheet_2
+  - first:
+      213: -1332284368915179393
+    second: bg_battle-Sheet_3
+  - first:
+      213: 5352148985246231090
+    second: bg_battle-Sheet_4
+  - first:
+      213: 8621097972870488825
+    second: bg_battle-Sheet_5
+  - first:
+      213: -1118103139136755477
+    second: bg_battle-Sheet_6
+  - first:
+      213: -5303622594878524101
+    second: bg_battle-Sheet_7
+  - first:
+      213: 6511178390217607007
+    second: bg_battle-Sheet_8
+  - first:
+      213: 1717271037510437038
+    second: bg_battle-Sheet_9
+  - first:
+      213: 4521949552132291117
+    second: bg_battle-Sheet_10
+  - first:
+      213: -3167276211553918761
+    second: bg_battle-Sheet_11
+  - first:
+      213: 4639632001821461871
+    second: bg_battle-Sheet_12
+  - first:
+      213: 4728820435608545724
+    second: bg_battle-Sheet_13
+  - first:
+      213: 3982226321409351344
+    second: bg_battle-Sheet_14
+  - first:
+      213: 8730698881455548892
+    second: bg_battle-Sheet_15
+  - first:
+      213: 7941937914756464750
+    second: bg_battle-Sheet_16
+  - first:
+      213: 7227334550367607168
+    second: bg_battle-Sheet_17
+  - first:
+      213: -7082992330914617037
+    second: bg_battle-Sheet_18
+  - first:
+      213: 2825864018554675763
+    second: bg_battle-Sheet_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bg_battle-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2100
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2303bea76760ed140800000000000000
+      internalID: 4746238163233222706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 2100
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139586c9f254188e0800000000000000
+      internalID: -1692995914124732111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 2100
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6d74fd5bb4e5ba0800000000000000
+      internalID: -6098353600905881939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 2100
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78510bdc66c28de0800000000000000
+      internalID: -1332284368915179393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 2100
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23aa19a2527a64a40800000000000000
+      internalID: 5352148985246231090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1400
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f229c60eea44a770800000000000000
+      internalID: 8621097972870488825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1400
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be821817e13bb70f0800000000000000
+      internalID: -1118103139136755477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 1400
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b35b789895fb566b0800000000000000
+      internalID: -5303622594878524101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1400
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57ce1a8f3a5c5a50800000000000000
+      internalID: 6511178390217607007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 1400
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea840edf8e8f4d710800000000000000
+      internalID: 1717271037510437038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2af41bc82131ce30800000000000000
+      internalID: 4521949552132291117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 700
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0a8c801139b04d0800000000000000
+      internalID: -3167276211553918761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 700
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d4a1d49b8436040800000000000000
+      internalID: 4639632001821461871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 700
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb92e0fb12520a140800000000000000
+      internalID: 4728820435608545724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 700
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0be90d69db5b34730800000000000000
+      internalID: 3982226321409351344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9ee0e106ca92970800000000000000
+      internalID: 8730698881455548892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60044d847e673e60800000000000000
+      internalID: 7941937914756464750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08991934b76ac4460800000000000000
+      internalID: 7227334550367607168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339a409900824bd90800000000000000
+      internalID: -7082992330914617037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_battle-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 1200
+        height: 700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33262815a5c773720800000000000000
+      internalID: 2825864018554675763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      bg_battle-Sheet_6: -1118103139136755477
+      bg_battle-Sheet_2: -6098353600905881939
+      bg_battle-Sheet_14: 3982226321409351344
+      bg_battle-Sheet_16: 7941937914756464750
+      bg_battle-Sheet_3: -1332284368915179393
+      bg_battle-Sheet_18: -7082992330914617037
+      bg_battle-Sheet_0: 4746238163233222706
+      bg_battle-Sheet_10: 4521949552132291117
+      bg_battle-Sheet_4: 5352148985246231090
+      bg_battle-Sheet_12: 4639632001821461871
+      bg_battle-Sheet_7: -5303622594878524101
+      bg_battle-Sheet_5: 8621097972870488825
+      bg_battle-Sheet_13: 4728820435608545724
+      bg_battle-Sheet_11: -3167276211553918761
+      bg_battle-Sheet_17: 7227334550367607168
+      bg_battle-Sheet_15: 8730698881455548892
+      bg_battle-Sheet_19: 2825864018554675763
+      bg_battle-Sheet_1: -1692995914124732111
+      bg_battle-Sheet_8: 6511178390217607007
+      bg_battle-Sheet_9: 1717271037510437038
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

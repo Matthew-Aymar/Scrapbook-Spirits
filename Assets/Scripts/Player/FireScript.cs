@@ -48,23 +48,6 @@ public class FireScript : MonoBehaviour
         anim.Play("Base Layer.Wisp_Fire_Attack", -1);
     }
 
-    public void Shoot()
-    {
-        GameObject temp;
-        temp = Instantiate(ball, this.transform.position, this.transform.rotation);
-
-        if(sr.flipX)
-        {
-            temp.GetComponent<FireBall>().dir = Vector2.left;
-        }
-        else
-        {
-            temp.GetComponent<FireBall>().dir = Vector2.right;
-        }
-
-        temp.GetComponent<SpriteRenderer>().flipX = sr.flipX;
-    }
-
     public void FinishAtk()
     {
         inatk = false;

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,20 +11,11 @@ public class PlayerMovement : MonoBehaviour
         Walking = 0b_0000_0001,     // 1
         Jumping = 0b_0000_0010,     // 2
         Falling = 0b_0000_0100,     // 4
-        Attacking = 0b_0000_1000,   // 8
-        Wall = 0b_0001_0000,        // 16
-        Dash = 0b_0010_0000,        // 32
     }
-
-    //Stats
-    public float maxhp;
-    public float currenthp;
-    public GameObject hpbar;
 
     public bool direction; //right = false, left = true
     public float speed = 1;
     public float jumpforce = 1;
-    public float dashforce = 1;
     //onslope checks if it is moving along the slope
     private bool onslope = false;
 
@@ -37,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     public BoxCollider2D bc;
     public SpriteRenderer sr;
     public Animator anim;
+    public PlayerCombat pc;
 
     //public GameObject raytest;
     public GameObject Wall = null;
@@ -44,19 +35,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool passthrough = false;
 
-    public FireScript f;
-
-    private bool candash;
-    private float dashtimer = 0;
-    private float endofdash = 0;
-    private Vector2 dashdir;
-    public GameObject dashui;
-
-    public bool inCombat = false;
-    private bool isDead = false;
     public bool fadeout = false;
     public GameObject fade;
-    private SpriteRenderer fsr;
 
     private bool paused;
     // Start is called before the first frame update
@@ -65,64 +45,26 @@ public class PlayerMovement : MonoBehaviour
         //Initialize as falling in case they are not directly placed on ground
         current_state = States.Idle | States.Falling;
         rb.gameObject.GetComponent<Rigidbody2D>();
-        if (inCombat)
-        {
-            fsr = fade.GetComponent<SpriteRenderer>();
-            dashui.GetComponent<SpriteRenderer>().enabled = false;
-            currenthp = maxhp;
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (inCombat)
+        if (Input.GetButtonDown("Pause") && !paused)
         {
-            if(currenthp/maxhp >= 0)
-                hpbar.transform.localScale = new Vector3((currenthp/maxhp) * 10, 1, 1);
-            else
-                hpbar.transform.localScale = new Vector3(0, 1, 1);
-
-
-            if (currenthp <= 0 || fadeout)
-            {
-                isDead = true;
-                fsr.color = new Color(0, 0, 0, fsr.color.a + 0.01f);
-
-                if(fsr.color.a > 1.0f)
-                {
-                    SceneManager.LoadScene("SampleScene");
-                }
-            }
+            paused = true;
+            rb.gravityScale = 0;
+            rb.velocity = Vector3.zero;
+            anim.enabled = false;
         }
-        else
+        else if(Input.GetButtonDown("Pause") && paused)
         {
-            if(Input.GetButtonDown("Pause") && !paused)
-            {
-                paused = true;
-                rb.gravityScale = 0;
-                rb.velocity = Vector3.zero;
-                anim.enabled = false;
-            }
-            else if(Input.GetButtonDown("Pause") && paused)
-            {
-                paused = false;
-                rb.gravityScale = 6;
-                anim.enabled = true;
-            }
-
-            if(Input.GetButtonDown("Start") && paused)
-            {
-                paused = false;
-                rb.gravityScale = 6;
-                anim.enabled = true;
-            }
+            paused = false;
+            rb.gravityScale = 6;
+            anim.enabled = true;
         }
 
         if (paused)
-            return;
-
-        if (isDead)
             return;
 
         //Get basic movement
@@ -136,23 +78,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 if(WalkingToWall())
                 {
-                    current_state |= States.Wall;
                     current_state |= States.Walking;
                     sr.flipX = true;
                 }
             }
             else
             {
-                if((current_state & States.Wall) == States.Wall)
-                {
-                    current_state -= States.Wall;
-                }
                 current_state |= States.Walking;
                 sr.flipX = false;
-                if(inCombat)
-                {
-                    f.SetPos(1);
-                }
             }
         }
 
@@ -165,35 +98,14 @@ public class PlayerMovement : MonoBehaviour
             {
                 if (WalkingToWall())
                 {
-                    current_state |= States.Wall;
                     current_state |= States.Walking;
                     sr.flipX = false;
                 }
             }
             else
             {
-                if ((current_state & States.Wall) == States.Wall)
-                {
-                    current_state -= States.Wall;
-                }
                 current_state |= States.Walking;
                 sr.flipX = true;
-                if (inCombat)
-                {
-                    f.SetPos(2);
-                }
-            }
-        }
-
-        if (inCombat)
-        {
-            if (Input.GetButton("Down") && passthrough == false)
-            {
-                passthrough = true;
-            }
-            else if (!Input.GetButton("Down") && passthrough == true)
-            {
-                passthrough = false;
             }
         }
 
@@ -227,39 +139,10 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (inCombat)
-        {
-            if (Input.GetButtonDown("Attack"))
-            {
-                f.FireAttack();
-            }
-
-
-            if (Input.GetButtonDown("Dash") && (current_state & States.Dash) != States.Dash)
-            {
-                if (candash)
-                {
-                    dashui.GetComponent<SpriteRenderer>().enabled = true;
-                    candash = false;
-                    dashtimer = 0;
-                    current_state |= States.Dash;
-                }
-            }
-        }
-
         //Check if the player has hit the apex of thier jump and will switch to falling state
         if((current_state & States.Jumping) == States.Jumping)
         {
             Jump();
-        }
-
-        if (inCombat)
-        {
-            //Done after jump to pause in mid air
-            if ((current_state & States.Dash) == States.Dash)
-            {
-                Dash();
-            }
         }
 
         //Animation controller
@@ -295,32 +178,6 @@ public class PlayerMovement : MonoBehaviour
         else if (animstate == 3 && anim.GetInteger("State") != 3)
         {
             anim.SetInteger("State", 3);
-        }
-
-        if (inCombat)
-        {
-            if (sr.flipX)
-            {
-                if ((current_state & States.Walking) == States.Walking)
-                {
-                    f.SetPos(4);
-                }
-                else
-                {
-                    f.SetPos(2);
-                }
-            }
-            else
-            {
-                if ((current_state & States.Walking) == States.Walking)
-                {
-                    f.SetPos(3);
-                }
-                else
-                {
-                    f.SetPos(1);
-                }
-            }
         }
     }
 
@@ -378,11 +235,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void Walk()
     {
-        if ((current_state & States.Dash) == States.Dash)
-        {
-            return;
-        }
-
         if (direction == false)
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
@@ -464,31 +316,19 @@ public class PlayerMovement : MonoBehaviour
 
     public void Fall()
     {
-        if ((current_state & States.Dash) == States.Dash)
-        {
-            return;
-        }
-
         if (rb.velocity.y > -0.001 && rb.velocity.y <= 0.001)
         {
-            candash = false;
             current_state -= States.Falling;
         }
     }
 
     public void Jump()
     {
-        if ((current_state & States.Dash) == States.Dash)
-        {
-            return;
-        }
-
         rb.gravityScale = 6;
         onslope = false;
         if((current_state & States.Jumping) != States.Jumping)
         {
             //Just started the jump...
-            candash = true;
             current_state |= States.Jumping;
             rb.velocity = new Vector2(rb.velocity.x, jumpforce);
         }
@@ -499,87 +339,6 @@ public class PlayerMovement : MonoBehaviour
                 current_state -= States.Jumping;
                 current_state |= States.Falling;
             }
-        }
-    }
-
-    public void Dash()
-    {
-        rb.gravityScale = 0;
-
-        if(endofdash != 0)
-        {
-            if(dashtimer > endofdash)
-            {
-                dashui.GetComponent<SpriteRenderer>().enabled = false;
-                current_state -= States.Dash;
-                endofdash = 0;
-                rb.gravityScale = 6;
-            }
-            else
-            {
-                dashtimer += Time.deltaTime;
-                rb.velocity = new Vector2(dashdir.x * dashforce, dashdir.y * dashforce);
-            }
-        }
-        else if(dashtimer > 0.25f)
-        {
-            dashdir = new Vector2();
-
-            if(Input.GetButton("Left"))
-            {
-                dashdir.x -= 1;
-            }
-
-            if (Input.GetButton("Right"))
-            {
-                dashdir.x += 1;
-            }
-
-            if (Input.GetButton("Interact"))
-            {
-                dashdir.y += 1;
-            }
-
-            if (!onslope && Input.GetButton("Down"))
-            {
-                dashdir.y -= 1;
-            }
-
-            dashdir.Normalize();
-            endofdash = dashtimer + 0.1f;
-        }
-        else
-        {
-            Vector2 tempdir = new Vector2();
-
-            if (Input.GetButton("Left"))
-            {
-                tempdir.x -= 1;
-            }
-
-            if (Input.GetButton("Right"))
-            {
-                tempdir.x += 1;
-            }
-
-            if (Input.GetButton("Interact"))
-            {
-                tempdir.y += 1;
-            }
-
-            if (!onslope && Input.GetButton("Down"))
-            {
-                tempdir.y -= 1;
-            }
-            tempdir.Normalize();
-            Vector2 newpos = this.transform.position;
-            newpos += tempdir * 2;
-
-            dashui.transform.up = tempdir;
-
-            dashui.transform.position = newpos;
-
-            dashtimer += Time.deltaTime;
         }
     }
 
@@ -645,7 +404,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Door"))
             {
-                SceneManager.LoadScene("combatTest");
+                pc.StartTransition();
             }
         }
     }
@@ -655,7 +414,6 @@ public class PlayerMovement : MonoBehaviour
         rb.gravityScale = 6;
         if((current_state & States.Jumping) != States.Jumping && (current_state & States.Falling) != States.Falling)
         {
-            candash = true;
             rb.velocity = new Vector2(rb.velocity.x, -0.002f);
         }
         current_state |= States.Falling;

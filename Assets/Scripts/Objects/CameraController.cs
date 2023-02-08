@@ -5,30 +5,42 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public GameObject Player;
-    public GameObject Foreground;
-    public GameObject Treeline;
-    public GameObject Sky;
+    public GameObject foreground;
+    public GameObject midground;
+    public GameObject background;
+    public Transform parralax;
+
+    public float fgMulti;
+    public float mgMulti;
+    public float bgMulti;
+
+    private GameObject[] fg = new GameObject[3];
+    private GameObject[] mg = new GameObject[3];
+    private GameObject[] bg = new GameObject[3];
 
     public float speed;
     public Vector2 bounds;
 
-    private Vector3 temp;
+    private Vector3 newPos;
+    private Vector3 lastPos;
     private float dist;
-    private bool left;
-    private float percent_travelled;
+    private float moveDist;
 
     public bool sub_area;
+
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        for(int x = 0; x < 3; x++)
+        {
+            fg[x] = Instantiate(foreground, parralax); //70
+            mg[x] = Instantiate(midground, parralax);  //27
+            bg[x] = Instantiate(background, parralax); //27
 
-    public void hide_parralax()
-    {
-        Foreground.SetActive(!Foreground.activeSelf);
-        Treeline.SetActive(!Treeline.activeSelf);
-        Sky.SetActive(!Sky.activeSelf);
+            fg[x].transform.position = new Vector3(fg[x].transform.position.x + (70 * (x - 1)), fg[x].transform.position.y, fg[x].transform.position.z);
+            mg[x].transform.position = new Vector3(mg[x].transform.position.x + (27 * (x - 1)), mg[x].transform.position.y, mg[x].transform.position.z);
+            bg[x].transform.position = new Vector3(bg[x].transform.position.x + (27 * (x - 1)), bg[x].transform.position.y, bg[x].transform.position.z);
+        }
     }
 
     // Update is called once per frame
@@ -40,42 +52,36 @@ public class CameraController : MonoBehaviour
             if (dist < 0)
             {
                 dist = Mathf.Abs(dist);
-                left = false;
-            }
-            else
-            {
-                left = true;
             }
 
-            temp = Vector3.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime * dist);
-            temp.y = 0;
-            temp.z = -10;
+            newPos = Vector3.MoveTowards(transform.position, Player.transform.position, speed * Time.deltaTime * dist);
+            newPos.y = 0;
+            newPos.z = -10;
 
-            if (temp.x < bounds.x)
+            if (newPos.x < bounds.x)
             {
-                temp.x = bounds.x;
+                newPos.x = bounds.x;
             }
-            else if (temp.x > bounds.y)
+            else if (newPos.x > bounds.y)
             {
-                temp.x = bounds.y;
-            }
-            else
-            {
-                if (left)
-                {
-                    Foreground.transform.Translate(Vector3.left * dist * Time.deltaTime * 3);
-                    Treeline.transform.Translate(Vector3.left * dist * Time.deltaTime * 0.5f);
-                    Sky.transform.Translate(Vector3.left * dist * Time.deltaTime * 0.25f);
-                }
-                else
-                {
-                    Foreground.transform.Translate(Vector3.right * dist * Time.deltaTime * 3);
-                    Treeline.transform.Translate(Vector3.right * dist * Time.deltaTime * 0.5f);
-                    Sky.transform.Translate(Vector3.right * dist * Time.deltaTime * 0.25f);
-                }
+                newPos.x = bounds.y;
             }
 
-            transform.position = temp;
+            /*
+             * Parralaxing
+             * Take change in distance and apply it based on the movement direction as the camera
+             * Then see if elemenets need to be replaced
+             */
+            for(int x = 0; x < 3; x++)
+            {
+                fg[x].transform.Translate(new Vector3(moveDist * fgMulti * -1, 0, 0));
+                mg[x].transform.Translate(new Vector3(moveDist * mgMulti * -0.33f, 0, 0));
+                bg[x].transform.Translate(new Vector3(moveDist * bgMulti * -0.33f, 0, 0));
+            }
+
+            lastPos = transform.position;
+            transform.position = newPos;
+            moveDist = transform.position.x - lastPos.x;
         }   
     }
 }

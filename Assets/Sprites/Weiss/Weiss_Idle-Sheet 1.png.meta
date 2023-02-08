@@ -39,6 +39,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -232,6 +233,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Weiss_Idle-Sheet 1_1: -6863981180761104016
+      Weiss_Idle-Sheet 1_2: 3200159667329397656
+      Weiss_Idle-Sheet 1_4: -472071829464691189
+      Weiss_Idle-Sheet 1_0: 420346409225144711
+      Weiss_Idle-Sheet 1_3: 6692116759015431927
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

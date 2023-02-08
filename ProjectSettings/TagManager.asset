@@ -24,8 +24,8 @@ TagManager:
   - Player
   - Enemy
   - UI
-  - 
-  - 
+  - CombatPlayer
+  - CombatWall
   - 
   - 
   - 
@@ -59,4 +59,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 284437601
+    locked: 0
+  - name: Combat
+    uniqueID: 3488231013
     locked: 0
