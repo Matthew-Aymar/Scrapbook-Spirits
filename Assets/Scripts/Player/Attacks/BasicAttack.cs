@@ -6,7 +6,7 @@ public class BasicAttack : Attack
 {
     public GameObject particle;
 
-    public override void Init(bool held)
+    public override bool Init(bool held)
     {
         chargeAmount = 0.3f;
         chargeTime = Time.time;
@@ -18,6 +18,8 @@ public class BasicAttack : Attack
             chargeAmount *= 0.5f;
             this.transform.localScale *= 0.5f;
         }
+
+        return true;
     }
 
     public override void Spawn(int dir)
@@ -49,6 +51,7 @@ public class BasicAttack : Attack
         {
             chargeTime = 0;
             timeoutTime = Time.time;
+            attacker.UnlockMovement();
             return true;
         }
 

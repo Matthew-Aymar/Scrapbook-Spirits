@@ -16,6 +16,7 @@ public class PlayerCombat : MonoBehaviour
 
     public PlayerMovement pm;
     public AttackSelector attacker;
+    public CardSelector cards;
 
     private Rigidbody2D combatRb;
     private Animator anim;
@@ -62,74 +63,132 @@ public class PlayerCombat : MonoBehaviour
             if (!combatPlayer.activeSelf && Time.time > transitionTime)
             {
                 combatPlayer.SetActive(true);
+                cards.ShowCards();
                 pm.enabled = false;
                 this.gameObject.GetComponent<Rigidbody2D>().simulated = false;
                 canJump = true;
             }
-            else if(combatPlayer.activeSelf && !movementLocked)
+            else
             {
-                shouldMove = false;
+                if (Input.GetButtonDown("Special"))
+                {
+                    cards.HoldCards();
+                    attacker.BreakHold();
+                    anim.SetInteger("State", 0);
+                    dir = 0;
+                }
+                else if (Input.GetButtonUp("Special"))
+                {
+                    cards.DropCards();
+                    attacker.BreakHold();
+                }
 
-                if (Input.GetButton("Attack") && !movementLocked && !inJump && !inFall)
+                if (!inFall && !inJump && !movementLocked)
                 {
-                    combatRb.velocity = combatRb.velocity * 0.15f;
-                    attacker.newAttack(false);
-                    anim.SetInteger("State", 3);
-                    movementLocked = true;
-                }
-                else if (Input.GetButton("Right"))
-                {
-                    anim.SetInteger("State", 1);
-                    shouldMove = true;
-                    dir = 1;
-                    attacker.breakHold();
-                }
-                else if (Input.GetButton("Left"))
-                {
-                    anim.SetInteger("State", 2);
-                    shouldMove = true;
-                    dir = -1;
-                    attacker.breakHold();
+                    if (canJump && (Input.GetButtonDown("Jump") || Input.GetButtonDown("Interact")))
+                    {
+                        combatRb.AddForce(new Vector2(dir * speed * 0.5f, jump), ForceMode2D.Impulse);
+                        inJump = true;
+                        canJump = false;
+                        jumpDir = dir;
+
+                        onUpper = true;
+                        SwapWalls(onUpper);
+                    }
+                    else if (canFall && Input.GetButtonDown("Down"))
+                    {
+                        if ((combatPlayer.transform.localPosition.x < -6.235f && dir != 1) || (combatPlayer.transform.localPosition.x > 6.235f && dir != -1))
+                        {
+                            combatRb.AddForce(new Vector2((-1 * combatPlayer.transform.localPosition.x) * 2, -jump), ForceMode2D.Impulse);
+                        }
+                        else if ((combatPlayer.transform.localPosition.x < -3.75f && dir == -1) || (combatPlayer.transform.localPosition.x > 3.75f && dir == 1))
+                        {
+                            combatRb.AddForce(new Vector2(0, -jump), ForceMode2D.Impulse);
+                        }
+                        else
+                            combatRb.AddForce(new Vector2(dir * speed * 0.5f, -jump), ForceMode2D.Impulse);
+                        inFall = true;
+                        canFall = false;
+                    }
                 }
                 else
                 {
-                    anim.SetInteger("State", 0);
-                    dir = 0;
-                    attacker.breakHold();
+                    shouldMove = false;
                 }
-            }
 
-            if (!inFall && !inJump && !movementLocked)
-            {
-                if (canJump && (Input.GetButtonDown("Jump") || Input.GetButtonDown("Interact")))
+                if (combatPlayer.activeSelf && !inJump && !inFall)
                 {
-                    combatRb.AddForce(new Vector2(dir * speed * 0.5f, jump), ForceMode2D.Impulse);
-                    inJump = true;
-                    canJump = false;
-                    jumpDir = dir;
+                    if (!cards.holding && !movementLocked)
+                    {
+                        shouldMove = false;
 
-                    onUpper = true;
-                    SwapWalls(onUpper);
-                }
-                else if (canFall && Input.GetButtonDown("Down"))
-                {
-                    if((combatPlayer.transform.localPosition.x < -6.235f && dir != 1) || (combatPlayer.transform.localPosition.x > 6.235f && dir != -1))
-                    {
-                        combatRb.AddForce(new Vector2((-1 * combatPlayer.transform.localPosition.x) * 2, -jump), ForceMode2D.Impulse);
+                        if (Input.GetButton("Attack"))
+                        {
+                            combatRb.velocity = combatRb.velocity * 0.15f;
+                            attacker.NewAttack(false);
+                            anim.SetInteger("State", 3);
+                            movementLocked = true;
+                        }
+                        else if (Input.GetButton("Right"))
+                        {
+                            anim.SetInteger("State", 1);
+                            shouldMove = true;
+                            dir = 1;
+                            attacker.BreakHold();
+                        }
+                        else if (Input.GetButton("Left"))
+                        {
+                            anim.SetInteger("State", 2);
+                            shouldMove = true;
+                            dir = -1;
+                            attacker.BreakHold();
+                        }
+                        else
+                        {
+                            anim.SetInteger("State", 0);
+                            dir = 0;
+                            attacker.BreakHold();
+                        }
                     }
-                    else if((combatPlayer.transform.localPosition.x < -3.75f && dir == -1) || (combatPlayer.transform.localPosition.x > 3.75f && dir == 1))
+                    else if (cards.holding) 
                     {
-                        combatRb.AddForce(new Vector2(0, -jump), ForceMode2D.Impulse);
+                        if(Input.GetButton("Attack"))
+                        {
+                            if(attacker.nextCheck < Time.time)
+                            {
+                                attacker.NewAttack(true);
+                            }
+
+                            combatRb.velocity = combatRb.velocity * 0.15f;
+                            anim.SetInteger("State", 3);
+                            movementLocked = true;
+                        }
+                        else if(Input.GetButtonDown("Right"))
+                        {
+                            cards.SelectRight();
+                        }
+                        else if(Input.GetButton("Right"))
+                        {
+                            dir = 1;
+                            anim.SetInteger("State", 0);
+                        }
+                        else if(Input.GetButtonDown("Left"))
+                        {
+                            cards.SelectLeft();
+                        }
+                        else if(Input.GetButton("Left"))
+                        {
+                            dir = -1;
+                            anim.SetInteger("State", 0);
+                        }
+                        else if(!movementLocked)
+                        {
+                            anim.SetInteger("State", 0);
+                            dir = 0;
+                            attacker.BreakHold();
+                        }
                     }
-                    else
-                        combatRb.AddForce(new Vector2(dir * speed * 0.5f, -jump), ForceMode2D.Impulse);
-                    inFall = true;
-                    canFall = false;
                 }
-            }
-            else
-            {
-                shouldMove = false;
             }
         }
     }
@@ -247,11 +306,5 @@ public class PlayerCombat : MonoBehaviour
         wallRight.SetActive(!upper);
         wallLeftUpper.SetActive(upper);
         wallRightUpper.SetActive(upper);
-    }
-
-    public void SetIdle()
-    {
-        anim.SetInteger("State", 0);
-        //anim.Play("Wisp_Idle");
     }
 }

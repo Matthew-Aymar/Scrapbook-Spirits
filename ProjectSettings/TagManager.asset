@@ -8,6 +8,8 @@ TagManager:
   - Teleport
   - Card
   - Deck
+  - FirePillar
+  - StarBoomerang
   layers:
   - Default
   - TransparentFX
@@ -62,4 +64,7 @@ TagManager:
     locked: 0
   - name: Combat
     uniqueID: 3488231013
+    locked: 0
+  - name: UI
+    uniqueID: 2240215827
     locked: 0

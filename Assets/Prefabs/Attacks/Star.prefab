@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 1974942779797024125}
   - component: {fileID: 1974942779797024127}
   - component: {fileID: 1974942779797024124}
+  - component: {fileID: -6686578713545872680}
   m_Layer: 0
   m_Name: Star
-  m_TagString: Untagged
+  m_TagString: StarBoomerang
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1974942779797024125
 Transform:
   m_ObjectHideFlags: 0
@@ -105,3 +106,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-6686578713545872680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974942779797024002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36420ce79b0fb6c41a268a86748f67f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: 0
+  direction: 0
+  chargeAmount: 0
+  chargeTime: 0
+  speed: 0
+  timeout: 0
+  timeoutTime: 0

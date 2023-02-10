@@ -58,15 +58,17 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\Attacks\BasicAttack.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Managers\CardSelector.cs" />
     <Compile Include="Assets\SlerpTest.cs" />
-    <Compile Include="Assets\Scripts\Player\Attacks\AttackSelector.cs" />
-    <Compile Include="Assets\Scripts\Managers\CombatManager.cs" />
+    <Compile Include="Assets\Scripts\Player\Attacks\Cards\FirePillar.cs" />
+    <Compile Include="Assets\Scripts\Managers\AttackSelector.cs" />
+    <Compile Include="Assets\Scripts\Objects\Particle.cs" />
     <Compile Include="Assets\Scripts\Objects\CameraController.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\Attack.cs" />
     <Compile Include="Assets\Scripts\Player\FireScript.cs" />
     <Compile Include="Assets\Scripts\Objects\CombatWarp.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCombat.cs" />
-    <Compile Include="Assets\Scripts\Objects\Particle.cs" />
+    <Compile Include="Assets\Scripts\Player\Attacks\Cards\StarBoomerang.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

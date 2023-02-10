@@ -6,6 +6,8 @@ public abstract class Attack : MonoBehaviour
 {
     public int _id;
 
+    public AttackSelector attacker;
+
     public int direction;
     public float chargeAmount;
     public float chargeTime;
@@ -13,7 +15,7 @@ public abstract class Attack : MonoBehaviour
     public float timeout;
     public float timeoutTime;
 
-    public abstract void Init(bool held);
+    public abstract bool Init(bool held);
 
     public abstract void Spawn(int dir);
 
