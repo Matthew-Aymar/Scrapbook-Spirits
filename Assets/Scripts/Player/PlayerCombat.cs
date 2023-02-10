@@ -76,6 +76,7 @@ public class PlayerCombat : MonoBehaviour
                     attacker.BreakHold();
                     anim.SetInteger("State", 0);
                     dir = 0;
+                    shouldMove = false;
                 }
                 else if (Input.GetButtonUp("Special"))
                 {
@@ -170,7 +171,8 @@ public class PlayerCombat : MonoBehaviour
                         else if(Input.GetButton("Right"))
                         {
                             dir = 1;
-                            anim.SetInteger("State", 0);
+                            if(!attacker.inCharge)
+                                anim.SetInteger("State", 0);
                         }
                         else if(Input.GetButtonDown("Left"))
                         {
@@ -179,7 +181,8 @@ public class PlayerCombat : MonoBehaviour
                         else if(Input.GetButton("Left"))
                         {
                             dir = -1;
-                            anim.SetInteger("State", 0);
+                            if (!attacker.inCharge)
+                                anim.SetInteger("State", 0);
                         }
                         else if(!movementLocked)
                         {

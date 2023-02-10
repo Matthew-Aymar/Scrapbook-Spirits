@@ -13,6 +13,8 @@ public class StarBoomerang : Attack
     public bool letGo;
     public float lastAmp;
     public float totalAmp;
+    private int ampStage;
+    private float ampStep;
     public override bool Init(bool held)
     {
         if (held)
@@ -24,7 +26,7 @@ public class StarBoomerang : Attack
                     continue;
                 else if(!original.GetComponent<StarBoomerang>().letGo)
                 {
-                    original.GetComponent<StarBoomerang>().totalAmp = Time.time - original.GetComponent<StarBoomerang>().lastAmp;
+                    original.GetComponent<StarBoomerang>().totalAmp += Time.time - original.GetComponent<StarBoomerang>().lastAmp;
                     original.GetComponent<StarBoomerang>().lastAmp = Time.time;
 
                     return false;
@@ -32,12 +34,14 @@ public class StarBoomerang : Attack
             }
         }
 
+        ampStage = 1;
         returnAmount = 0.5f;
         chargeAmount = 0.25f;
         chargeTime = Time.time;
         speed = 15.0f;
         timeout = 5.0f;
         timeoutTime = 0;
+        ampStep = 1.0f;
 
         return true;
     }
@@ -66,6 +70,14 @@ public class StarBoomerang : Attack
                 letGo = true;
                 timeoutTime = Time.time;
                 returnTime = Time.time;
+            }
+            else if(!letGo)
+            {
+                if(ampStage < 5 && totalAmp > ampStage * ampStep)
+                {
+                    transform.localScale *= 1.5f;
+                    ampStage++;
+                }
             }
 
             if(letGo)

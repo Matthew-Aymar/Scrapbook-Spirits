@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Objects\CombatWarp.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCombat.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\Cards\StarBoomerang.cs" />
+    <Compile Include="Assets\Scripts\Player\Attacks\Cards\FireSwipe.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

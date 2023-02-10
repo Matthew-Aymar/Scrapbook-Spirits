@@ -9,7 +9,7 @@ public class AttackSelector : MonoBehaviour
     public CardSelector cards;
 
     public PlayerCombat pc;
-    private bool inCharge;
+    public bool inCharge;
     private bool isHeld;
     public float nextCheck;
     void Start()
@@ -58,8 +58,7 @@ public class AttackSelector : MonoBehaviour
         }
         else
         {
-            //newAttack = Instantiate(attacks[cards.GetCardID()], pc.combatPlayer.transform);
-            newAttack = Instantiate(attacks[1], pc.combatPlayer.transform);
+            newAttack = Instantiate(attacks[cards.GetCardID()], pc.combatPlayer.transform);
             nextCheck = Time.time + 0.1f;
         }
 

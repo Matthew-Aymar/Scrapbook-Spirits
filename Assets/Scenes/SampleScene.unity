@@ -1928,9 +1928,11 @@ MonoBehaviour:
   - {fileID: 5515685245621879743, guid: 3d08e5bfce334aa45b3d1108e60ccda6, type: 3}
   - {fileID: 4779257189396258648, guid: 15fc092a5970a12449408ddf7c76a606, type: 3}
   - {fileID: 1974942779797024002, guid: 2fac55c14cdbb764e9184480c96cd1cb, type: 3}
+  - {fileID: 6769653439187809785, guid: 1387c03d21e9db14db27cb986edf4271, type: 3}
   activeAttacks: []
-  cards: {fileID: 0}
+  cards: {fileID: 1560456368}
   pc: {fileID: 1691780281}
+  inCharge: 0
   nextCheck: 0
 --- !u!114 &1560456368
 MonoBehaviour:

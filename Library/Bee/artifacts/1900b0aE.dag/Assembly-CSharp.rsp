@@ -372,6 +372,7 @@
 "Assets/Scripts/Player/Attacks/Attack.cs"
 "Assets/Scripts/Player/Attacks/BasicAttack.cs"
 "Assets/Scripts/Player/Attacks/Cards/FirePillar.cs"
+"Assets/Scripts/Player/Attacks/Cards/FireSwipe.cs"
 "Assets/Scripts/Player/Attacks/Cards/StarBoomerang.cs"
 "Assets/Scripts/Player/FireScript.cs"
 "Assets/Scripts/Player/PlayerCombat.cs"
