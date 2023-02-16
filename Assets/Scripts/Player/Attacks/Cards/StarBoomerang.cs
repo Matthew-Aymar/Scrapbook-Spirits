@@ -15,6 +15,9 @@ public class StarBoomerang : Attack
     public float totalAmp;
     private int ampStage;
     private float ampStep;
+
+    public GameObject AmpParticle;
+
     public override bool Init(bool held)
     {
         if (held)
@@ -77,6 +80,9 @@ public class StarBoomerang : Attack
                 {
                     transform.localScale *= 1.5f;
                     ampStage++;
+
+                    GameObject part = Instantiate(AmpParticle, this.transform.localPosition, new Quaternion());
+                    part.transform.localScale = this.transform.localScale * 1.5f;
                 }
             }
 

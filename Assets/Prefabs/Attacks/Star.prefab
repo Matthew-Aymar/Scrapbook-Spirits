@@ -129,3 +129,4 @@ MonoBehaviour:
   letGo: 0
   lastAmp: 0
   totalAmp: 0
+  AmpParticle: {fileID: 5742195681967521023, guid: 1cfbe3292a713b543928dc2b57aebffe, type: 3}

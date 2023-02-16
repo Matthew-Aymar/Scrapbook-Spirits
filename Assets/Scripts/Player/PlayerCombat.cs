@@ -125,9 +125,11 @@ public class PlayerCombat : MonoBehaviour
 
                         if (Input.GetButton("Attack"))
                         {
+                            if(Input.GetButtonDown("Attack"))
+                                anim.SetInteger("State", 3);
+
                             combatRb.velocity = combatRb.velocity * 0.15f;
                             attacker.NewAttack(false);
-                            anim.SetInteger("State", 3);
                             movementLocked = true;
                         }
                         else if (Input.GetButton("Right"))
@@ -155,13 +157,15 @@ public class PlayerCombat : MonoBehaviour
                     {
                         if(Input.GetButton("Attack"))
                         {
-                            if(attacker.nextCheck < Time.time)
+                            if (Input.GetButtonDown("Attack"))
+                                anim.SetInteger("State", 3);
+
+                            if (attacker.nextCheck < Time.time)
                             {
                                 attacker.NewAttack(true);
                             }
 
                             combatRb.velocity = combatRb.velocity * 0.15f;
-                            anim.SetInteger("State", 3);
                             movementLocked = true;
                         }
                         else if(Input.GetButtonDown("Right"))
@@ -309,5 +313,10 @@ public class PlayerCombat : MonoBehaviour
         wallRight.SetActive(!upper);
         wallLeftUpper.SetActive(upper);
         wallRightUpper.SetActive(upper);
+    }
+
+    public void EndCharge()
+    {
+        anim.SetInteger("State", 4);
     }
 }

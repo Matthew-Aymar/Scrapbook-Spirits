@@ -13,6 +13,7 @@ public class CardSelector : MonoBehaviour
     private float firstMoveAmount;
     private float holdAmount;
     private int selected;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -142,5 +143,10 @@ public class CardSelector : MonoBehaviour
     public int GetCardID()
     {
         return selected + 1;
+    }
+
+    public void SetPositions()
+    {
+
     }
 }

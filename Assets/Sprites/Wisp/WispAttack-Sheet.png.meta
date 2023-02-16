@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 115
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e45f1811c781174449d2d3ef87bab200
-      internalID: -151411226
+      spriteID: 885e1cd2219d86d4193b93f8a7cd689b
+      internalID: -1253078979
       vertices: []
       indices: 
       edges: []
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 294b2f7602d86274b8f18bb6bd24ee44
-      internalID: -1619216914
+      spriteID: 7f85eab2e017bcd4a9561b13aef237a2
+      internalID: -252161291
       vertices: []
       indices: 
       edges: []
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa112b759ba734f4b84dd0fbc7a28653
-      internalID: -1178375367
+      spriteID: 21115fb67082b144da41bffc47539b21
+      internalID: 593302432
       vertices: []
       indices: 
       edges: []
@@ -201,9 +201,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WispAttack-Sheet_1: -1619216914
-      WispAttack-Sheet_2: -1178375367
-      WispAttack-Sheet_0: -151411226
+      WispAttack-Sheet_1: -252161291
+      WispAttack-Sheet_2: 593302432
+      WispAttack-Sheet_0: -1253078979
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

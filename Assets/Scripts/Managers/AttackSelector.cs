@@ -8,6 +8,10 @@ public class AttackSelector : MonoBehaviour
     public List<GameObject> activeAttacks = new List<GameObject>();
     public CardSelector cards;
 
+    public GameObject AttackParticle;
+    public GameObject ChargeParticle;
+    public GameObject AmpParticle;
+
     public PlayerCombat pc;
     public bool inCharge;
     private bool isHeld;
@@ -31,6 +35,7 @@ public class AttackSelector : MonoBehaviour
                     tempScript.Spawn(1);
 
                     inCharge = false;
+                    pc.EndCharge();
                 }
             }
 
