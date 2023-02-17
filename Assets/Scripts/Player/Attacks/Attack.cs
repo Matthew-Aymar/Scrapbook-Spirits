@@ -17,7 +17,7 @@ public abstract class Attack : MonoBehaviour
 
     public abstract bool Init(bool held);
 
-    public abstract void Spawn(int dir);
+    public abstract void Spawn(int dir, bool upper);
 
     public abstract void Move();
 

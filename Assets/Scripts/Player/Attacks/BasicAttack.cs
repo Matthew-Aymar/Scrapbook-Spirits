@@ -22,7 +22,7 @@ public class BasicAttack : Attack
         return true;
     }
 
-    public override void Spawn(int dir)
+    public override void Spawn(int dir, bool upper)
     {
         gameObject.SetActive(true);
         direction = dir;
@@ -30,10 +30,16 @@ public class BasicAttack : Attack
         float randx = Random.Range(0.0f, 0.25f);
         float randy = Random.Range(-0.25f, 0.25f);
 
-        transform.Translate(new Vector3(direction + randx, randy, 0));
-        GameObject part = Instantiate(particle, this.transform.position, particle.transform.rotation);
+        transform.Translate(new Vector3(direction + randx + (upper ? 0.25f : 0), randy, 0));
+        GameObject part = Instantiate(particle, this.transform.position, new Quaternion());
         part.transform.localScale = this.transform.localScale * 1.5f;
-        part.transform.Translate(new Vector3(this.transform.localScale.x * -0.4f, 0, 0), Space.World);
+        part.transform.Translate(new Vector3(dir * (this.transform.localScale.x * -0.4f), 0, 0), Space.World);
+        part.transform.Rotate(0, 0, dir * particle.transform.rotation.eulerAngles.z);
+        if (dir == -1)
+        {
+            part.GetComponent<SpriteRenderer>().flipX = false;
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
     }
 
     public override void Move()

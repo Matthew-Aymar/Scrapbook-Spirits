@@ -32,12 +32,15 @@ public class FirePillar : Attack
         }
     }
 
-    public override void Spawn(int dir)
+    public override void Spawn(int dir, bool upper)
     {
         gameObject.SetActive(true);
         direction = dir;
 
-        transform.Translate(new Vector3(3.0f, 1.0f, 0));
+        transform.Translate(new Vector3((dir * 3.0f) + dir * (upper ? 0.25f : 0), 1.0f, 0));
+
+        if (dir == -1)
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
     }
 
     public override void Move()
@@ -68,7 +71,7 @@ public class FirePillar : Attack
             Destroy(this.gameObject);
             return true;
         }
-
+        
         return false;
     }
 

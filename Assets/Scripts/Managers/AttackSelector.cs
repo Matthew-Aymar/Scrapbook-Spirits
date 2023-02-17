@@ -8,13 +8,15 @@ public class AttackSelector : MonoBehaviour
     public List<GameObject> activeAttacks = new List<GameObject>();
     public CardSelector cards;
 
-    public GameObject AttackParticle;
-    public GameObject ChargeParticle;
-    public GameObject AmpParticle;
+    public GameObject attackParticle;
+    public GameObject chargeParticle;
+
+    private GameObject currentAttackParticle;
+    private GameObject currentChargeParticle;
 
     public PlayerCombat pc;
     public bool inCharge;
-    private bool isHeld;
+    public bool isHeld;
     public float nextCheck;
     void Start()
     {
@@ -32,10 +34,12 @@ public class AttackSelector : MonoBehaviour
             {
                 if(tempScript.CheckCharge())
                 {
-                    tempScript.Spawn(1);
+                    tempScript.Spawn(pc.attackDir, pc.onUpper);
+                    SpawnParticle();
 
                     inCharge = false;
                     pc.EndCharge();
+                    DestroyCharge();
                 }
             }
 
@@ -73,9 +77,15 @@ public class AttackSelector : MonoBehaviour
             activeAttacks.Add(newAttack);
             newAttack.GetComponent<Attack>().attacker = this;
             inCharge = true;
+
+            if (!currentChargeParticle && !pc.inAttackAnim)
+            {
+                currentChargeParticle = Instantiate(chargeParticle, pc.combatPlayer.transform);
+            }
         }
         else
         {
+            SpawnParticle();
             Destroy(newAttack.gameObject);
         }
 
@@ -93,5 +103,18 @@ public class AttackSelector : MonoBehaviour
     public void UnlockMovement()
     {
         pc.movementLocked = false;
+    }
+
+    public void DestroyCharge()
+    {
+        if (currentChargeParticle)
+            Destroy(currentChargeParticle);
+    }
+
+    public void SpawnParticle()
+    {
+        currentAttackParticle = Instantiate(attackParticle, pc.combatPlayer.transform);
+        currentAttackParticle.transform.Translate(new Vector3(pc.attackDir * (pc.onUpper ? 1.25f : 1), 0, 0));
+        currentAttackParticle.transform.parent = null;
     }
 }

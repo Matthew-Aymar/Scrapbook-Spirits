@@ -10,6 +10,7 @@ TagManager:
   - Deck
   - FirePillar
   - StarBoomerang
+  - Enemy
   layers:
   - Default
   - TransparentFX

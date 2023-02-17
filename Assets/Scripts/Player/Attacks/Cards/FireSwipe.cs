@@ -14,12 +14,15 @@ public class FireSwipe : Attack
         return true;
     }
 
-    public override void Spawn(int dir)
+    public override void Spawn(int dir, bool upper)
     {
         gameObject.SetActive(true);
         direction = dir;
 
-        transform.Translate(new Vector3(direction * 1.5f, 0.5f, 0));
+        transform.Translate(new Vector3((dir * 1.5f) + dir * (upper ? 0.25f : 0), 0.5f, 0));
+
+        if (dir == -1)
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
     }
 
     public override void Move()
@@ -36,7 +39,6 @@ public class FireSwipe : Attack
         {
             chargeTime = 0;
             timeoutTime = Time.time;
-            attacker.UnlockMovement();
             return true;
         }
 
@@ -47,6 +49,7 @@ public class FireSwipe : Attack
     {
         if (timeoutTime != 0 && timeoutTime + timeout < Time.time)
         {
+            attacker.UnlockMovement();
             Destroy(this.gameObject);
             return true;
         }

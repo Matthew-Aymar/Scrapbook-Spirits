@@ -49,18 +49,18 @@ public class StarBoomerang : Attack
         return true;
     }
 
-    public override void Spawn(int dir)
+    public override void Spawn(int dir, bool upper)
     {
         gameObject.SetActive(true);
         direction = dir;
         reversal = dir;
 
-        float randx = Random.Range(0.0f, 0.25f);
-        float randy = Random.Range(-0.25f, 0.25f);
-
-        transform.Translate(new Vector3(direction + randx, randy, 0));
+        transform.Translate(new Vector3(dir + dir * (upper ? 0.25f : 0), 0, 0));
 
         lastAmp = Time.time;
+
+        if(dir == -1)
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
     }
 
     public override void Move()
@@ -76,13 +76,15 @@ public class StarBoomerang : Attack
             }
             else if(!letGo)
             {
-                if(ampStage < 5 && totalAmp > ampStage * ampStep)
+                if(ampStage < 3 && totalAmp > ampStage * ampStep)
                 {
                     transform.localScale *= 1.5f;
                     ampStage++;
 
                     GameObject part = Instantiate(AmpParticle, this.transform.localPosition, new Quaternion());
-                    part.transform.localScale = this.transform.localScale * 1.5f;
+                    part.transform.localScale = this.transform.localScale;
+                    if(direction == -1)
+                        part.GetComponent<SpriteRenderer>().flipX = true;
                 }
             }
 
