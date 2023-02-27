@@ -6,6 +6,9 @@ public class FireSwipe : Attack
 {
     public override bool Init(bool held)
     {
+        if (held)
+            return false;
+
         chargeAmount = 0.5f;
         chargeTime = Time.time;
         speed = 15.0f;
@@ -50,6 +53,7 @@ public class FireSwipe : Attack
         if (timeoutTime != 0 && timeoutTime + timeout < Time.time)
         {
             attacker.UnlockMovement();
+            attacker.BreakHold();
             Destroy(this.gameObject);
             return true;
         }

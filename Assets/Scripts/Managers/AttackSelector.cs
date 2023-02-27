@@ -61,14 +61,14 @@ public class AttackSelector : MonoBehaviour
         pc.movementLocked = true;
 
         GameObject newAttack;
-        if (!wasCard)
-        {
-            newAttack = Instantiate(attacks[0], pc.combatPlayer.transform);
-        }
-        else
+        if (wasCard && cards.usingCard)
         {
             newAttack = Instantiate(attacks[cards.GetCardID()], pc.combatPlayer.transform);
             nextCheck = Time.time + 0.1f;
+        }
+        else
+        {
+            newAttack = Instantiate(attacks[0], pc.combatPlayer.transform);
         }
 
         newAttack.transform.parent = null;
@@ -97,6 +97,7 @@ public class AttackSelector : MonoBehaviour
         if(isHeld)
         {
             isHeld = false;
+            cards.StopUsingCard();
         }
     }
 
@@ -116,5 +117,26 @@ public class AttackSelector : MonoBehaviour
         currentAttackParticle = Instantiate(attackParticle, pc.combatPlayer.transform);
         currentAttackParticle.transform.Translate(new Vector3(pc.attackDir * (pc.onUpper ? 1.25f : 1), 0, 0));
         currentAttackParticle.transform.parent = null;
+    }
+
+    public void JumpCancel()
+    {
+        for (int x = 0; x < activeAttacks.Count; x++)
+        {
+            GameObject temp = activeAttacks[x];
+            if(activeAttacks[x].activeSelf == false)
+            {
+                activeAttacks.RemoveAt(x);
+                Destroy(temp);
+            }
+        }
+
+        inCharge = false;
+        UnlockMovement();
+        DestroyCharge();
+        BreakHold();
+        pc.SetIdle();
+        cards.DropCards();
+        cards.StopUsingCard();
     }
 }

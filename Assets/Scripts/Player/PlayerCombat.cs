@@ -50,6 +50,7 @@ public class PlayerCombat : MonoBehaviour
     public bool inAttackAnim;
 
     private bool justLanded = false;
+    private bool justAttacked = false;
 
     public int attackDir;       //Direction to enemy
     public GameObject enemy;
@@ -94,46 +95,64 @@ public class PlayerCombat : MonoBehaviour
             }
             else
             {
-                if (Input.GetButtonDown("Special"))
+                if (Input.GetButtonDown("Special") && !inAttackAnim && !movementLocked)
                 {
                     cards.HoldCards();
                     attacker.BreakHold();
-                    anim.SetInteger("State", 0);
                     dir = 0;
                     shouldMove = false;
                 }
-                else if (Input.GetButtonUp("Special"))
+                else if (Input.GetButtonUp("Special") && !inAttackAnim)
                 {
                     cards.DropCards();
                     attacker.BreakHold();
                 }
 
-                if (!inFall && !inJump && !movementLocked && !inAttackAnim)
+                bool chargingCard = false;
+                if(attacker.inCharge && cards.usingCard)
+                {
+                    chargingCard = true;
+                }
+
+                if (!inFall && !inJump && !chargingCard)
                 {
                     if (canJump && (Input.GetButton("Jump") || Input.GetButton("Interact")))
                     {
-                        combatRb.AddForce(new Vector2(dir * speed * 0.5f, jump), ForceMode2D.Impulse);
+                        if (Input.GetButton("Right"))
+                            jumpDir = 1;
+
+                        if (Input.GetButton("Left"))
+                            jumpDir = -1;
+
+                        combatRb.AddForce(new Vector2(jumpDir * speed * 0.5f, jump), ForceMode2D.Impulse);
                         inJump = true;
                         canJump = false;
-                        jumpDir = dir;
 
                         onUpper = true;
                         SwapWalls(onUpper);
+                        attacker.JumpCancel();
                     }
                     else if (canFall && Input.GetButton("Down"))
                     {
-                        if ((combatPlayer.transform.localPosition.x < -6.235f && dir != 1) || (combatPlayer.transform.localPosition.x > 6.235f && dir != -1))
+                        if (Input.GetButton("Right"))
+                            jumpDir = 1;
+
+                        if (Input.GetButton("Left"))
+                            jumpDir = -1;
+
+                        if ((combatPlayer.transform.localPosition.x < -6.235f && jumpDir != 1) || (combatPlayer.transform.localPosition.x > 6.235f && jumpDir != -1))
                         {
                             combatRb.AddForce(new Vector2((-1 * combatPlayer.transform.localPosition.x) * 2, -jump), ForceMode2D.Impulse);
                         }
-                        else if ((combatPlayer.transform.localPosition.x < -3.75f && dir == -1) || (combatPlayer.transform.localPosition.x > 3.75f && dir == 1))
+                        else if ((combatPlayer.transform.localPosition.x < -3.75f && jumpDir == -1) || (combatPlayer.transform.localPosition.x > 3.75f && jumpDir == 1))
                         {
                             combatRb.AddForce(new Vector2(0, -jump), ForceMode2D.Impulse);
                         }
                         else
-                            combatRb.AddForce(new Vector2(dir * speed * 0.5f, -jump), ForceMode2D.Impulse);
+                            combatRb.AddForce(new Vector2(jumpDir * speed * 0.5f, -jump), ForceMode2D.Impulse);
                         inFall = true;
                         canFall = false;
+                        attacker.JumpCancel();
                     }
                 }
                 else
@@ -151,21 +170,22 @@ public class PlayerCombat : MonoBehaviour
                         {
                             if((Input.GetButtonDown("Attack") || justLanded) && !attacker.isHeld)
                             {
-                                anim.Play("Wisp_Charge");
-                                anim.SetInteger("State", 3);
+                                if (!justAttacked)
+                                {
+                                    anim.Play("Wisp_Charge");
+                                    anim.SetInteger("State", 3);
+                                }
                             }
 
                             combatRb.velocity = combatRb.velocity * 0.15f;
                             attacker.NewAttack(false);
                             movementLocked = true;
-                            inAttackAnim = false;
                         }
                         else if (Input.GetButton("Right"))
                         {
-                            inAttackAnim = false;
-                            if (attackDir == 1)
+                            if (attackDir == 1 && !justAttacked)
                                 anim.SetInteger("State", 1);
-                            else
+                            else if(!justAttacked)
                                 anim.SetInteger("State", 2);
                             shouldMove = true;
                             dir = 1;
@@ -173,10 +193,9 @@ public class PlayerCombat : MonoBehaviour
                         }
                         else if (Input.GetButton("Left"))
                         {
-                            inAttackAnim = false;
-                            if (attackDir == -1)
+                            if (attackDir == -1 && !justAttacked)
                                 anim.SetInteger("State", 1);
-                            else
+                            else if(!justAttacked)
                                 anim.SetInteger("State", 2);
                             shouldMove = true;
                             dir = -1;
@@ -184,8 +203,8 @@ public class PlayerCombat : MonoBehaviour
                         }
                         else
                         {
-                            inAttackAnim = false;
-                            anim.SetInteger("State", 0);
+                            if (!justAttacked)
+                                anim.SetInteger("State", 0);
                             dir = 0;
                             attacker.BreakHold();
                         }
@@ -194,10 +213,15 @@ public class PlayerCombat : MonoBehaviour
                     {
                         if(Input.GetButton("Attack"))
                         {
-                            if ((Input.GetButtonDown("Attack") || justLanded) && !attacker.isHeld)
+                            if ((Input.GetButtonDown("Attack") || justLanded) && !attacker.isHeld && !movementLocked)
                             {
-                                anim.Play("Wisp_Charge");
-                                anim.SetInteger("State", 3);
+                                if (!justAttacked)
+                                {
+                                    anim.Play("Wisp_Charge");
+                                    anim.SetInteger("State", 3);
+                                }
+
+                                cards.UseCard();
                             }
 
                             if (attacker.nextCheck < Time.time)
@@ -207,7 +231,11 @@ public class PlayerCombat : MonoBehaviour
 
                             combatRb.velocity = combatRb.velocity * 0.15f;
                             movementLocked = true;
-                            inAttackAnim = false;
+                        }
+                        else if(Input.GetButtonUp("Attack"))
+                        {
+                            cards.DropCards();
+                            attacker.BreakHold();
                         }
                         else if(Input.GetButtonDown("Right"))
                         {
@@ -218,8 +246,8 @@ public class PlayerCombat : MonoBehaviour
                             dir = 1;
                             if(!attacker.inCharge)
                             {
-                                inAttackAnim = false;
-                                anim.SetInteger("State", 0);
+                                if (!justAttacked)
+                                    anim.SetInteger("State", 0);
                             }
                         }
                         else if(Input.GetButtonDown("Left"))
@@ -231,14 +259,14 @@ public class PlayerCombat : MonoBehaviour
                             dir = -1;
                             if (!attacker.inCharge)
                             {
-                                inAttackAnim = false;
-                                anim.SetInteger("State", 0);
+                                if (!justAttacked)
+                                    anim.SetInteger("State", 0);
                             }
                         }
                         else if(!movementLocked)
                         {
-                            inAttackAnim = false;
-                            anim.SetInteger("State", 0);
+                            if (!justAttacked)
+                                anim.SetInteger("State", 0);
                             dir = 0;
                             attacker.BreakHold();
                         }
@@ -247,7 +275,18 @@ public class PlayerCombat : MonoBehaviour
             }
         }
 
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            cards.DrawCard();
+        }
+
         justLanded = false;
+
+        if(justAttacked)
+        {
+            anim.SetInteger("State", 4);
+            justAttacked = false;
+        }
     }
 
     private void FixedUpdate()
@@ -371,5 +410,12 @@ public class PlayerCombat : MonoBehaviour
     {
         anim.SetInteger("State", 4);
         inAttackAnim = true;
+        justAttacked = true;
+    }
+
+    public void SetIdle()
+    {
+        if (!justAttacked)
+            anim.SetInteger("State", 0);
     }
 }
