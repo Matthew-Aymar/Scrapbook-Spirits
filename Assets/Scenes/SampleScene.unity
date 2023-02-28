@@ -1745,6 +1745,7 @@ GameObject:
   - component: {fileID: 1560456365}
   - component: {fileID: 1560456367}
   - component: {fileID: 1560456368}
+  - component: {fileID: 1560456369}
   m_Layer: 0
   m_Name: CombatManager
   m_TagString: Untagged
@@ -1806,7 +1807,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 519420028}
   card: {fileID: 6800720211568421032, guid: 1707b06287342c445828f24b23d504d6, type: 3}
+  deck: {fileID: 1560456369}
   cardDisplays: []
+  cardHand: 
   icons:
   - {fileID: 21300000, guid: 1f824308ed1733943a8497661a8367a1, type: 3}
   - {fileID: 21300000, guid: 0f22c0e12db34de45a8744103a18aafd, type: 3}
@@ -1823,6 +1826,18 @@ MonoBehaviour:
   handCount: 0
   totalRot: 30
   usingCard: {fileID: 0}
+--- !u!114 &1560456369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560456364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2525e3b2e49866547b43b3c0f54595cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1691780274
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,6 +2055,7 @@ MonoBehaviour:
   inAttackAnim: 0
   attackDir: 0
   enemy: {fileID: 0}
+  canCancel: 0
 --- !u!4 &1734813826 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 860037041756244198, guid: b1391d7b419a04b46b701f3121b8b279, type: 3}

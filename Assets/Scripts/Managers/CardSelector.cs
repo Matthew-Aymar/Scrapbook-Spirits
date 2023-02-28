@@ -6,7 +6,10 @@ public class CardSelector : MonoBehaviour
 {
     public GameObject cam;
     public GameObject card;
+    public DeckManager deck;
+
     public List<GameObject> cardDisplays;
+    public List<int> cardHand;
     public Sprite[] icons;
 
     public List<Vector3> basePositions;
@@ -24,6 +27,7 @@ public class CardSelector : MonoBehaviour
     public float totalRot;
 
     public GameObject usingCard;
+    private int usedCardId;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +40,8 @@ public class CardSelector : MonoBehaviour
             card.transform.Find("Icon").GetComponent<SpriteRenderer>().sprite = icons[i];
             i++;
         }
+
+        deck.StartDeck();
     }
 
     // Update is called once per frame
@@ -141,7 +147,7 @@ public class CardSelector : MonoBehaviour
 
     public void SelectRight()
     {
-        if (selected < cardDisplays.Count - 1)
+        if (selected >= 0 && selected < cardDisplays.Count - 1)
         {
             cardDisplays[selected].transform.Find("card_base").GetComponent<SpriteRenderer>().color = Color.white;
             selected++;
@@ -150,7 +156,7 @@ public class CardSelector : MonoBehaviour
 
     public void SelectLeft()
     {
-        if(selected > 0)
+        if(selected > 0 && selected < cardDisplays.Count)
         {
             cardDisplays[selected].transform.Find("card_base").GetComponent<SpriteRenderer>().color = Color.white;
             selected--;
@@ -159,7 +165,7 @@ public class CardSelector : MonoBehaviour
 
     public int GetCardID()
     {
-        return 2;
+        return usedCardId;
     }
 
     public void NewPositions()
@@ -234,9 +240,13 @@ public class CardSelector : MonoBehaviour
             if (selected >= handCount)
                 selected = handCount - 1;
 
+            usedCardId = cardHand[selected];
+
             basePositions.RemoveAt(selected);
             usingCard = cardDisplays[selected];
             cardDisplays.RemoveAt(selected);
+            deck.DiscardCard(cardHand[selected]);
+            cardHand.RemoveAt(selected);
             handCount--;
 
             NewPositions();
@@ -249,6 +259,10 @@ public class CardSelector : MonoBehaviour
         {
             GameObject newCard = Instantiate(card, cam.transform);
             cardDisplays.Add(newCard);
+            cardHand.Add(deck.DrawCard());
+            int i = cardHand[cardHand.Count - 1];
+            newCard.transform.Find("Icon").GetComponent<SpriteRenderer>().sprite = icons[i - 1];
+
             handCount++;
 
             NewPositions();

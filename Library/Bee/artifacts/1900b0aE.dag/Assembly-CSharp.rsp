@@ -367,6 +367,7 @@
 "Assets/EndAttack.cs"
 "Assets/Scripts/Managers/AttackSelector.cs"
 "Assets/Scripts/Managers/CardSelector.cs"
+"Assets/Scripts/Managers/DeckManager.cs"
 "Assets/Scripts/Objects/CameraController.cs"
 "Assets/Scripts/Objects/CombatWarp.cs"
 "Assets/Scripts/Objects/Particle.cs"
