@@ -65,6 +65,7 @@ public class AttackSelector : MonoBehaviour
         {
             newAttack = Instantiate(attacks[cards.GetCardID()], pc.combatPlayer.transform);
             nextCheck = Time.time + 0.1f;
+            CanCancel(false);
         }
         else
         {
@@ -117,6 +118,11 @@ public class AttackSelector : MonoBehaviour
         currentAttackParticle = Instantiate(attackParticle, pc.combatPlayer.transform);
         currentAttackParticle.transform.Translate(new Vector3(pc.attackDir * (pc.onUpper ? 1.25f : 1), 0, 0));
         currentAttackParticle.transform.parent = null;
+    }
+
+    public void CanCancel(bool cancellable)
+    {
+        pc.canCancel = cancellable;
     }
 
     public void JumpCancel()

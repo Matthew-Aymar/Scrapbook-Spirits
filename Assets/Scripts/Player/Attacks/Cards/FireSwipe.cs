@@ -52,6 +52,7 @@ public class FireSwipe : Attack
     {
         if (timeoutTime != 0 && timeoutTime + timeout < Time.time)
         {
+            attacker.CanCancel(true);
             attacker.UnlockMovement();
             attacker.BreakHold();
             Destroy(this.gameObject);

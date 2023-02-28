@@ -104,7 +104,6 @@ public class CardSelector : MonoBehaviour
             i++;
         }
         holdAmount = 0;
-        selected = 1;
     }
 
     public void DropCards()
@@ -232,6 +231,9 @@ public class CardSelector : MonoBehaviour
     {
         if(handCount > 0)
         {
+            if (selected >= handCount)
+                selected = handCount - 1;
+
             basePositions.RemoveAt(selected);
             usingCard = cardDisplays[selected];
             cardDisplays.RemoveAt(selected);

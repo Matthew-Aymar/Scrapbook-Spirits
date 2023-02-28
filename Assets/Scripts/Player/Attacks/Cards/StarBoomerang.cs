@@ -70,6 +70,7 @@ public class StarBoomerang : Attack
             if(!letGo && lastAmp < Time.time - 0.25f)
             {
                 attacker.UnlockMovement();
+                attacker.CanCancel(true);
                 letGo = true;
                 timeoutTime = Time.time;
                 returnTime = Time.time;
@@ -110,6 +111,7 @@ public class StarBoomerang : Attack
         if (chargeTime + chargeAmount < Time.time)
         {
             chargeTime = 0;
+            attacker.CanCancel(true);
             return true;
         }
 

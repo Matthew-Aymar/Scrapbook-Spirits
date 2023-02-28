@@ -13,6 +13,7 @@ public class FirePillar : Attack
             chargeAmount = 0.25f;
             chargeTime = Time.time;
             timeout = 0.25f;
+
             return true;
         }
         else
@@ -68,6 +69,7 @@ public class FirePillar : Attack
         if (timeoutTime != 0 && timeoutTime + timeout < Time.time)
         {
             attacker.UnlockMovement();
+            attacker.CanCancel(true);
             Destroy(this.gameObject);
             return true;
         }

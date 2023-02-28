@@ -55,6 +55,8 @@ public class PlayerCombat : MonoBehaviour
     public int attackDir;       //Direction to enemy
     public GameObject enemy;
 
+    public bool canCancel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +64,8 @@ public class PlayerCombat : MonoBehaviour
         sr = combatPlayer.GetComponentInChildren<SpriteRenderer>();
         combatRb = combatPlayer.GetComponent<Rigidbody2D>();
         SwapWalls(onUpper);
+
+        canCancel = true;
     }
 
     // Update is called once per frame
@@ -108,13 +112,7 @@ public class PlayerCombat : MonoBehaviour
                     attacker.BreakHold();
                 }
 
-                bool chargingCard = false;
-                if(attacker.inCharge && cards.usingCard)
-                {
-                    chargingCard = true;
-                }
-
-                if (!inFall && !inJump && !chargingCard)
+                if (!inFall && !inJump && canCancel)
                 {
                     if (canJump && (Input.GetButton("Jump") || Input.GetButton("Interact")))
                     {
@@ -175,11 +173,12 @@ public class PlayerCombat : MonoBehaviour
                                     anim.Play("Wisp_Charge");
                                     anim.SetInteger("State", 3);
                                 }
+
+                                combatRb.velocity = combatRb.velocity * 0.15f;
+                                movementLocked = true;
                             }
 
-                            combatRb.velocity = combatRb.velocity * 0.15f;
                             attacker.NewAttack(false);
-                            movementLocked = true;
                         }
                         else if (Input.GetButton("Right"))
                         {
@@ -222,15 +221,15 @@ public class PlayerCombat : MonoBehaviour
                                 }
 
                                 cards.UseCard();
+
+                                combatRb.velocity = combatRb.velocity * 0.15f;
+                                movementLocked = true;
                             }
 
                             if (attacker.nextCheck < Time.time)
                             {
                                 attacker.NewAttack(true);
                             }
-
-                            combatRb.velocity = combatRb.velocity * 0.15f;
-                            movementLocked = true;
                         }
                         else if(Input.GetButtonUp("Attack"))
                         {
