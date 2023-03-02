@@ -55,6 +55,7 @@ public class FireSwipe : Attack
             attacker.CanCancel(true);
             attacker.UnlockMovement();
             attacker.BreakHold();
+            attacker.StopUsing();
             Destroy(this.gameObject);
             return true;
         }

@@ -73,7 +73,7 @@ public class CardSelector : MonoBehaviour
         }
         else if(holding)
         {
-            if(holdAmount < 2.0f)
+            if (holdAmount < 2.0f)
             {
                 int i = 0;
                 foreach (GameObject card in cardDisplays)
@@ -84,17 +84,9 @@ public class CardSelector : MonoBehaviour
 
                 holdAmount += Time.deltaTime * 15;
             }
-            else 
-            {
-                if(cardDisplays.Count != 0 && !usingCard)
-                {
-                    if (selected > cardDisplays.Count - 1)
-                        selected = cardDisplays.Count - 1;
-
-                    cardDisplays[selected].transform.Find("card_base").GetComponent<SpriteRenderer>().color = new Color(0.9f, 0.85f, 1f, 1);
-                }
-            }
         }
+
+        UpdateColors();
     }
 
     public void HoldCards()
@@ -110,6 +102,7 @@ public class CardSelector : MonoBehaviour
             i++;
         }
         holdAmount = 0;
+        selected = 0;
     }
 
     public void DropCards()
@@ -122,7 +115,6 @@ public class CardSelector : MonoBehaviour
         foreach (GameObject card in cardDisplays)
         {
             card.transform.localPosition = basePositions[i];
-            cardDisplays[i].transform.Find("card_base").GetComponent<SpriteRenderer>().color = Color.white;
             i++;
         }
     }
@@ -149,7 +141,6 @@ public class CardSelector : MonoBehaviour
     {
         if (selected >= 0 && selected < cardDisplays.Count - 1)
         {
-            cardDisplays[selected].transform.Find("card_base").GetComponent<SpriteRenderer>().color = Color.white;
             selected++;
         }
     }
@@ -158,7 +149,6 @@ public class CardSelector : MonoBehaviour
     {
         if(selected > 0 && selected < cardDisplays.Count)
         {
-            cardDisplays[selected].transform.Find("card_base").GetComponent<SpriteRenderer>().color = Color.white;
             selected--;
         }
     }
@@ -273,5 +263,24 @@ public class CardSelector : MonoBehaviour
     {
         if(usingCard)
             Destroy(usingCard);
+    }
+
+    public void UpdateColors()
+    {
+        int count = 0;
+        foreach (GameObject card in cardDisplays)
+        {
+            SpriteRenderer[] renderers = card.GetComponentsInChildren<SpriteRenderer>();
+            Color c = Color.white;
+            if (count == selected && !usingCard && holding)
+                c = new Color(0.9f, 0.85f, 1.0f);
+
+            for (int x = 0; x < renderers.Length; x++)
+            {
+                renderers[x].color = c;
+            }
+
+            count++;
+        }
     }
 }

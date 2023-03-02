@@ -17,6 +17,7 @@ public class PlayerCombat : MonoBehaviour
     public PlayerMovement pm;
     public AttackSelector attacker;
     public CardSelector cards;
+    public EnemyManager enemy;
 
     private Rigidbody2D combatRb;
     private Animator anim;
@@ -53,8 +54,6 @@ public class PlayerCombat : MonoBehaviour
     private bool justAttacked = false;
 
     public int attackDir;       //Direction to enemy
-    public GameObject enemy;
-
     public bool canCancel;
 
     // Start is called before the first frame update
@@ -73,29 +72,25 @@ public class PlayerCombat : MonoBehaviour
     {
         if(inCombat)
         {
-            if(enemy)
+            if (enemy.currentEnemy && combatPlayer.transform.localPosition.x < enemy.currentEnemy.transform.localPosition.x)
             {
-                if (combatPlayer.transform.localPosition.x < enemy.transform.localPosition.x)
-                {
-                    attackDir = 1;
-                    sr.flipX = false;
-                }
-                else
-                {
-                    attackDir = -1;
-                    sr.flipX = true;
-                }
+                attackDir = 1;
+                sr.flipX = false;
+            }
+            else
+            {
+                attackDir = -1;
+                sr.flipX = true;
             }
 
             if (!combatPlayer.activeSelf && Time.time > transitionTime)
             {
                 combatPlayer.SetActive(true);
+                enemy.NewEnemy();
                 cards.ShowCards();
                 pm.enabled = false;
                 this.gameObject.GetComponent<Rigidbody2D>().simulated = false;
                 canJump = true;
-
-                enemy = GameObject.FindGameObjectWithTag("Enemy");
             }
             else
             {
@@ -106,10 +101,16 @@ public class PlayerCombat : MonoBehaviour
                     dir = 0;
                     shouldMove = false;
                 }
-                else if (Input.GetButtonUp("Special") && !inAttackAnim)
+                else if (Input.GetButtonUp("Special") && !inAttackAnim && !attacker.inCharge)
                 {
                     cards.DropCards();
                     attacker.BreakHold();
+                    attacker.StopUsing();
+                }
+
+                if(cards.holding && !inAttackAnim && !Input.GetButton("Special"))
+                {
+                    cards.DropCards();
                 }
 
                 if (!inFall && !inJump && canCancel)
@@ -189,6 +190,7 @@ public class PlayerCombat : MonoBehaviour
                             shouldMove = true;
                             dir = 1;
                             attacker.BreakHold();
+                            attacker.StopUsing();
                         }
                         else if (Input.GetButton("Left"))
                         {
@@ -199,6 +201,7 @@ public class PlayerCombat : MonoBehaviour
                             shouldMove = true;
                             dir = -1;
                             attacker.BreakHold();
+                            attacker.StopUsing();
                         }
                         else
                         {
@@ -206,6 +209,7 @@ public class PlayerCombat : MonoBehaviour
                                 anim.SetInteger("State", 0);
                             dir = 0;
                             attacker.BreakHold();
+                            attacker.StopUsing();
                         }
                     }
                     else if (cards.holding) //Card-based attacks and inputs
@@ -268,6 +272,7 @@ public class PlayerCombat : MonoBehaviour
                                 anim.SetInteger("State", 0);
                             dir = 0;
                             attacker.BreakHold();
+                            attacker.StopUsing();
                         }
                     }
                 }

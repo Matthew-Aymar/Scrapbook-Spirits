@@ -69,6 +69,9 @@ public class AttackSelector : MonoBehaviour
         }
         else
         {
+            if (cards.usingCard)
+                StopUsing();
+
             newAttack = Instantiate(attacks[0], pc.combatPlayer.transform);
         }
 
@@ -98,13 +101,18 @@ public class AttackSelector : MonoBehaviour
         if(isHeld)
         {
             isHeld = false;
-            cards.StopUsingCard();
         }
+    }
+
+    public void StopUsing()
+    {
+        cards.StopUsingCard();
     }
 
     public void UnlockMovement()
     {
         pc.movementLocked = false;
+        cards.DropCards();
     }
 
     public void DestroyCharge()

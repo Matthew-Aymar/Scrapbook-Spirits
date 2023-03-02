@@ -1746,9 +1746,10 @@ GameObject:
   - component: {fileID: 1560456367}
   - component: {fileID: 1560456368}
   - component: {fileID: 1560456369}
+  - component: {fileID: 1560456370}
   m_Layer: 0
   m_Name: CombatManager
-  m_TagString: Untagged
+  m_TagString: CombatManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1838,6 +1839,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2525e3b2e49866547b43b3c0f54595cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeDeck: 
+--- !u!114 &1560456370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560456364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f259d0cba99c6f0459d75647e7c66cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies:
+  - {fileID: 4560261787024644865, guid: cfe8993a20f14984a9903430d6275cc8, type: 3}
+  currentEnemy: {fileID: 0}
+  cam: {fileID: 519420032}
+  lr: {fileID: 4083016424617096027, guid: b933de15b64d86b45b6685b1d73fae11, type: 3}
+  warnings: []
 --- !u!1 &1691780274
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,6 +2064,7 @@ MonoBehaviour:
   pm: {fileID: 1691780277}
   attacker: {fileID: 1560456367}
   cards: {fileID: 1560456368}
+  enemy: {fileID: 1560456370}
   dir: 0
   speed: 25
   jump: 30
@@ -2054,7 +2075,6 @@ MonoBehaviour:
   movementLocked: 0
   inAttackAnim: 0
   attackDir: 0
-  enemy: {fileID: 0}
   canCancel: 0
 --- !u!4 &1734813826 stripped
 Transform:
@@ -2079,7 +2099,7 @@ GameObject:
   - component: {fileID: 1796374958}
   m_Layer: 15
   m_Name: Combat_Player
-  m_TagString: Untagged
+  m_TagString: CombatPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

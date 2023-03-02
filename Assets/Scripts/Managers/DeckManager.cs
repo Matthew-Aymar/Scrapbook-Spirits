@@ -5,7 +5,7 @@ using UnityEngine;
 public class DeckManager : MonoBehaviour
 {
     private List<int> deck = new List<int>();           //The list of cards set through the deckbuilding UI
-    public List<int> activeDeck;                       //Cards to be shuffled mid combat
+    public List<int> activeDeck;                        //Cards to be shuffled mid combat
     private List<int> discard;                          //Cards to be readded to the deck when it runs out
 
     public void StartDeck()

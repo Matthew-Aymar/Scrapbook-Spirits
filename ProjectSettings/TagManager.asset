@@ -11,6 +11,9 @@ TagManager:
   - FirePillar
   - StarBoomerang
   - Enemy
+  - CombatPlayer
+  - Indicator
+  - CombatManager
   layers:
   - Default
   - TransparentFX
