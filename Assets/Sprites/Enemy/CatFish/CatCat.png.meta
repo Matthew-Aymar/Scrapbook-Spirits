@@ -1,22 +1,7 @@
 fileFormatVersion: 2
-guid: c2c5db287b7bc0f4b88e7c65ff12beb4
+guid: 59e960de9b084eb47bee01fd932e4178
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -3898252175264870492
-    second: CatCat_0
-  - first:
-      213: -1557936818691896582
-    second: CatCat_1
-  - first:
-      213: 2578253397922866834
-    second: CatCat_2
-  - first:
-      213: -1661948760747238132
-    second: CatCat_3
-  - first:
-      213: 3802737094364603944
-    second: CatCat_4
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -96,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,11 +89,35 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -119,13 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CatCat_0
+      name: CatCat-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 512
+        width: 312
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4af8178ec40a6e9c0800000000000000
-      internalID: -3898252175264870492
+      spriteID: f1100eb9253136e41879918f21a594e5
+      internalID: -1019157298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CatCat_1
+      name: CatCat-Sheet_1
       rect:
         serializedVersion: 2
-        x: 512
+        x: 312
         y: 0
-        width: 512
-        height: 512
+        width: 312
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afa0e5bb7b8116ae0800000000000000
-      internalID: -1557936818691896582
+      spriteID: 3052322200c84f543ba9db693f6e3f6d
+      internalID: 2095496795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CatCat_2
+      name: CatCat-Sheet_2
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 624
         y: 0
-        width: 512
-        height: 512
+        width: 312
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 296e2242ecbc7c320800000000000000
-      internalID: 2578253397922866834
+      spriteID: 080dcce799db8d34ab3ecf6eab341f25
+      internalID: 109543753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CatCat_3
+      name: CatCat-Sheet_3
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 936
         y: 0
-        width: 512
-        height: 512
+        width: 312
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0d92c058629fe8e0800000000000000
-      internalID: -1661948760747238132
+      spriteID: 71ce33919a095154cad48ed58016efc5
+      internalID: 665307190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CatCat_4
+      name: CatCat-Sheet_4
       rect:
         serializedVersion: 2
-        x: 2048
+        x: 1248
         y: 0
-        width: 512
-        height: 512
+        width: 312
+        height: 312
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,8 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 826adc35d3906c430800000000000000
-      internalID: 3802737094364603944
+      spriteID: d1329a59cdd43b24f958804868b5a36b
+      internalID: 1891221600
       vertices: []
       indices: 
       edges: []
@@ -234,11 +243,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CatCat_1: -1557936818691896582
-      CatCat_2: 2578253397922866834
-      CatCat_4: 3802737094364603944
-      CatCat_0: -3898252175264870492
-      CatCat_3: -1661948760747238132
+      CatCat-Sheet_0: -1019157298
+      CatCat-Sheet_3: 665307190
+      CatCat-Sheet_1: 2095496795
+      CatCat-Sheet_4: 1891221600
+      CatCat-Sheet_2: 109543753
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

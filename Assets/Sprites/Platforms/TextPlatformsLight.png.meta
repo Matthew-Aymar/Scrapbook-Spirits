@@ -1,0 +1,1048 @@
+fileFormatVersion: 2
+guid: 9de29a37be0e8694b8daa67ff882e87b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 2
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TextPlatformsLight_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2560
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce5d16a82972d14582d39328caade0a
+      internalID: 975608610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2496
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53bbdf37e7b860841a3a5a9401f8b89b
+      internalID: 1341429930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2432
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47fb101486e300544985ccc09c6d0da2
+      internalID: 669094177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2368
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2ae25577952334a83bc9a51b93b61d
+      internalID: 536362568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2304
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db31052b2b1bd654d8359589aeeed21b
+      internalID: 780199632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2240
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc8e6e1b4d69784ebde0f042047e396
+      internalID: 1245790566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2176
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5bf152b5f9cf494ca655558c438fa6a
+      internalID: 1067972787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2112
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab775770e47b294bbc09e304b159d73
+      internalID: -193920225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5b09823fa89724a946ec7b93fa542c
+      internalID: -818654066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1984
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7011e9a2c2148774faba9de99b1d064b
+      internalID: 1281220077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1f5141cc3760a48a1aacc9f02aeb46
+      internalID: -1049805796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1856
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b88322832be4254d8115ade42ee292b
+      internalID: -529568426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1792
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2acfff36fcbbd540801bd8394ea506b
+      internalID: -1257032184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1728
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fcc1e9c042f38e418c63c33629a50e1
+      internalID: 1725143031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1664
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740122c40af4a714ca81fdbc167c43e5
+      internalID: 780913110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60bf76028fc306b45b589857fd6c305f
+      internalID: 1367035984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba53e8f4b0f26b344a0d70739d107a13
+      internalID: -884022167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1472
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc570d09cde12240a6cf655e791ffab
+      internalID: -992746291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1408
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3c844731340314087c516502eac597
+      internalID: -1241815960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1344
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0009267859cdf6742910eb48819ac9a6
+      internalID: 1793936447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9472eae3129cbf34f955169904a00bcb
+      internalID: -1067562209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1216
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97213e3ee0210b84a8c4a04643d38e1b
+      internalID: 1381599957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16186ffb75a5b0a40a197be0e40be1f7
+      internalID: 167875172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1088
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d20e4eb96205b4ebcb30866a55408e
+      internalID: -245423410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44416a639abf9274194d73ce6ea92b2a
+      internalID: 1812022510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d920e972b312cd48b11d4b01e18c91d
+      internalID: -37628461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03bd372a698f36c4b879d0b9a97a17d1
+      internalID: 1464807675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 832
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cbcf9b71b57aff4692d5722c4a8b088
+      internalID: 1248157918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9185087294af2764ca125f65b55b1ca8
+      internalID: -640362069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac867d25ffb8464daeadcde70808fb2
+      internalID: 1472948206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a48ad0891a10bc43b43d1db4dd7b549
+      internalID: 722266935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3524c6e1df5f7b49ae22beac54395d1
+      internalID: 352246481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc50f51d108f01469a9024bb4e47ae3
+      internalID: 829818196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f096ea74ebe86b4449a507a7ae93b780
+      internalID: -717747197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05b28c18b893534b809af6e7c04c8a7
+      internalID: -1254104684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74c807239faa12c49b8e7f2ef516070b
+      internalID: 1241263416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94bbcdca4f6433849b8ef5c023187b2c
+      internalID: -361068970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eba4fbecde9cd246bc35c2786996f15
+      internalID: -670544601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63036d432cbfea447a234273b77acc48
+      internalID: -312825580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297db96a40d57a645879773a8a026291
+      internalID: -481458465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TextPlatformsLight_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1920
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5de277ff98e4f478b00edd7b980b4a
+      internalID: -708879122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TextPlatformsLight_11: -529568426
+      TextPlatformsLight_29: 1472948206
+      TextPlatformsLight_32: 829818196
+      TextPlatformsLight_37: -670544601
+      TextPlatformsLight_13: 1725143031
+      TextPlatformsLight_3: 536362568
+      TextPlatformsLight_39: -481458465
+      TextPlatformsLight_30: 722266935
+      TextPlatformsLight_35: 1241263416
+      TextPlatformsLight_31: 352246481
+      TextPlatformsLight_22: 167875172
+      TextPlatformsLight_9: 1281220077
+      TextPlatformsLight_4: 780199632
+      TextPlatformsLight_40: -708879122
+      TextPlatformsLight_12: -1257032184
+      TextPlatformsLight_20: -1067562209
+      TextPlatformsLight_16: -884022167
+      TextPlatformsLight_1: 1341429930
+      TextPlatformsLight_2: 669094177
+      TextPlatformsLight_8: -818654066
+      TextPlatformsLight_27: 1248157918
+      TextPlatformsLight_0: 975608610
+      TextPlatformsLight_23: -245423410
+      TextPlatformsLight_26: 1464807675
+      TextPlatformsLight_28: -640362069
+      TextPlatformsLight_24: 1812022510
+      TextPlatformsLight_33: -717747197
+      TextPlatformsLight_6: 1067972787
+      TextPlatformsLight_34: -1254104684
+      TextPlatformsLight_5: 1245790566
+      TextPlatformsLight_7: -193920225
+      TextPlatformsLight_19: 1793936447
+      TextPlatformsLight_14: 780913110
+      TextPlatformsLight_15: 1367035984
+      TextPlatformsLight_17: -992746291
+      TextPlatformsLight_10: -1049805796
+      TextPlatformsLight_21: 1381599957
+      TextPlatformsLight_38: -312825580
+      TextPlatformsLight_25: -37628461
+      TextPlatformsLight_36: -361068970
+      TextPlatformsLight_18: -1241815960
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

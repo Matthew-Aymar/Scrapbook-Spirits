@@ -14,6 +14,11 @@ public class PlayerCombat : MonoBehaviour
     public GameObject wallLeftUpper;
     public GameObject wallRightUpper;
 
+    public SpriteRenderer darkBot;
+    public SpriteRenderer darkTop;
+    public SpriteRenderer lightBot;
+    public SpriteRenderer lightTop;
+
     public PlayerMovement pm;
     public AttackSelector attacker;
     public CardSelector cards;
@@ -91,8 +96,9 @@ public class PlayerCombat : MonoBehaviour
                 pm.enabled = false;
                 this.gameObject.GetComponent<Rigidbody2D>().simulated = false;
                 canJump = true;
+                combatPlayer.transform.localPosition = new Vector3(0, -2, 10);
             }
-            else
+            else if(combatPlayer.activeSelf)
             {
                 if (Input.GetButtonDown("Special") && !inAttackAnim && !movementLocked)
                 {
@@ -159,7 +165,7 @@ public class PlayerCombat : MonoBehaviour
                     shouldMove = false;
                 }
 
-                if (combatPlayer.activeSelf && !inJump && !inFall)
+                if (!inJump && !inFall)
                 {
                     if (!cards.holding && !movementLocked) //normal attacks and inputs
                     {
@@ -277,6 +283,25 @@ public class PlayerCombat : MonoBehaviour
                     }
                 }
             }
+            else
+            {
+                lightBot.color = new Color(1, 1, 1, lightBot.color.a * (1 + Time.deltaTime * 1.6f));
+                lightTop.color = new Color(1, 1, 1, lightTop.color.a * (1 + Time.deltaTime * 1.6f));
+                darkBot.color = new Color(1, 1, 1, darkBot.color.a * (1 + Time.deltaTime * 1.6f));
+                darkTop.color = new Color(1, 1, 1, darkTop.color.a * (1 + Time.deltaTime * 1.6f));
+            }
+        }
+
+        if(onUpper)
+        {
+            lightBot.gameObject.SetActive(false);
+            if(!inJump)
+                lightTop.gameObject.SetActive(true);
+        }
+        else
+        {
+            lightTop.gameObject.SetActive(false);
+            lightBot.gameObject.SetActive(true);
         }
 
         if(Input.GetKeyDown(KeyCode.I))
@@ -399,6 +424,12 @@ public class PlayerCombat : MonoBehaviour
         combatBackground.SetActive(true);
         transitionTime = 1.05f + playerSpawnBuffer;
         transitionTime += Time.time;
+
+        lightBot.color = new Color(1, 1, 1, 0.1f);
+        lightTop.color = new Color(1, 1, 1, 0.1f);
+        darkBot.color = new Color(1, 1, 1, 0.1f);
+        darkTop.color = new Color(1, 1, 1, 0.1f);
+
         inCombat = true;
     }
 
