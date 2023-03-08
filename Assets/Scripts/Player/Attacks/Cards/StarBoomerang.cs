@@ -18,6 +18,10 @@ public class StarBoomerang : Attack
 
     public GameObject AmpParticle;
 
+    public CircleCollider2D col;
+    private bool canHit;
+    private float lastHit;
+
     public override bool Init(bool held)
     {
         if (held)
@@ -61,6 +65,8 @@ public class StarBoomerang : Attack
 
         if(dir == -1)
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
+
+        col = gameObject.GetComponent<CircleCollider2D>();
     }
 
     public override void Move()
@@ -101,6 +107,9 @@ public class StarBoomerang : Attack
 
             transform.Rotate(new Vector3(0, 0, 1), 180 * Time.deltaTime * direction * Mathf.Abs(reversal));
         }
+
+        if (!canHit && lastHit < Time.time - 0.1f)
+            canHit = true;
     }
 
     public override bool CheckCharge()
@@ -130,6 +139,24 @@ public class StarBoomerang : Attack
 
     public override bool CheckCollision()
     {
+        if (!this.gameObject.activeSelf || !canHit)
+            return false;
+
+        Collider2D[] cols = new Collider2D[5];
+        col.OverlapCollider(new ContactFilter2D().NoFilter(), cols);
+        foreach (Collider2D c in cols)
+        {
+            if (!c)
+                continue;
+
+            if (c.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+            {
+                lastHit = Time.time;
+                canHit = false;
+                return true;
+            }
+        }
+
         return false;
     }
 }

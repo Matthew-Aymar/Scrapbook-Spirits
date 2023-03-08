@@ -10,6 +10,8 @@ public class EnemyManager : MonoBehaviour
     public LineRenderer lr;
     public GameObject[] warnings;
 
+    public GameObject poof;
+
     private float nextTick;
     private float tickRate = 0.05f;
 
@@ -39,6 +41,8 @@ public class EnemyManager : MonoBehaviour
     public void NewEnemy()
     {
         currentEnemy = Instantiate(enemies[Random.Range(0, enemies.Count)], cam);
+        GameObject p = Instantiate(poof, currentEnemy.transform);
+        p.transform.Rotate(new Vector3(0, 0, 1), Random.Range(0, 360));
     }
 
     public void ShowWarnings()
@@ -112,7 +116,59 @@ public class EnemyManager : MonoBehaviour
 
     public void DrawBox(BoxCollider2D b)
     {
+        LineRenderer line = lines.GetValueOrDefault(b.gameObject);
 
+        if (expandTime[warningIndex] < 1.0f)
+        {
+            expandTime[warningIndex] += Time.deltaTime * (1 / tickRate) * 2;
+        }
+        float expand = expandTime[warningIndex];
+
+        int size = (int)(b.size.y * 8 + b.size.x * 8 + 1);
+        Vector3[] linePositions = new Vector3[size];
+
+        float segmentCount = 0;
+        int lastSegment = 0;
+        for(int x = 0; x < size - 1; x++)
+        {
+            float r = Random.Range(-0.1f, 0.1f);
+
+            if(x < b.size.x * 4)
+            {
+                if (lastSegment != 0)
+                    segmentCount = 0;
+                linePositions[x] = new Vector3(b.bounds.min.x + segmentCount, b.bounds.min.y + r);
+                lastSegment = 0;
+            }
+            else if(x < b.size.x * 4 + b.size.y * 4)
+            {
+                if (lastSegment != 1)
+                    segmentCount = 0;
+                linePositions[x] = new Vector3(b.bounds.max.x + r, b.bounds.min.y + segmentCount);
+                lastSegment = 1;
+            }
+            else if(x < b.size.x * 8 + b.size.y * 4)
+            {
+                if (lastSegment != 2)
+                    segmentCount = 0;
+                linePositions[x] = new Vector3(b.bounds.max.x - segmentCount, b.bounds.max.y + r);
+                lastSegment = 2;
+            }
+            else
+            {
+                if (lastSegment != 3)
+                    segmentCount = 0;
+                linePositions[x] = new Vector3(b.bounds.min.x + r, b.bounds.max.y - segmentCount);
+                lastSegment = 3;
+            }
+
+            segmentCount += 0.25f;
+        }
+
+        linePositions[size - 1] = linePositions[0];
+
+        line.positionCount = size;
+        line.SetPositions(linePositions);
     }
 
     public void RemoveWarning(GameObject c)
@@ -120,5 +176,11 @@ public class EnemyManager : MonoBehaviour
         LineRenderer temp = lines.GetValueOrDefault(c);
         lines.Remove(c);
         Destroy(temp.gameObject);
+    }
+
+    public void StunEnemy(float d)
+    {
+        currentEnemy.GetComponent<Enemy>().Stun();
+        currentEnemy.GetComponent<Enemy>().stunEnd = Time.time + d;
     }
 }

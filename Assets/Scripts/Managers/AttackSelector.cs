@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class AttackSelector : MonoBehaviour
 {
+    public EnemyManager enemy;
     public GameObject[] attacks;
     public List<GameObject> activeAttacks = new List<GameObject>();
     public CardSelector cards;
 
     public GameObject attackParticle;
     public GameObject chargeParticle;
+    public GameObject hitFx;
 
     private GameObject currentAttackParticle;
     private GameObject currentChargeParticle;
@@ -47,6 +49,18 @@ public class AttackSelector : MonoBehaviour
             {
                 activeAttacks.RemoveAt(x);
                 Destroy(tempScript.gameObject);
+            }
+
+            if(tempScript.CheckCollision())
+            {
+                float dist = Vector3.Distance(tempScript.gameObject.transform.position, enemy.currentEnemy.transform.position);
+                Vector3 between = Vector3.MoveTowards(tempScript.gameObject.transform.position, enemy.currentEnemy.transform.position, dist * 0.67f);
+                GameObject fx = Instantiate(hitFx);
+                fx.transform.position = between;
+                fx.transform.Rotate(new Vector3(0, 0, 1), Random.Range(0, 360));
+
+                if (tempScript.heavy)
+                    enemy.StunEnemy(tempScript.stunDuration);
             }
 
             tempScript.Move();

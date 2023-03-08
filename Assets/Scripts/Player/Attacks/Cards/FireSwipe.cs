@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FireSwipe : Attack
 {
+    public CircleCollider2D col;
+    private bool canHit;
+
     public override bool Init(bool held)
     {
         if (held)
@@ -13,6 +16,8 @@ public class FireSwipe : Attack
         chargeTime = Time.time;
         speed = 15.0f;
         timeout = 0.35f;
+        heavy = true;
+        stunDuration = 2.0f;
 
         return true;
     }
@@ -26,6 +31,9 @@ public class FireSwipe : Attack
 
         if (dir == -1)
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
+
+        col = gameObject.GetComponent<CircleCollider2D>();
+        canHit = true;
     }
 
     public override void Move()
@@ -64,6 +72,23 @@ public class FireSwipe : Attack
 
     public override bool CheckCollision()
     {
+        if (!this.gameObject.activeSelf || !canHit)
+            return false;
+
+        Collider2D[] cols = new Collider2D[5];
+        col.OverlapCollider(new ContactFilter2D().NoFilter(), cols);
+        foreach (Collider2D c in cols)
+        {
+            if (!c)
+                continue;
+
+            if (c.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+            {
+                canHit = false;
+                return true;
+            }
+        }
+
         return false;
     }
 }

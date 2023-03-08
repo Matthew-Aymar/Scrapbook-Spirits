@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 6769653439187809780}
   - component: {fileID: 6769653439187809787}
   - component: {fileID: -3872288867233753328}
-  m_Layer: 0
+  - component: {fileID: 2822506392220648880}
+  m_Layer: 17
   m_Name: FireSwipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,3 +127,19 @@ MonoBehaviour:
   speed: 0
   timeout: 0
   timeoutTime: 0
+--- !u!58 &2822506392220648880
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6769653439187809785}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.64

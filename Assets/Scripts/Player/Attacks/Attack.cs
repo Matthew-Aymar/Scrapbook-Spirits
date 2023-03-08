@@ -14,6 +14,8 @@ public abstract class Attack : MonoBehaviour
     public float speed;
     public float timeout;
     public float timeoutTime;
+    public bool heavy;
+    public float stunDuration;
 
     public abstract bool Init(bool held);
 

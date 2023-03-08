@@ -2256,6 +2256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4f5ac9ff2699df418aada5b9d535592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 1560456370}
   attacks:
   - {fileID: 5515685245621879743, guid: 3d08e5bfce334aa45b3d1108e60ccda6, type: 3}
   - {fileID: 4779257189396258648, guid: 15fc092a5970a12449408ddf7c76a606, type: 3}
@@ -2265,6 +2266,7 @@ MonoBehaviour:
   cards: {fileID: 1560456368}
   attackParticle: {fileID: 408600293569075505, guid: 1efa0a9ba1bf3c64383612e93d4e1986, type: 3}
   chargeParticle: {fileID: 5902812874912494253, guid: 765828b0df5b2394b9f3916cd2f204eb, type: 3}
+  hitFx: {fileID: 6569400792466693358, guid: 930b7c41214b03f448406b907dfdd464, type: 3}
   pc: {fileID: 1691780281}
   inCharge: 0
   isHeld: 0
@@ -2333,6 +2335,7 @@ MonoBehaviour:
   cam: {fileID: 519420032}
   lr: {fileID: 4083016424617096027, guid: b933de15b64d86b45b6685b1d73fae11, type: 3}
   warnings: []
+  poof: {fileID: 1548842122091315617, guid: 27f52a7a35d53224bb44669491a2cb22, type: 3}
 --- !u!1 &1691780274
 GameObject:
   m_ObjectHideFlags: 0
@@ -2540,6 +2543,7 @@ MonoBehaviour:
   darkTop: {fileID: 315824212}
   lightBot: {fileID: 742042845}
   lightTop: {fileID: 342124991}
+  spawnObject: {fileID: 8838357069091414175, guid: fb8f21ad8bb6cfd44bdc94d0bbb3bb56, type: 3}
   pm: {fileID: 1691780277}
   attacker: {fileID: 1560456367}
   cards: {fileID: 1560456368}
@@ -2549,7 +2553,7 @@ MonoBehaviour:
   jump: 35
   platform: 2.5
   ground: -2
-  playerSpawnBuffer: 0.4
+  inTransition: 0
   onUpper: 0
   movementLocked: 0
   inAttackAnim: 0
@@ -2591,7 +2595,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796374956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 0, y: -2, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

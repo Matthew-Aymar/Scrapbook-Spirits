@@ -5,6 +5,7 @@ using UnityEngine;
 public class BasicAttack : Attack
 {
     public GameObject particle;
+    private BoxCollider2D col;
 
     public override bool Init(bool held)
     {
@@ -40,6 +41,8 @@ public class BasicAttack : Attack
             part.GetComponent<SpriteRenderer>().flipX = false;
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
+
+        col = gameObject.GetComponent<BoxCollider2D>();
     }
 
     public override void Move()
@@ -76,6 +79,23 @@ public class BasicAttack : Attack
 
     public override bool CheckCollision()
     {
+        if (!this.gameObject.activeSelf)
+            return false;
+
+        Collider2D[] cols = new Collider2D[5];
+        col.OverlapCollider(new ContactFilter2D().NoFilter(), cols);
+        foreach(Collider2D c in cols)
+        {
+            if (!c)
+                continue;
+
+            if(c.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+            {
+                timeoutTime = Time.time - timeout;
+                return true;
+            }
+        }
+
         return false;
     }
 }

@@ -402,7 +402,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (interacting)
         {
-            if (collision.gameObject.layer == LayerMask.NameToLayer("Door"))
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Door") && !pc.GetComponent<PlayerCombat>().inTransition)
             {
                 pc.StartTransition();
             }

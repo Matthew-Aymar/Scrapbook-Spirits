@@ -19,6 +19,8 @@ public class PlayerCombat : MonoBehaviour
     public SpriteRenderer lightBot;
     public SpriteRenderer lightTop;
 
+    public GameObject spawnObject;
+
     public PlayerMovement pm;
     public AttackSelector attacker;
     public CardSelector cards;
@@ -34,8 +36,7 @@ public class PlayerCombat : MonoBehaviour
     public float platform;  //y value of the second level during combat
     public float ground;    //y value of the first level
 
-    public float playerSpawnBuffer;
-    private float transitionTime;
+    public bool inTransition;
 
     private bool inJump;
     private bool inFall;
@@ -77,26 +78,30 @@ public class PlayerCombat : MonoBehaviour
     {
         if(inCombat)
         {
-            if (enemy.currentEnemy && combatPlayer.transform.localPosition.x < enemy.currentEnemy.transform.localPosition.x)
+            if (enemy.currentEnemy && Vector3.Distance(new Vector3(combatPlayer.transform.localPosition.x,0,0), new Vector3(enemy.currentEnemy.transform.localPosition.x,0,0)) > 0.25f)
             {
-                attackDir = 1;
-                sr.flipX = false;
-            }
-            else
-            {
-                attackDir = -1;
-                sr.flipX = true;
+                if (combatPlayer.transform.localPosition.x < enemy.currentEnemy.transform.localPosition.x)
+                {
+                    attackDir = 1;
+                    sr.flipX = false;
+                }
+                else
+                {
+                    attackDir = -1;
+                    sr.flipX = true;
+                }
             }
 
-            if (!combatPlayer.activeSelf && Time.time > transitionTime)
+            if (combatPlayer.activeSelf && inTransition)
             {
-                combatPlayer.SetActive(true);
                 enemy.NewEnemy();
                 cards.ShowCards();
                 pm.enabled = false;
                 this.gameObject.GetComponent<Rigidbody2D>().simulated = false;
                 canJump = true;
                 combatPlayer.transform.localPosition = new Vector3(0, -2, 10);
+
+                inTransition = false;
             }
             else if(combatPlayer.activeSelf)
             {
@@ -294,14 +299,14 @@ public class PlayerCombat : MonoBehaviour
 
         if(onUpper)
         {
-            lightBot.gameObject.SetActive(false);
+            lightBot.enabled = false;
             if(!inJump)
-                lightTop.gameObject.SetActive(true);
+                lightTop.enabled = true;
         }
         else
         {
-            lightTop.gameObject.SetActive(false);
-            lightBot.gameObject.SetActive(true);
+            lightTop.enabled = false;
+            lightBot.enabled = true;
         }
 
         if(Input.GetKeyDown(KeyCode.I))
@@ -422,13 +427,16 @@ public class PlayerCombat : MonoBehaviour
     {
         combatTransition.SetActive(true);
         combatBackground.SetActive(true);
-        transitionTime = 1.05f + playerSpawnBuffer;
-        transitionTime += Time.time;
+        inTransition = true;
 
         lightBot.color = new Color(1, 1, 1, 0.1f);
         lightTop.color = new Color(1, 1, 1, 0.1f);
         darkBot.color = new Color(1, 1, 1, 0.1f);
         darkTop.color = new Color(1, 1, 1, 0.1f);
+
+        GameObject temp = Instantiate(spawnObject, cam.transform);
+        temp.transform.Translate(Vector2.up * 20);
+        temp.GetComponent<SpawnFireball>().player = this;
 
         inCombat = true;
     }

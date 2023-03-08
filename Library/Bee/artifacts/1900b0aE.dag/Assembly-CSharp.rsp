@@ -366,6 +366,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/EndAttack.cs"
 "Assets/Scripts/Enemies/CatFish.cs"
+"Assets/Scripts/Enemies/Enemy.cs"
 "Assets/Scripts/Managers/AttackSelector.cs"
 "Assets/Scripts/Managers/CardSelector.cs"
 "Assets/Scripts/Managers/DeckManager.cs"
@@ -381,6 +382,7 @@
 "Assets/Scripts/Player/FireScript.cs"
 "Assets/Scripts/Player/PlayerCombat.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
+"Assets/Scripts/Player/SpawnFireball.cs"
 "Assets/SlerpTest.cs"
 -langversion:9.0
 

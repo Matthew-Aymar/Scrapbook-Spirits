@@ -5,6 +5,9 @@ using UnityEngine;
 public class FirePillar : Attack
 {
     //Use as an example of a SUSTAINED attack (only 1 active + only active while button held)
+    public BoxCollider2D col;
+    private bool canHit;
+    private float lastHit;
 
     public override bool Init(bool held)
     {
@@ -42,11 +45,14 @@ public class FirePillar : Attack
 
         if (dir == -1)
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
+
+        col = gameObject.GetComponent<BoxCollider2D>();
     }
 
     public override void Move()
     {
-
+        if (!canHit && lastHit < Time.time - 0.1f)
+            canHit = true;
     }
 
     public override bool CheckCharge()
@@ -79,6 +85,24 @@ public class FirePillar : Attack
 
     public override bool CheckCollision()
     {
+        if (!this.gameObject.activeSelf || !canHit)
+            return false;
+
+        Collider2D[] cols = new Collider2D[5];
+        col.OverlapCollider(new ContactFilter2D().NoFilter(), cols);
+        foreach (Collider2D c in cols)
+        {
+            if (!c)
+                continue;
+
+            if (c.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+            {
+                lastHit = Time.time;
+                canHit = false;
+                return true;
+            }
+        }
+
         return false;
     }
 }

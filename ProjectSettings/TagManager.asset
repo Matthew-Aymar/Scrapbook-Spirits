@@ -32,9 +32,9 @@ TagManager:
   - UI
   - CombatPlayer
   - CombatWall
-  - 
-  - 
-  - 
+  - PlayerAttack
+  - Indicator
+  - EnemyAttack
   - 
   - 
   - 
