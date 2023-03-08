@@ -16,7 +16,6 @@ public class EnemyManager : MonoBehaviour
     private float tickRate = 0.05f;
 
     Dictionary<GameObject, LineRenderer> lines = new Dictionary<GameObject, LineRenderer>();
-    List<float> expandTime = new List<float>();
     private int warningIndex;
     // Start is called before the first frame update
     void Start()
@@ -60,10 +59,6 @@ public class EnemyManager : MonoBehaviour
                 if(!lines.ContainsKey(warnings[x]))
                 {
                     lines.Add(warnings[x], Instantiate(lr, warnings[x].transform));
-                    if(warningIndex >= expandTime.Count)
-                        expandTime.Add(0);
-                    else
-                        expandTime[warningIndex] = 0;
                 }
 
                 Collider2D col = warnings[x].GetComponent<Collider2D>();
@@ -85,17 +80,11 @@ public class EnemyManager : MonoBehaviour
     {
         LineRenderer line = lines.GetValueOrDefault(c.gameObject);
 
-        if(expandTime[warningIndex] < 1.0f)
-        {
-            expandTime[warningIndex] += Time.deltaTime * (1 / tickRate) * 2;
-        }
-        float expand = expandTime[warningIndex];
-
         int numPoints = 61;
         float r = c.radius;
         float rotAmount = 400 / numPoints;
         GameObject temp = new GameObject();
-        temp.transform.position = new Vector3(r * expand, 0, 0);
+        temp.transform.position = new Vector3(r, 0, 0);
         Vector3[] positions = new Vector3[numPoints];
 
         for(int x = 0; x < numPoints; x++)
@@ -104,7 +93,7 @@ public class EnemyManager : MonoBehaviour
 
             temp.transform.position = Vector3.zero;
             temp.transform.Rotate(new Vector3(0,0,1), rotAmount);
-            temp.transform.Translate(Vector3.right * (r * Random.Range(0.9f, 1.1f) * expand));
+            temp.transform.Translate(Vector3.right * (r * Random.Range(0.9f, 1.1f)));
         }
 
         positions[numPoints - 1] = positions[0];
@@ -117,12 +106,6 @@ public class EnemyManager : MonoBehaviour
     public void DrawBox(BoxCollider2D b)
     {
         LineRenderer line = lines.GetValueOrDefault(b.gameObject);
-
-        if (expandTime[warningIndex] < 1.0f)
-        {
-            expandTime[warningIndex] += Time.deltaTime * (1 / tickRate) * 2;
-        }
-        float expand = expandTime[warningIndex];
 
         int size = (int)(b.size.y * 8 + b.size.x * 8 + 1);
         Vector3[] linePositions = new Vector3[size];

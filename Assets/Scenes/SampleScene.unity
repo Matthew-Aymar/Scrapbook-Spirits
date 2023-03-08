@@ -360,7 +360,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 1291911657, guid: 6ac465c744c960344a6b9ddb6e92e883, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 19.205938, y: 0.64000005}
@@ -590,7 +590,7 @@ SpriteRenderer:
   m_SortingOrder: 2
   m_Sprite: {fileID: 975608610, guid: 9de29a37be0e8694b8daa67ff882e87b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 19.205938, y: 0.64000005}

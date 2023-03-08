@@ -80,15 +80,18 @@ public class PlayerCombat : MonoBehaviour
         {
             if (enemy.currentEnemy && Vector3.Distance(new Vector3(combatPlayer.transform.localPosition.x,0,0), new Vector3(enemy.currentEnemy.transform.localPosition.x,0,0)) > 0.25f)
             {
-                if (combatPlayer.transform.localPosition.x < enemy.currentEnemy.transform.localPosition.x)
+                if(!cards.usingCard)
                 {
-                    attackDir = 1;
-                    sr.flipX = false;
-                }
-                else
-                {
-                    attackDir = -1;
-                    sr.flipX = true;
+                    if (combatPlayer.transform.localPosition.x < enemy.currentEnemy.transform.localPosition.x)
+                    {
+                        attackDir = 1;
+                        sr.flipX = false;
+                    }
+                    else
+                    {
+                        attackDir = -1;
+                        sr.flipX = true;
+                    }
                 }
             }
 
@@ -309,7 +312,7 @@ public class PlayerCombat : MonoBehaviour
             lightBot.enabled = true;
         }
 
-        if(Input.GetKeyDown(KeyCode.I))
+        if(Input.GetButtonDown("Draw"))
         {
             cards.DrawCard();
         }

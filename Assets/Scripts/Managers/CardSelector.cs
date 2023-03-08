@@ -7,6 +7,7 @@ public class CardSelector : MonoBehaviour
     public GameObject cam;
     public GameObject card;
     public DeckManager deck;
+    public GameObject player;
 
     public List<GameObject> cardDisplays;
     public List<int> cardHand;
@@ -103,6 +104,8 @@ public class CardSelector : MonoBehaviour
         }
         holdAmount = 0;
         selected = 0;
+
+        Time.timeScale = 0.25f;
     }
 
     public void DropCards()
@@ -117,6 +120,8 @@ public class CardSelector : MonoBehaviour
             card.transform.localPosition = basePositions[i];
             i++;
         }
+
+        Time.timeScale = 1.0f;
     }
 
     public void ShowCards()
@@ -127,6 +132,8 @@ public class CardSelector : MonoBehaviour
             firstMove = true;
             firstMoveAmount = 0;
         }
+
+        player = GameObject.FindGameObjectWithTag("CombatPlayer");
     }
 
     public void HideCards()
@@ -143,14 +150,18 @@ public class CardSelector : MonoBehaviour
         {
             selected++;
         }
+        else if (selected == cardDisplays.Count - 1)
+            selected = 0;
     }
 
     public void SelectLeft()
     {
-        if(selected > 0 && selected < cardDisplays.Count)
+        if (selected > 0 && selected < cardDisplays.Count)
         {
             selected--;
         }
+        else if (selected == 0)
+            selected = cardDisplays.Count - 1;
     }
 
     public int GetCardID()
@@ -239,8 +250,20 @@ public class CardSelector : MonoBehaviour
             cardHand.RemoveAt(selected);
             handCount--;
 
+            usingCard.transform.localPosition = new Vector3(player.gameObject.transform.localPosition.x, player.gameObject.transform.localPosition.y + 1.5f, player.gameObject.transform.localPosition.z - 1);
+            SpriteRenderer back = usingCard.transform.Find("card_base").gameObject.GetComponent<SpriteRenderer>();
+            SpriteRenderer icon = usingCard.transform.Find("Icon").gameObject.GetComponent<SpriteRenderer>();
+            back.sortingLayerName = "Combat";
+            back.sortingOrder = 0;
+            icon.sortingLayerName = "Combat";
+            icon.sortingOrder = 1;
+            usingCard.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            usingCard.transform.rotation = new Quaternion();
+
             NewPositions();
         }
+
+        Time.timeScale = 1.0f;
     }
 
     public void DrawCard()

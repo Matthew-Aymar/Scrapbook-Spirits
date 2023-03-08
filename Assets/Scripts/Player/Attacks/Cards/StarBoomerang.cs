@@ -24,20 +24,17 @@ public class StarBoomerang : Attack
 
     public override bool Init(bool held)
     {
-        if (held)
+        GameObject[] stars = GameObject.FindGameObjectsWithTag("StarBoomerang");
+        foreach (GameObject original in stars)
         {
-            GameObject[] stars = GameObject.FindGameObjectsWithTag("StarBoomerang");
-            foreach (GameObject original in stars)
+            if (original.Equals(this.gameObject))
+                continue;
+            else if (!original.GetComponent<StarBoomerang>().letGo)
             {
-                if (original.Equals(this.gameObject))
-                    continue;
-                else if(!original.GetComponent<StarBoomerang>().letGo)
-                {
-                    original.GetComponent<StarBoomerang>().totalAmp += Time.time - original.GetComponent<StarBoomerang>().lastAmp;
-                    original.GetComponent<StarBoomerang>().lastAmp = Time.time;
+                original.GetComponent<StarBoomerang>().totalAmp += Time.time - original.GetComponent<StarBoomerang>().lastAmp;
+                original.GetComponent<StarBoomerang>().lastAmp = Time.time;
 
-                    return false;
-                }
+                return false;
             }
         }
 
@@ -48,7 +45,7 @@ public class StarBoomerang : Attack
         speed = 15.0f;
         timeout = 5.0f;
         timeoutTime = 0;
-        ampStep = 1.0f;
+        ampStep = 0.5f;
 
         return true;
     }
@@ -73,7 +70,7 @@ public class StarBoomerang : Attack
     {
         if (this.gameObject.activeSelf)
         {
-            if(!letGo && lastAmp < Time.time - 0.25f)
+            if(!letGo && lastAmp < Time.time - 0.15f)
             {
                 attacker.UnlockMovement();
                 attacker.CanCancel(true);
@@ -108,7 +105,7 @@ public class StarBoomerang : Attack
             transform.Rotate(new Vector3(0, 0, 1), 180 * Time.deltaTime * direction * Mathf.Abs(reversal));
         }
 
-        if (!canHit && lastHit < Time.time - 0.1f)
+        if (!canHit && lastHit < Time.time - 0.25f)
             canHit = true;
     }
 
