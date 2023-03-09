@@ -206,7 +206,9 @@ public class CardSelector : MonoBehaviour
             card.transform.localPosition = new Vector3(xOffset, yVal, 15 + count);
             card.transform.Rotate(new Vector3(0, 0, rotVal));
 
-            card.transform.Find("card_base").GetComponent<SpriteRenderer>().sortingOrder = sortCount;
+            card.transform.Find("CardBG").GetComponent<SpriteRenderer>().sortingOrder = sortCount;
+            sortCount++;
+            card.transform.Find("CardBase").GetComponent<SpriteRenderer>().sortingOrder = sortCount;
             sortCount++;
             card.transform.Find("Icon").GetComponent<SpriteRenderer>().sortingOrder = sortCount;
             sortCount++;
@@ -251,12 +253,15 @@ public class CardSelector : MonoBehaviour
             handCount--;
 
             usingCard.transform.localPosition = new Vector3(player.gameObject.transform.localPosition.x, player.gameObject.transform.localPosition.y + 1.5f, player.gameObject.transform.localPosition.z - 1);
-            SpriteRenderer back = usingCard.transform.Find("card_base").gameObject.GetComponent<SpriteRenderer>();
+            SpriteRenderer back = usingCard.transform.Find("CardBase").gameObject.GetComponent<SpriteRenderer>();
             SpriteRenderer icon = usingCard.transform.Find("Icon").gameObject.GetComponent<SpriteRenderer>();
+            SpriteRenderer bg = usingCard.transform.Find("CardBG").gameObject.GetComponent<SpriteRenderer>();
             back.sortingLayerName = "Combat";
             back.sortingOrder = 0;
             icon.sortingLayerName = "Combat";
             icon.sortingOrder = 1;
+            bg.sortingLayerName = "Combat";
+            bg.sortingOrder = -1;
             usingCard.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             usingCard.transform.rotation = new Quaternion();
 

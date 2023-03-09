@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject DeckBuilder; // TEMP
+
     public States current_state;
     public enum States
     {
@@ -52,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetButtonDown("Pause") && !paused)
         {
+            DeckBuilder.SetActive(true);
             paused = true;
             rb.gravityScale = 0;
             rb.velocity = Vector3.zero;
@@ -59,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(Input.GetButtonDown("Pause") && paused)
         {
+            DeckBuilder.SetActive(false);
             paused = false;
             rb.gravityScale = 6;
             anim.enabled = true;

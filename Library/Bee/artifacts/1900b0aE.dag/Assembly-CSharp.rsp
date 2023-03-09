@@ -371,6 +371,7 @@
 "Assets/Scripts/Managers/CardSelector.cs"
 "Assets/Scripts/Managers/DeckManager.cs"
 "Assets/Scripts/Managers/EnemyManager.cs"
+"Assets/Scripts/Managers/InventoryManager.cs"
 "Assets/Scripts/Objects/CameraController.cs"
 "Assets/Scripts/Objects/CombatWarp.cs"
 "Assets/Scripts/Objects/Particle.cs"
@@ -383,6 +384,7 @@
 "Assets/Scripts/Player/PlayerCombat.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/Scripts/Player/SpawnFireball.cs"
+"Assets/Scripts/UI/DeckBuilder.cs"
 "Assets/SlerpTest.cs"
 -langversion:9.0
 
