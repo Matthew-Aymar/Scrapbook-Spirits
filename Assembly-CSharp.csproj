@@ -68,16 +68,16 @@
     <Compile Include="Assets\Scripts\Player\SpawnFireball.cs" />
     <Compile Include="Assets\Scripts\Objects\CameraController.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\Attack.cs" />
+    <Compile Include="Assets\Scripts\UI\DeckBuilder.cs" />
     <Compile Include="Assets\Scripts\Player\FireScript.cs" />
     <Compile Include="Assets\Scripts\Objects\CombatWarp.cs" />
     <Compile Include="Assets\Scripts\Enemies\CatFish.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCombat.cs" />
+    <Compile Include="Assets\Scripts\Managers\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\Cards\FireSwipe.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\Cards\StarBoomerang.cs" />
     <Compile Include="Assets\Scripts\Managers\EnemyManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\InventoryManager.cs" />
-    <Compile Include="Assets\Scripts\UI\DeckBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
