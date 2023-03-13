@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class DeckManager : MonoBehaviour
 {
-    private List<int> deck = new List<int>();           //The list of cards set through the deckbuilding UI
+    private List<int> deck;                             //The list of cards set through the deckbuilding UI
     public List<int> activeDeck;                        //Cards to be shuffled mid combat
     private List<int> discard;                          //Cards to be readded to the deck when it runs out
 
-    public void StartDeck()
+    public void StartDeck(List<int> uiDeck)
     {
-        for(int x = 0; x < 30; x++)
-        {
-            deck.Add((int)(x / 10) + 1);
-        }
-
+        deck = new List<int>(uiDeck);
         activeDeck = new List<int>(deck);
         discard = new List<int>();
 

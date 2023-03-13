@@ -41,8 +41,6 @@ public class CardSelector : MonoBehaviour
             card.transform.Find("Icon").GetComponent<SpriteRenderer>().sprite = icons[i];
             i++;
         }
-
-        deck.StartDeck();
     }
 
     // Update is called once per frame

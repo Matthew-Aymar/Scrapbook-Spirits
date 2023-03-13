@@ -6,12 +6,13 @@ public class InventoryManager : MonoBehaviour
 {
     public DeckBuilder deck;
     public int[] CardCollection;
+    public int totalCardTypes = 9;
     // Start is called before the first frame update
     void Start()
     {
         for(int x = 0; x < CardCollection.Length; x++)
         {
-            CardCollection[x] = 5;
+            CardCollection[x] = Random.Range(0, 6);
         }
 
         deck.CreateMenu();

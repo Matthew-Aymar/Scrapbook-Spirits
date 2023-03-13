@@ -59,6 +59,7 @@
     <Compile Include="Assets\EndAttack.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\BasicAttack.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\UI\CardText.cs" />
     <Compile Include="Assets\Scripts\Managers\CardSelector.cs" />
     <Compile Include="Assets\SlerpTest.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\Cards\FirePillar.cs" />

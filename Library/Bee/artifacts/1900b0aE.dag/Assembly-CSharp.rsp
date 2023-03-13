@@ -384,6 +384,7 @@
 "Assets/Scripts/Player/PlayerCombat.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
 "Assets/Scripts/Player/SpawnFireball.cs"
+"Assets/Scripts/UI/CardText.cs"
 "Assets/Scripts/UI/DeckBuilder.cs"
 "Assets/SlerpTest.cs"
 -langversion:9.0
