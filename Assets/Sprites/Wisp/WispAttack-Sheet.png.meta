@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 885e1cd2219d86d4193b93f8a7cd689b
-      internalID: -1253078979
+      spriteID: 61c8c38bfe02a1f46a2a6fb392639250
+      internalID: -706275082
       vertices: []
       indices: 
       edges: []
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f85eab2e017bcd4a9561b13aef237a2
-      internalID: -252161291
+      spriteID: 01b2fa819b303f64f954eb30c82f54bf
+      internalID: -520987826
       vertices: []
       indices: 
       edges: []
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21115fb67082b144da41bffc47539b21
-      internalID: 593302432
+      spriteID: 8f4f62adc27dfb447af8f91ce252b6ab
+      internalID: -333685495
       vertices: []
       indices: 
       edges: []
@@ -201,9 +201,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WispAttack-Sheet_1: -252161291
-      WispAttack-Sheet_2: 593302432
-      WispAttack-Sheet_0: -1253078979
+      WispAttack-Sheet_1: -520987826
+      WispAttack-Sheet_2: -333685495
+      WispAttack-Sheet_0: -706275082
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

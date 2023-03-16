@@ -62,6 +62,8 @@ public class PlayerCombat : MonoBehaviour
     public int attackDir;       //Direction to enemy
     public bool canCancel;
 
+    public GameObject hud;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -98,13 +100,14 @@ public class PlayerCombat : MonoBehaviour
             if (combatPlayer.activeSelf && inTransition)
             {
                 enemy.NewEnemy();
-                cards.ShowCards();
+                //cards.ShowCards();
                 pm.enabled = false;
                 this.gameObject.GetComponent<Rigidbody2D>().simulated = false;
                 canJump = true;
                 combatPlayer.transform.localPosition = new Vector3(0, -2, 10);
 
                 inTransition = false;
+                hud.SetActive(true);
             }
             else if(combatPlayer.activeSelf)
             {
@@ -298,31 +301,31 @@ public class PlayerCombat : MonoBehaviour
                 darkBot.color = new Color(1, 1, 1, darkBot.color.a * (1 + Time.deltaTime * 1.6f));
                 darkTop.color = new Color(1, 1, 1, darkTop.color.a * (1 + Time.deltaTime * 1.6f));
             }
-        }
 
-        if(onUpper)
-        {
-            lightBot.enabled = false;
-            if(!inJump)
-                lightTop.enabled = true;
-        }
-        else
-        {
-            lightTop.enabled = false;
-            lightBot.enabled = true;
-        }
+            if (Input.GetButtonDown("Draw"))
+            {
+                cards.DrawCard();
+            }
 
-        if(Input.GetButtonDown("Draw"))
-        {
-            cards.DrawCard();
-        }
+            if (onUpper)
+            {
+                lightBot.enabled = false;
+                if (!inJump)
+                    lightTop.enabled = true;
+            }
+            else
+            {
+                lightTop.enabled = false;
+                lightBot.enabled = true;
+            }
 
-        justLanded = false;
+            justLanded = false;
 
-        if(justAttacked)
-        {
-            anim.SetInteger("State", 4);
-            justAttacked = false;
+            if (justAttacked)
+            {
+                anim.SetInteger("State", 4);
+                justAttacked = false;
+            }
         }
     }
 
@@ -360,6 +363,7 @@ public class PlayerCombat : MonoBehaviour
                         snapStart = combatPlayer.transform.localPosition;
 
                         snapBack = true;
+                        combatRb.interpolation = RigidbodyInterpolation2D.None;
                     }
                 }
 
@@ -378,7 +382,10 @@ public class PlayerCombat : MonoBehaviour
                     }
                     else if (snapTime < 1.0f)
                     {
-                        snapTime += Time.deltaTime * (speed * 0.2f);
+                        if(Time.timeScale != 1.0f)
+                            snapTime += (Time.unscaledDeltaTime * Time.timeScale) * (speed * 0.2f);
+                        else
+                            snapTime += Time.deltaTime * (speed * 0.2f);
                         combatPlayer.transform.localScale = new Vector3(1 + 0.25f * snapTime, 1 + 0.25f * snapTime, 1 + 0.25f * snapTime);
                     }
                 }

@@ -30,6 +30,10 @@ public class CardSelector : MonoBehaviour
     public GameObject usingCard;
     private int usedCardId;
 
+    private int tempMaxBoost; //One time increase to max hand size, used when cards are left over from last hand
+    private bool canDraw;     //Set when draw timer fills up
+    public DrawBar bar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +45,8 @@ public class CardSelector : MonoBehaviour
             card.transform.Find("Icon").GetComponent<SpriteRenderer>().sprite = icons[i];
             i++;
         }
+
+        player = cam.transform.Find("Combat_Player").gameObject;
     }
 
     // Update is called once per frame
@@ -48,7 +54,7 @@ public class CardSelector : MonoBehaviour
     {
         if(firstMove)
         {
-            if(firstMoveAmount < 1.25f)
+            if(firstMoveAmount < 1.5f)
             {
                 int i = 0;
                 foreach (GameObject card in cardDisplays)
@@ -72,7 +78,7 @@ public class CardSelector : MonoBehaviour
         }
         else if(holding)
         {
-            if (holdAmount < 2.0f)
+            if (holdAmount < 2.5f)
             {
                 int i = 0;
                 foreach (GameObject card in cardDisplays)
@@ -104,6 +110,7 @@ public class CardSelector : MonoBehaviour
         selected = 0;
 
         Time.timeScale = 0.25f;
+        player.GetComponent<Rigidbody2D>().interpolation = RigidbodyInterpolation2D.Interpolate;
     }
 
     public void DropCards()
@@ -120,6 +127,7 @@ public class CardSelector : MonoBehaviour
         }
 
         Time.timeScale = 1.0f;
+        player.GetComponent<Rigidbody2D>().interpolation = RigidbodyInterpolation2D.None;
     }
 
     public void ShowCards()
@@ -130,8 +138,6 @@ public class CardSelector : MonoBehaviour
             firstMove = true;
             firstMoveAmount = 0;
         }
-
-        player = GameObject.FindGameObjectWithTag("CombatPlayer");
     }
 
     public void HideCards()
@@ -267,21 +273,51 @@ public class CardSelector : MonoBehaviour
         }
 
         Time.timeScale = 1.0f;
+        player.GetComponent<Rigidbody2D>().interpolation = RigidbodyInterpolation2D.None;
     }
 
     public void DrawCard()
     {
-        if(handCount < maxHand)
+        if(canDraw)
         {
-            GameObject newCard = Instantiate(card, cam.transform);
-            cardDisplays.Add(newCard);
-            cardHand.Add(deck.DrawCard());
-            int i = cardHand[cardHand.Count - 1];
-            newCard.transform.Find("Icon").GetComponent<SpriteRenderer>().sprite = icons[i - 1];
+            if (handCount != 0)
+                tempMaxBoost++;
 
-            handCount++;
+            for(int x = 0; x < handCount; x++)
+            {
+                GameObject temp = cardDisplays[0];
+
+                basePositions.RemoveAt(0);
+                cardDisplays.RemoveAt(0);
+                deck.DiscardCard(cardHand[0]);
+                cardHand.RemoveAt(0);
+
+                Destroy(temp);
+            }
+
+            handCount = 0;
+
+            for(int x = 0; x < maxHand + tempMaxBoost; x++)
+            {
+                int tempDraw = deck.DrawCard();
+                if (tempDraw >= 0)
+                {
+                    GameObject newCard = Instantiate(card, cam.transform);
+                    cardDisplays.Add(newCard);
+                    cardHand.Add(tempDraw);
+                    int i = cardHand[cardHand.Count - 1];
+                    newCard.transform.Find("Icon").GetComponent<SpriteRenderer>().sprite = icons[i - 1];
+
+                    handCount++;
+                }
+            }
 
             NewPositions();
+            tempMaxBoost = 0;
+
+            bar.ResetDrawTimer();
+
+            canDraw = false;
         }
     }
 
@@ -308,5 +344,16 @@ public class CardSelector : MonoBehaviour
 
             count++;
         }
+    }
+
+    public void checkHandSize()
+    {
+        if (maxHand >= deck.activeDeck.Count)
+            maxHand = deck.activeDeck.Count;
+    }
+
+    public void CanDraw()
+    {
+        canDraw = true;
     }
 }

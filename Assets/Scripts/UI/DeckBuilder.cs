@@ -52,6 +52,8 @@ public class DeckBuilder : MonoBehaviour
 
     public void DeckUpdate()
     {
+        int lastSelected = selected;
+
         if(tempDeck.Count > 0)
         {
             if (Input.GetButtonDown("Left"))
@@ -99,6 +101,14 @@ public class DeckBuilder : MonoBehaviour
                     i.color = Color.white;
             }
 
+            if(selected == count)
+            {
+                Sprite s = card.Find("Icon").GetComponent<Image>().sprite;
+                selectedCardID = Array.IndexOf(cards.icons, s);
+
+                cardText.SetText(selectedCardID);
+            }
+
             count++;
         }
 
@@ -108,7 +118,29 @@ public class DeckBuilder : MonoBehaviour
             deckSelected.SetActive(false);
             libSelected.SetActive(true);
 
+            if(tempDeck.Count > 0)
+            {
+                Image[] images = DeckPos.transform.GetChild(selected).GetComponentsInChildren<Image>();
+                foreach (Image i in images)
+                {
+                    i.color = Color.white;
+                }
+            }
+
             selected = 0;
+
+            if(cardObjs.Count > 0)
+            {
+                Sprite s = cardObjs[selected].transform.Find("Icon").GetComponent<Image>().sprite;
+                selectedCardID = Array.IndexOf(cards.icons, s);
+
+                cardText.SetText(selectedCardID);
+            }
+        }
+
+        if(selected != lastSelected && tempDeck.Count > 0)
+        {
+            
         }
     }
 
@@ -231,7 +263,24 @@ public class DeckBuilder : MonoBehaviour
             deckSelected.SetActive(true);
             libSelected.SetActive(false);
 
+            if(cardObjs.Count > 0)
+            {
+                Image[] images = cardObjs[selected].GetComponentsInChildren<Image>();
+                foreach (Image i in images)
+                {
+                    i.color = Color.white;
+                }
+            }
+
             selected = 0;
+
+            if(tempDeck.Count > 0)
+            {
+                Sprite s = DeckPos.transform.GetChild(selected).transform.Find("Icon").GetComponent<Image>().sprite;
+                selectedCardID = Array.IndexOf(cards.icons, s);
+
+                cardText.SetText(selectedCardID);
+            }
         }
     }
 
@@ -321,6 +370,7 @@ public class DeckBuilder : MonoBehaviour
 
         deckCount.text = tempDeck.Count + "/20";
         inv.CardCollection[selectedCardID]++;
+
         CreateMenu();
     }
 
@@ -470,6 +520,9 @@ public class DeckBuilder : MonoBehaviour
 
     public void OnDisable()
     {
+        for (int x = 0; x < tempDeck.Count; x++)
+            tempDeck[x]++;
+
         deck.StartDeck(tempDeck);
     }
 }
