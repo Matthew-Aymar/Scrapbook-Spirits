@@ -9,7 +9,7 @@ public abstract class Attack : MonoBehaviour
     public AttackSelector attacker;
 
     public int direction;
-    public float chargeAmount;
+    public float chargeAmount; //Minimum 0.3f
     public float chargeTime;
     public float speed;
     public float timeout;
@@ -27,5 +27,5 @@ public abstract class Attack : MonoBehaviour
 
     public abstract bool CheckTimeout();
 
-    public abstract bool CheckCollision();
+    public abstract Collider2D CheckCollision();
 }

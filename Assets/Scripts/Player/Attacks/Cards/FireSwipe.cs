@@ -17,7 +17,7 @@ public class FireSwipe : Attack
         speed = 15.0f;
         timeout = 0.35f;
         heavy = true;
-        stunDuration = 2.0f;
+        stunDuration = 1.5f;
 
         return true;
     }
@@ -70,10 +70,10 @@ public class FireSwipe : Attack
         return false;
     }
 
-    public override bool CheckCollision()
+    public override Collider2D CheckCollision()
     {
         if (!this.gameObject.activeSelf || !canHit)
-            return false;
+            return null;
 
         Collider2D[] cols = new Collider2D[5];
         col.OverlapCollider(new ContactFilter2D().NoFilter(), cols);
@@ -85,10 +85,10 @@ public class FireSwipe : Attack
             if (c.gameObject.layer == LayerMask.NameToLayer("Enemy"))
             {
                 canHit = false;
-                return true;
+                return col;
             }
         }
 
-        return false;
+        return null;
     }
 }

@@ -51,10 +51,11 @@ public class AttackSelector : MonoBehaviour
                 Destroy(tempScript.gameObject);
             }
 
-            if(tempScript.CheckCollision())
+            Collider2D hit = tempScript.CheckCollision();
+            if(hit)
             {
-                float dist = Vector3.Distance(tempScript.gameObject.transform.position, enemy.currentEnemy.transform.position);
-                Vector3 between = Vector3.MoveTowards(tempScript.gameObject.transform.position, enemy.currentEnemy.transform.position, dist * 0.67f);
+                float dist = Vector3.Distance(hit.gameObject.transform.position, enemy.currentEnemy.transform.position);
+                Vector3 between = Vector3.MoveTowards(hit.gameObject.transform.position, enemy.currentEnemy.transform.position, dist * 0.67f);
                 GameObject fx = Instantiate(hitFx);
                 fx.transform.position = between;
                 fx.transform.Rotate(new Vector3(0, 0, 1), Random.Range(0, 360));

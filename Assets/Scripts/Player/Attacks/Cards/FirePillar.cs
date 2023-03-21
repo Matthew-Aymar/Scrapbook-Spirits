@@ -83,10 +83,10 @@ public class FirePillar : Attack
         return false;
     }
 
-    public override bool CheckCollision()
+    public override Collider2D CheckCollision()
     {
         if (!this.gameObject.activeSelf || !canHit)
-            return false;
+            return null;
 
         Collider2D[] cols = new Collider2D[5];
         col.OverlapCollider(new ContactFilter2D().NoFilter(), cols);
@@ -99,10 +99,10 @@ public class FirePillar : Attack
             {
                 lastHit = Time.time;
                 canHit = false;
-                return true;
+                return col;
             }
         }
 
-        return false;
+        return null;
     }
 }

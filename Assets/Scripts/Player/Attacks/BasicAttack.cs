@@ -31,7 +31,7 @@ public class BasicAttack : Attack
         float randx = Random.Range(0.0f, 0.25f);
         float randy = Random.Range(-0.25f, 0.25f);
 
-        transform.Translate(new Vector3(direction + randx + (upper ? 0.25f : 0), randy, 0));
+        transform.Translate(new Vector3(direction + randx + (upper ? (dir * 0.5f) : 0), randy, 0));
         GameObject part = Instantiate(particle, this.transform.position, new Quaternion());
         part.transform.localScale = this.transform.localScale * 1.5f;
         part.transform.Translate(new Vector3(dir * (this.transform.localScale.x * -0.4f), 0, 0), Space.World);
@@ -77,10 +77,10 @@ public class BasicAttack : Attack
         return false;
     }
 
-    public override bool CheckCollision()
+    public override Collider2D CheckCollision()
     {
         if (!this.gameObject.activeSelf)
-            return false;
+            return null;
 
         Collider2D[] cols = new Collider2D[5];
         col.OverlapCollider(new ContactFilter2D().NoFilter(), cols);
@@ -92,10 +92,10 @@ public class BasicAttack : Attack
             if(c.gameObject.layer == LayerMask.NameToLayer("Enemy"))
             {
                 timeoutTime = Time.time - timeout;
-                return true;
+                return col;
             }
         }
 
-        return false;
+        return null;
     }
 }

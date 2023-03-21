@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: -5384922028473582610}
   m_Layer: 13
   m_Name: CatFish
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -336,6 +336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c5fa4c392907e34f88bcdf11a8fa439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stunned: 0
+  stunEnd: 0
   manager: {fileID: 0}
   xBoundLower: 6
   xBoundUpper: 7.8

@@ -12,7 +12,7 @@ public class InventoryManager : MonoBehaviour
     {
         for(int x = 0; x < CardCollection.Length; x++)
         {
-            CardCollection[x] = Random.Range(0, 6);
+            CardCollection[x] = Random.Range(1, 6);
         }
 
         deck.CreateMenu();

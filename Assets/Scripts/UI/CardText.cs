@@ -44,7 +44,7 @@ public class CardText : MonoBehaviour
         cardSpices[4] = "\"This One Doesn't Bounce\"";
 
         cardTitles[5] = "Four Seasons";
-        cardDescriptions[5] = "Create four flames on each corner to follow enemies";
+        cardDescriptions[5] = "Create four flames on each corner to trap enemies";
         cardSpices[5] = "\"Rain Or Shine\"";
 
         cardTitles[6] = "Brighter Burn";

@@ -449,7 +449,7 @@ MonoBehaviour:
   goopPos: {fileID: 62628464}
   goop: {fileID: 799808804}
   cards: {fileID: 1560456368}
-  drawTime: 30
+  drawTime: 1
 --- !u!1 &219723403
 GameObject:
   m_ObjectHideFlags: 0
@@ -4237,6 +4237,9 @@ MonoBehaviour:
   - {fileID: 4779257189396258648, guid: 15fc092a5970a12449408ddf7c76a606, type: 3}
   - {fileID: 6769653439187809785, guid: 1387c03d21e9db14db27cb986edf4271, type: 3}
   - {fileID: 1974942779797024002, guid: 2fac55c14cdbb764e9184480c96cd1cb, type: 3}
+  - {fileID: 8332176363531367115, guid: 4b3b2a645acc4234991c616f35cd3bac, type: 3}
+  - {fileID: 4282984017162751943, guid: 43438aa26004b694a86ce969d71ced83, type: 3}
+  - {fileID: 361319631992239191, guid: 271c19320d7cc004bb23fb2cb29ea9ab, type: 3}
   activeAttacks: []
   cards: {fileID: 1560456368}
   attackParticle: {fileID: 408600293569075505, guid: 1efa0a9ba1bf3c64383612e93d4e1986, type: 3}
