@@ -56,35 +56,40 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EndAttack.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\BasicAttack.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\UI\CardText.cs" />
     <Compile Include="Assets\Scripts\Managers\BuffManager.cs" />
+    <Compile Include="Assets\Scripts\Player\Attacks\Cards\BirghterBurn.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\Cards\BottledSpite.cs" />
     <Compile Include="Assets\Scripts\Managers\CardSelector.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\Cards\MeteorShot.cs" />
-    <Compile Include="Assets\SlerpTest.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\Cards\FirePillar.cs" />
     <Compile Include="Assets\Scripts\Managers\AttackSelector.cs" />
     <Compile Include="Assets\Scripts\Objects\Particle.cs" />
+    <Compile Include="Assets\Scripts\UI\HealthText.cs" />
     <Compile Include="Assets\Scripts\Managers\DeckManager.cs" />
+    <Compile Include="Assets\Scripts\Player\Attacks\Cards\Meditate.cs" />
     <Compile Include="Assets\Scripts\Player\SpawnFireball.cs" />
     <Compile Include="Assets\Scripts\Objects\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Managers\CustomParticles.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\Attack.cs" />
     <Compile Include="Assets\Scripts\UI\DeckBuilder.cs" />
     <Compile Include="Assets\Scripts\Player\FireScript.cs" />
     <Compile Include="Assets\Scripts\Objects\CombatWarp.cs" />
     <Compile Include="Assets\Scripts\Enemies\CatFish.cs" />
+    <Compile Include="Assets\Scripts\Managers\DamageNumbers.cs" />
     <Compile Include="Assets\Scripts\UI\DrawBar.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCombat.cs" />
+    <Compile Include="Assets\Scripts\Player\Attacks\Cards\FourSeasons.cs" />
     <Compile Include="Assets\Scripts\Managers\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\Cards\FireSwipe.cs" />
+    <Compile Include="Assets\Scripts\UI\BookMark.cs" />
+    <Compile Include="Assets\Scripts\Player\Attacks\Cards\Douse.cs" />
     <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\Cards\StarBoomerang.cs" />
+    <Compile Include="Assets\Scripts\Player\Attacks\EndAttack.cs" />
     <Compile Include="Assets\Scripts\Managers\EnemyManager.cs" />
-    <Compile Include="Assets\Scripts\Managers\CustomParticles.cs" />
-    <Compile Include="Assets\Scripts\Player\Attacks\Cards\FourSeasons.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

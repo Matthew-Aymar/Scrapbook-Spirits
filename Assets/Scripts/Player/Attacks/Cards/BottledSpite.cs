@@ -6,6 +6,7 @@ public class BottledSpite : Attack
 {
     private CircleCollider2D col;
     private GameObject enemy;
+    public GameObject part;
 
     private Vector2 targetDir;
     private Vector2 currentDir;
@@ -16,7 +17,9 @@ public class BottledSpite : Attack
         if (held)
             return false;
 
-        chargeAmount = 0.3f;
+        cursed = true;
+        damage = 1;
+        chargeAmount = 0.35f;
         chargeTime = Time.time;
         speed = 2.5f;
         timeout = 15.0f;
@@ -102,6 +105,7 @@ public class BottledSpite : Attack
 
             if (c.gameObject.layer == LayerMask.NameToLayer("Enemy"))
             {
+                Instantiate(part, enemy.transform);
                 timeoutTime = Time.time - timeout;
                 return col;
             }

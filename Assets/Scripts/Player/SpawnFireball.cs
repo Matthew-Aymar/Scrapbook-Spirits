@@ -21,7 +21,7 @@ public class SpawnFireball : MonoBehaviour
         }
         else
         {
-            transform.Translate(Vector2.down * Time.deltaTime * 15);
+            transform.Translate(Vector2.down * Time.deltaTime * 20);
         }
     }
 

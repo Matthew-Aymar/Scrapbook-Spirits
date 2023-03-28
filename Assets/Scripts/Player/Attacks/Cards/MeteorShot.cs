@@ -12,6 +12,7 @@ public class MeteorShot : Attack
         if (held)
             return false;
 
+        damage = 50;
         chargeAmount = 1.5f;
         chargeTime = Time.time;
         speed = 30.0f;

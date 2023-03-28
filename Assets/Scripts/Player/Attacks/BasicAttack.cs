@@ -9,6 +9,7 @@ public class BasicAttack : Attack
 
     public override bool Init(bool held)
     {
+        damage = 5;
         chargeAmount = 0.3f;
         chargeTime = Time.time;
         speed = 15.0f;
@@ -16,6 +17,7 @@ public class BasicAttack : Attack
 
         if (held)
         {
+            damage = 1;
             chargeAmount *= 0.5f;
             this.transform.localScale *= 0.5f;
         }

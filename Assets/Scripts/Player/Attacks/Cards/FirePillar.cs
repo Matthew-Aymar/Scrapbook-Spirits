@@ -13,6 +13,7 @@ public class FirePillar : Attack
     {
         if (!held)
         {
+            damage = 2;
             chargeAmount = 0.25f;
             chargeTime = Time.time;
             timeout = 0.25f;

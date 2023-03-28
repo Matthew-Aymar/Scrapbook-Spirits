@@ -6,6 +6,7 @@ public class EnemyManager : MonoBehaviour
 {
     public List<GameObject> enemies;
     public GameObject currentEnemy;
+    public DamageNumbers numbers;
     public Transform cam;
     public LineRenderer lr;
     public GameObject[] warnings;
@@ -165,5 +166,11 @@ public class EnemyManager : MonoBehaviour
     {
         currentEnemy.GetComponent<Enemy>().Stun();
         currentEnemy.GetComponent<Enemy>().stunEnd = Time.time + d;
+    }
+
+    public void Damage(float d)
+    {
+        currentEnemy.GetComponent<Enemy>().health -= d;
+        numbers.MakeNumber(currentEnemy, d);
     }
 }

@@ -9,6 +9,7 @@ public class CatFish : Enemy
     public float xBoundUpper;
     private bool onUpper;
     private GameObject player;
+    private PlayerCombat combat;
     private Animator anim;
     private SpriteRenderer sr;
 
@@ -41,6 +42,7 @@ public class CatFish : Enemy
     {
         nextAttack = Time.time + Random.Range(attackSpeed * 0.8f, attackSpeed * 1.2f);
         player = GameObject.FindGameObjectWithTag("CombatPlayer");
+        combat = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCombat>();
         sr = gameObject.GetComponent<SpriteRenderer>();
         anim = gameObject.GetComponent<Animator>();
         manager = GameObject.FindGameObjectWithTag("CombatManager");
@@ -52,6 +54,8 @@ public class CatFish : Enemy
             r = 5;
         Vector3 startPos = new Vector3(r, -2.0f, 9);
         this.transform.localPosition = startPos;
+
+        health = 100;
     }
 
     // Update is called once per frame
@@ -147,6 +151,7 @@ public class CatFish : Enemy
                 inOffset = false;
             }
 
+            catCollider.SetActive(false);
             catWarning.SetActive(false);
             manager.GetComponent<EnemyManager>().RemoveWarning(catWarning);
             Teleport();
@@ -168,6 +173,7 @@ public class CatFish : Enemy
                 transform.Translate(Vector3.up);
                 anim.Play("CatSlash");
                 catWarning.SetActive(false);
+                catCollider.SetActive(true);
             }
             else if(!inOffset)
                 transform.Translate(new Vector3(attackDir, 0, 0) * catSpeed * Time.deltaTime);
@@ -188,6 +194,7 @@ public class CatFish : Enemy
             nextAttack = Time.time + Random.Range(attackSpeed * 0.8f, attackSpeed * 1.2f);
             inAttack = false;
 
+            fishCollider.SetActive(false);
             fishWarning.SetActive(false);
             manager.GetComponent<EnemyManager>().RemoveWarning(fishWarning);
             fishWarning.transform.parent = this.transform;
@@ -204,6 +211,7 @@ public class CatFish : Enemy
             }
             else if (chargeEnd - Time.time < 1.0f)
             {
+                fishCollider.SetActive(true);
                 transform.Translate(Vector3.down * 25 * Time.deltaTime);
                 if (transform.localPosition.y <= -5 && inOffset)
                 {
@@ -322,6 +330,22 @@ public class CatFish : Enemy
         {
             catWarning.SetActive(false);
             manager.GetComponent<EnemyManager>().RemoveWarning(catWarning);
+        }
+        if(fishCollider.activeSelf)
+        {
+            fishCollider.SetActive(false);
+        }
+        else if(catCollider.activeSelf)
+        {
+            catCollider.SetActive(false);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("CombatPlayer"))
+        {
+            combat.GetComponent<PlayerCombat>().GetHit(1);
         }
     }
 }

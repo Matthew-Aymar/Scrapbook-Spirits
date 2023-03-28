@@ -12,6 +12,7 @@ public class FireSwipe : Attack
         if (held)
             return false;
 
+        damage = 30;
         chargeAmount = 0.5f;
         chargeTime = Time.time;
         speed = 15.0f;

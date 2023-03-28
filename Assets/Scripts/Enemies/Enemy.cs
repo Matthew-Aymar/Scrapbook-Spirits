@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
+    public float health;
+
     public bool stunned;
     public float stunEnd;
 

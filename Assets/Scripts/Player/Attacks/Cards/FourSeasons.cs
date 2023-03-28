@@ -31,6 +31,7 @@ public class FourSeasons : Attack
             }
         }
 
+        damage = 20;
         speed = 2;
         colToDestroy = -1;
         chargeAmount = 1.5f;

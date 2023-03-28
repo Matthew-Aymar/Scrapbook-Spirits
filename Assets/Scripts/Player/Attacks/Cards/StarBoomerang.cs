@@ -38,6 +38,7 @@ public class StarBoomerang : Attack
             }
         }
 
+        damage = 1;
         ampStage = 1;
         returnAmount = 0.5f;
         chargeAmount = 0.25f;
@@ -77,6 +78,8 @@ public class StarBoomerang : Attack
                 letGo = true;
                 timeoutTime = Time.time;
                 returnTime = Time.time;
+
+                damage = 10 * ampStage;
             }
             else if(!letGo)
             {

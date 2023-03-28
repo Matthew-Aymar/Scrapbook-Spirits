@@ -1008,7 +1008,6 @@ TextureImporter:
       TextPlatformsLight_39: -481458465
       TextPlatformsLight_30: 722266935
       TextPlatformsLight_35: 1241263416
-      TextPlatformsLight_31: 352246481
       TextPlatformsLight_22: 167875172
       TextPlatformsLight_9: 1281220077
       TextPlatformsLight_4: 780199632
@@ -1029,11 +1028,12 @@ TextureImporter:
       TextPlatformsLight_6: 1067972787
       TextPlatformsLight_34: -1254104684
       TextPlatformsLight_5: 1245790566
+      TextPlatformsLight_31: 352246481
       TextPlatformsLight_7: -193920225
-      TextPlatformsLight_19: 1793936447
       TextPlatformsLight_14: 780913110
-      TextPlatformsLight_15: 1367035984
+      TextPlatformsLight_19: 1793936447
       TextPlatformsLight_17: -992746291
+      TextPlatformsLight_15: 1367035984
       TextPlatformsLight_10: -1049805796
       TextPlatformsLight_21: 1381599957
       TextPlatformsLight_38: -312825580

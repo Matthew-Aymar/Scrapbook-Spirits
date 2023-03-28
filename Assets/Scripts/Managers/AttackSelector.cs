@@ -8,6 +8,7 @@ public class AttackSelector : MonoBehaviour
     public GameObject[] attacks;
     public List<GameObject> activeAttacks = new List<GameObject>();
     public CardSelector cards;
+    public BuffManager buff;
 
     public GameObject attackParticle;
     public GameObject chargeParticle;
@@ -62,6 +63,15 @@ public class AttackSelector : MonoBehaviour
 
                 if (tempScript.heavy)
                     enemy.StunEnemy(tempScript.stunDuration);
+
+                bool wasCard = tempScript._id != 0;
+                if(!wasCard)
+                    enemy.Damage(tempScript.damage + buff.PlayerDamageMulti(true));
+                else
+                    enemy.Damage(tempScript.damage * buff.PlayerDamageMulti(false));
+
+                if (tempScript.cursed)
+                    buff.Curse(true);
             }
 
             tempScript.Move();
@@ -79,6 +89,7 @@ public class AttackSelector : MonoBehaviour
         if (wasCard && cards.usingCard)
         {
             newAttack = Instantiate(attacks[cards.GetCardID()], pc.combatPlayer.transform);
+            newAttack.GetComponent<Attack>()._id = cards.GetCardID();
             nextCheck = Time.time + 0.1f;
             CanCancel(false);
         }
@@ -88,6 +99,7 @@ public class AttackSelector : MonoBehaviour
                 StopUsing();
 
             newAttack = Instantiate(attacks[0], pc.combatPlayer.transform);
+            newAttack.GetComponent<Attack>()._id = 0;
         }
 
         newAttack.transform.parent = null;

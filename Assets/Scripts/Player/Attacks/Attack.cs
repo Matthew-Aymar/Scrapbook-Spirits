@@ -8,14 +8,16 @@ public abstract class Attack : MonoBehaviour
 
     public AttackSelector attacker;
 
+    public int damage;
     public int direction;
-    public float chargeAmount; //Minimum 0.3f
+    public float chargeAmount;
     public float chargeTime;
     public float speed;
     public float timeout;
     public float timeoutTime;
     public bool heavy;
     public float stunDuration;
+    public bool cursed;
 
     public abstract bool Init(bool held);
 

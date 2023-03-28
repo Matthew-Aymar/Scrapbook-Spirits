@@ -145,3 +145,4 @@ MonoBehaviour:
   timeoutTime: 0
   heavy: 0
   stunDuration: 0
+  part: {fileID: 5889794848512980702, guid: d7bfb740d92b8644ea5057b6434eba8c, type: 3}

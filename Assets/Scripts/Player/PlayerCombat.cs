@@ -63,6 +63,7 @@ public class PlayerCombat : MonoBehaviour
     public bool canCancel;
 
     public GameObject hud;
+    public int health = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -107,7 +108,6 @@ public class PlayerCombat : MonoBehaviour
                 combatPlayer.transform.localPosition = new Vector3(0, -2, 10);
 
                 inTransition = false;
-                hud.SetActive(true);
             }
             else if(combatPlayer.activeSelf)
             {
@@ -382,7 +382,7 @@ public class PlayerCombat : MonoBehaviour
                     }
                     else if (snapTime < 1.0f)
                     {
-                        if(Time.timeScale != 1.0f)
+                        if (Time.timeScale != 1.0f && Time.timeScale != 0)
                             snapTime += (Time.unscaledDeltaTime * Time.timeScale) * (speed * 0.2f);
                         else
                             snapTime += Time.deltaTime * (speed * 0.2f);
@@ -435,6 +435,7 @@ public class PlayerCombat : MonoBehaviour
 
     public void StartTransition()
     {
+        hud.SetActive(true);
         combatTransition.SetActive(true);
         combatBackground.SetActive(true);
         inTransition = true;
@@ -470,5 +471,11 @@ public class PlayerCombat : MonoBehaviour
     {
         if (!justAttacked)
             anim.SetInteger("State", 0);
+    }
+
+    public void GetHit(int damage)
+    {
+        Debug.Log("Get Smacked");
+        health -= damage;
     }
 }
