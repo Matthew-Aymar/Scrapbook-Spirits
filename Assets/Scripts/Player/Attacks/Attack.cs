@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Attack : MonoBehaviour
 {
     public int _id;
+    public bool limited;
 
     public AttackSelector attacker;
 

@@ -346,7 +346,7 @@ public class CardSelector : MonoBehaviour
         }
     }
 
-    public void checkHandSize()
+    public void CheckHandSize()
     {
         if (maxHand >= deck.activeDeck.Count)
             maxHand = deck.activeDeck.Count;

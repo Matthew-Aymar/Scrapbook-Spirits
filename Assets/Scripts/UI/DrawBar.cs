@@ -27,6 +27,11 @@ public class DrawBar : MonoBehaviour
         lastDraw = Time.time;
         whichColor = 3;
         nextColor = nextColor = new Color(0.9f, 0.9f, 1.0f);
+
+        canDraw = true;
+        drawPercent = 1.0f;
+        cards.CanDraw();
+        goop.gameObject.SetActive(false);
     }
 
     // Update is called once per frame

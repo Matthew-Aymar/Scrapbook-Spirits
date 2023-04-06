@@ -30,15 +30,20 @@ public class DeckBuilder : MonoBehaviour
     private int yPos; //for scrolling purposes
     private int relativeToMiddle = -1;
 
-    private List<int> tempDeck = new List<int>(20);
+    public List<int> tempDeck = new List<int>(20);
 
     public bool inDeck = false;
     public GameObject deckSelected;
     public GameObject libSelected;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
-        deckCount.text = "0/20";
+        if (deck.activeDeck.Count != 0)
+        {
+            deckCount.text = deck.activeDeck.Count + "/20";
+        }
+        else
+            deckCount.text = "0/20";
     }
 
     // Update is called once per frame
@@ -136,11 +141,6 @@ public class DeckBuilder : MonoBehaviour
 
                 cardText.SetText(selectedCardID);
             }
-        }
-
-        if(selected != lastSelected && tempDeck.Count > 0)
-        {
-            
         }
     }
 
@@ -520,9 +520,6 @@ public class DeckBuilder : MonoBehaviour
 
     public void OnDisable()
     {
-        for (int x = 0; x < tempDeck.Count; x++)
-            tempDeck[x]++;
-
         deck.StartDeck(tempDeck);
     }
 }

@@ -17,7 +17,6 @@ public class EnemyManager : MonoBehaviour
     private float tickRate = 0.05f;
 
     Dictionary<GameObject, LineRenderer> lines = new Dictionary<GameObject, LineRenderer>();
-    private int warningIndex;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,8 +50,6 @@ public class EnemyManager : MonoBehaviour
         if (warnings.Length <= 0)
             return;
 
-        warningIndex = 0;
-
         for(int x = 0; x < warnings.Length; x++)
         {
             if(warnings[x].activeSelf)
@@ -71,8 +68,6 @@ public class EnemyManager : MonoBehaviour
                 {
                     DrawBox(col as BoxCollider2D);
                 }
-
-                warningIndex++;
             }
         }
     }

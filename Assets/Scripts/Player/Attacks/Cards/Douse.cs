@@ -13,6 +13,7 @@ public class Douse : Attack
         if (held)
             return false;
 
+        limited = true;
         chargeAmount = 0.5f;
         chargeTime = Time.time;
         timeout = 0.0f;

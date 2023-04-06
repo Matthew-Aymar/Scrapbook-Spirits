@@ -302,7 +302,7 @@ public class PlayerCombat : MonoBehaviour
                 darkTop.color = new Color(1, 1, 1, darkTop.color.a * (1 + Time.deltaTime * 1.6f));
             }
 
-            if (Input.GetButtonDown("Draw"))
+            if (Input.GetButtonDown("Draw") && !cards.usingCard && combatPlayer.activeSelf)
             {
                 cards.DrawCard();
             }
@@ -475,7 +475,6 @@ public class PlayerCombat : MonoBehaviour
 
     public void GetHit(int damage)
     {
-        Debug.Log("Get Smacked");
         health -= damage;
     }
 }

@@ -6,19 +6,23 @@ public class DeckManager : MonoBehaviour
 {
     private List<int> deck;                             //The list of cards set through the deckbuilding UI
     public List<int> activeDeck;                        //Cards to be shuffled mid combat
-    private List<int> discard;                          //Cards to be readded to the deck when it runs out
+    public List<int> discard;                          //Cards to be readded to the deck when it runs out
     public CardSelector cards;
 
     private bool wasStarted;
 
     public void StartDeck(List<int> uiDeck)
     {
-        deck = new List<int>(uiDeck);
+        List<int> temp = new List<int>(uiDeck);
+        for (int x = 0; x < temp.Count; x++)
+            temp[x]++;
+
+        deck = new List<int>(temp);
         activeDeck = new List<int>(deck);
         discard = new List<int>();
 
         Shuffle();
-        cards.checkHandSize();
+        cards.CheckHandSize();
 
         wasStarted = true;
     }
@@ -69,5 +73,10 @@ public class DeckManager : MonoBehaviour
     public void DiscardCard(int i)
     {
         discard.Add(i);
+    }
+
+    public void RemoveLastDiscard()
+    {
+        discard.RemoveAt(discard.Count - 1);
     }
 }

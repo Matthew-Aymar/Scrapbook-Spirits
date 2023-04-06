@@ -13,6 +13,7 @@ public class Meditate : Attack
         if (held)
             return false;
 
+        limited = true;
         chargeAmount = 0.5f;
         chargeTime = Time.time;
         timeout = 5.0f;

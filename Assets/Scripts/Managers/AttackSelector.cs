@@ -8,6 +8,7 @@ public class AttackSelector : MonoBehaviour
     public GameObject[] attacks;
     public List<GameObject> activeAttacks = new List<GameObject>();
     public CardSelector cards;
+    public DeckManager deck;
     public BuffManager buff;
 
     public GameObject attackParticle;
@@ -90,6 +91,7 @@ public class AttackSelector : MonoBehaviour
         {
             newAttack = Instantiate(attacks[cards.GetCardID()], pc.combatPlayer.transform);
             newAttack.GetComponent<Attack>()._id = cards.GetCardID();
+
             nextCheck = Time.time + 0.1f;
             CanCancel(false);
         }
@@ -105,6 +107,9 @@ public class AttackSelector : MonoBehaviour
         newAttack.transform.parent = null;
         if (newAttack.GetComponent<Attack>().Init(isHeld))
         {
+            if (newAttack.GetComponent<Attack>().limited)
+                deck.RemoveLastDiscard();
+
             activeAttacks.Add(newAttack);
             newAttack.GetComponent<Attack>().attacker = this;
             inCharge = true;
