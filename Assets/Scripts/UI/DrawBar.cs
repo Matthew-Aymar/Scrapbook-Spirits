@@ -5,10 +5,9 @@ using UnityEngine.UI;
 
 public class DrawBar : MonoBehaviour
 {
-    public RectTransform bar;
-    private Image barImg;
-    public RectTransform goopPos;
-    public RectTransform goop;
+    public GameObject clock;
+    private Image clockImg;
+    public GameObject small;
 
     public CardSelector cards;
     public float drawTime;
@@ -22,8 +21,8 @@ public class DrawBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        barImg = GetComponentInChildren<Image>();
-        startColor = barImg.color;
+        clockImg = clock.GetComponent<Image>();
+        startColor = clockImg.color;
         lastDraw = Time.time;
         whichColor = 3;
         nextColor = nextColor = new Color(0.9f, 0.9f, 1.0f);
@@ -31,7 +30,6 @@ public class DrawBar : MonoBehaviour
         canDraw = true;
         drawPercent = 1.0f;
         cards.CanDraw();
-        goop.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -44,20 +42,20 @@ public class DrawBar : MonoBehaviour
                 drawPercent = 1.0f;
                 canDraw = true;
                 cards.CanDraw();
-                goop.gameObject.SetActive(false);
+
+                small.transform.eulerAngles = new Vector3(0, 0, -50); 
             }
             else
             {
                 drawPercent = (Time.time - lastDraw) / drawTime;
-                bar.localScale = new Vector3(drawPercent, 1, 1);
 
-                goop.position = new Vector3(goopPos.position.x + 0.08f, goopPos.position.y, goopPos.position.z);
+                small.transform.eulerAngles = new Vector3(0, 0, (360 * drawPercent) - 50);
             }
         }
         else
         {
-            barImg.color = Vector4.MoveTowards(barImg.color, nextColor, Time.deltaTime * 0.25f);
-            Vector4 between = new Vector4(barImg.color.r - nextColor.r, barImg.color.g - nextColor.g, barImg.color.b - nextColor.b, barImg.color.a - nextColor.a);
+            clockImg.color = Vector4.MoveTowards(clockImg.color, nextColor, Time.deltaTime * 0.25f);
+            Vector4 between = new Vector4(clockImg.color.r - nextColor.r, clockImg.color.g - nextColor.g, clockImg.color.b - nextColor.b, clockImg.color.a - nextColor.a);
             if(between.magnitude < 0.01f)
             {
                 if(whichColor == 3)
@@ -84,10 +82,7 @@ public class DrawBar : MonoBehaviour
         lastDraw = Time.time;
         canDraw = false;
 
-        bar.localScale = new Vector3(0, 1, 1);
-        barImg.color = startColor;
+        clockImg.color = startColor;
         drawPercent = 0;
-
-        goop.gameObject.SetActive(true);
     }
 }

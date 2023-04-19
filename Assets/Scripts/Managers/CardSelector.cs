@@ -32,7 +32,7 @@ public class CardSelector : MonoBehaviour
 
     private int tempMaxBoost; //One time increase to max hand size, used when cards are left over from last hand
     private bool canDraw;     //Set when draw timer fills up
-    public DrawBar bar;
+    public DrawBar clock;
 
     // Start is called before the first frame update
     void Start()
@@ -315,7 +315,7 @@ public class CardSelector : MonoBehaviour
             NewPositions();
             tempMaxBoost = 0;
 
-            bar.ResetDrawTimer();
+            clock.ResetDrawTimer();
 
             canDraw = false;
         }

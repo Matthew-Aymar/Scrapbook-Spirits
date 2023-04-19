@@ -1,20 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class HealthText : MonoBehaviour
 {
     public PlayerCombat player;
-    public TMP_Text text;
+    public Image text;
+
+    private Animator anim;
+
+    private int currentStage = 0;
 
     private int lastHP;
     private bool jumped;
-    private float speed;
+    private Vector2 startSize;
     // Start is called before the first frame update
     void Start()
     {
         lastHP = player.health;
+        anim = text.gameObject.GetComponent<Animator>();
+        startSize = text.transform.localScale;
     }
 
     // Update is called once per frame
@@ -23,42 +29,45 @@ public class HealthText : MonoBehaviour
         if(player.health != lastHP)
         {
             textJump();
-            text.text = "" + player.health;
             lastHP = player.health;
+
+            currentStage = (int)(player.health / (player.maxHealth / 5));
+            switch(currentStage)
+            {
+                case 4:
+                    anim.Play("LivelyText");
+                    break;
+                case 3:
+                    anim.Play("HealthyText");
+                    break;
+                case 2:
+                    anim.Play("OkayText");
+                    break;
+                case 1:
+                    anim.Play("HurtingText");
+                    break;
+                case 0:
+                    anim.Play("BleakText");
+                    break;
+            }
         }
 
         if(jumped)
         {
-            Vector2 newPos = Vector2.MoveTowards(text.gameObject.transform.localPosition, new Vector2(), Time.deltaTime * speed);
-            Vector3 newScale = Vector3.MoveTowards(text.gameObject.transform.localScale, new Vector3(1, 1, 1), Time.deltaTime * speed / 10);
-            if (Vector2.Distance(newPos, new Vector2()) <= 0.01f)
+            text.transform.localScale = Vector3.MoveTowards(text.transform.localScale, startSize, Time.deltaTime * 2);
+            if(Vector3.Distance(text.transform.localScale, startSize) < 0.01f)
             {
                 jumped = false;
-                newPos = new Vector2();
-                text.color = Color.black;
-                newScale = new Vector3(1, 1, 1);
+                text.color = Color.white;
             }
-
-            text.gameObject.transform.localScale = newScale;
-            text.gameObject.transform.localPosition = newPos;
         }
     }
 
     public void textJump()
     {
-        text.transform.localScale *= 1.5f;
-        text.gameObject.transform.localPosition = new Vector3();
-
-        Vector3 jumpDir = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), 0);
-        jumpDir.Normalize();
-
-        float randomMag = Random.Range(0.05f, 0.1f);
-        jumpDir *= randomMag;
-
-        speed = randomMag * 750;
-
-        text.gameObject.transform.Translate(jumpDir);
-        text.color = Color.red;
+        text.transform.localScale = startSize;
+        text.transform.localScale *= 1.25f;
+        text.color = new Color(1.0f, 0.5f, 0.5f, 1.0f);
         jumped = true;
     }
 }
