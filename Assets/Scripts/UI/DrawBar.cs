@@ -49,7 +49,7 @@ public class DrawBar : MonoBehaviour
             {
                 drawPercent = (Time.time - lastDraw) / drawTime;
 
-                small.transform.eulerAngles = new Vector3(0, 0, (360 * drawPercent) - 50);
+                small.transform.eulerAngles = new Vector3(0, 0, (-360 * drawPercent) - 50);
             }
         }
         else

@@ -396,6 +396,7 @@
 "Assets/Scripts/UI/BookMark.cs"
 "Assets/Scripts/UI/CardText.cs"
 "Assets/Scripts/UI/DeckBuilder.cs"
+"Assets/Scripts/UI/DialougeAnimator.cs"
 "Assets/Scripts/UI/DrawBar.cs"
 "Assets/Scripts/UI/HealthText.cs"
 -langversion:9.0

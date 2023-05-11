@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Player\FireScript.cs" />
     <Compile Include="Assets\Scripts\Objects\CombatWarp.cs" />
     <Compile Include="Assets\Scripts\Enemies\CatFish.cs" />
+    <Compile Include="Assets\Scripts\UI\DialougeAnimator.cs" />
     <Compile Include="Assets\Scripts\Managers\DamageNumbers.cs" />
     <Compile Include="Assets\Scripts\UI\DrawBar.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCombat.cs" />
