@@ -78,7 +78,7 @@
     <Compile Include="Assets\Scripts\Player\FireScript.cs" />
     <Compile Include="Assets\Scripts\Objects\CombatWarp.cs" />
     <Compile Include="Assets\Scripts\Enemies\CatFish.cs" />
-    <Compile Include="Assets\Scripts\UI\DialougeAnimator.cs" />
+    <Compile Include="Assets\Scripts\UI\DialogueAnimator.cs" />
     <Compile Include="Assets\Scripts\Managers\DamageNumbers.cs" />
     <Compile Include="Assets\Scripts\UI\DrawBar.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerCombat.cs" />
@@ -91,6 +91,9 @@
     <Compile Include="Assets\Scripts\Player\Attacks\Cards\StarBoomerang.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\EndAttack.cs" />
     <Compile Include="Assets\Scripts\Managers\EnemyManager.cs" />
+    <Compile Include="Assets\ScriptableObjects\DialogueTexts.cs" />
+    <Compile Include="Assets\Scripts\UI\DialogueInteraction.cs" />
+    <Compile Include="Assets\Scripts\Managers\DiaManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
