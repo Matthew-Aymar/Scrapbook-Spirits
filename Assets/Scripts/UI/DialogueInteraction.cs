@@ -28,8 +28,8 @@ public class DialogueInteraction : MonoBehaviour
         if(diaAnimator.enabled == false)
         {
             target = true;
-            diaAnimator.NewValues(diaManager.GetText(targetEnt));
             diaAnimator.enabled = true;
+            diaAnimator.NewValues(diaManager.GetText(targetEnt));
         }
     }
 }

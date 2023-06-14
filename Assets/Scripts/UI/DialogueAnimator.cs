@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class WaveValues
 {
@@ -33,6 +34,10 @@ public class ShakeValues
 
 public class DialogueAnimator : MonoBehaviour
 {
+    public GameObject DialogueBox;
+    public GameObject DialogueBg;
+    public Animator Emote;
+
     public TMP_Text target;
     public string originalText;
     private string parsedText;
@@ -60,6 +65,15 @@ public class DialogueAnimator : MonoBehaviour
 
         waveIndexes = new List<int>();
         shakeIndexes = new List<int>();
+
+        if(!orig.Equals(""))
+        {
+            int reactionID;
+            reactionID = Int32.Parse(parsedText.Substring(1, 1));
+            Emote.SetInteger("State", reactionID);
+            Debug.Log(reactionID);
+            parsedText = parsedText.Substring(3);
+        }
 
         bool wClosed = true, sClosed = true;
         while (parsedText.IndexOf("|") != -1)
@@ -107,6 +121,18 @@ public class DialogueAnimator : MonoBehaviour
 
             lastUpdate = Time.time;
         }
+    }
+
+    private void OnEnable()
+    {
+        DialogueBg.SetActive(true);
+        DialogueBox.SetActive(true);
+    }
+
+    private void OnDisable()
+    {
+        DialogueBg.SetActive(false);
+        DialogueBox.SetActive(false);
     }
 
     public void LetterScroll()
