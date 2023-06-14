@@ -239,8 +239,6 @@ public class DialogueAnimator : MonoBehaviour
 
     public void LetterWave()
     {
-        Debug.Log("???");
-
         for (int x = 0; x < waves.Count; x++)
         {
             for (int y = 0; y < waves[x].letterHeights.Count; y++)
@@ -274,7 +272,6 @@ public class DialogueAnimator : MonoBehaviour
             {
                 if(shakes[x].letterDuration[y] <= 0.5f)
                 {
-                    Debug.Log(shakes[x].letterSize[y] + " : " + shakes[x].letterDuration[y]);
                     shakes[x].letterSize[y] = 1.5f - (shakes[x].letterDuration[y]);
                     shakes[x].letterDuration[y] += 0.1f;
                 }

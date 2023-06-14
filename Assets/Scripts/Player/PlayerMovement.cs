@@ -41,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject fade;
 
     private bool paused;
+    public bool inText;
+    public DialogueInteraction textTarget;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +71,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (paused)
+            return;
+
+        if (inText)
             return;
 
         //Get basic movement
@@ -406,9 +411,19 @@ public class PlayerMovement : MonoBehaviour
 
         if (interacting)
         {
-            if (collision.gameObject.layer == LayerMask.NameToLayer("Door") && !pc.GetComponent<PlayerCombat>().inTransition)
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Interactable") && !inText)
             {
-                pc.StartTransition();
+                textTarget = collision.gameObject.GetComponent<DialogueInteraction>();
+                inText = true;
+
+                anim.SetInteger("State", 0);
+                current_state = States.Idle;
+
+                DialogueInteraction interact = collision.gameObject.GetComponent<DialogueInteraction>();
+                if(interact != null)
+                {
+                    interact.InteractInput();
+                }
             }
         }
     }

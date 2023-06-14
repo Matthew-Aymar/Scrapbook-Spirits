@@ -12,13 +12,29 @@ public class DialogueTexts : ScriptableObject
     public void Init()
     {
         ents[0] = "name-area-instance";
-        ents[1] = "test-editor-01";
+        ents[1] = "test-object-01";
+        ents[2] = "test-object-02";
+        ents[3] = "test-object-03";
+        ents[4] = "test-object-04";
+        ents[5] = "test-enter-combat";
 
-        dialouge[1, 0] = "|wWhat's going on?|w";
-        dialouge[1, 1] = "Who are we?";
-        dialouge[1, 2] = "This is going to take a |swhile|s |wisn't it?|w";
-        dialouge[1, 3] = "|sACHOOOOO|s";
-        dialouge[1, 4] = "I wonder |wwhen this will end|w and when we can take a nap, I'm |ssleepy!|s";
+        dialouge[1, 0] = "This is a thing";
+        dialouge[1, 1] = "Really im not sure";
+        dialouge[1, 2] = "Definitely something";
+        dialouge[1, 3] = "";
+
+        dialouge[2, 0] = "|sBOO|s";
+        dialouge[2, 1] = "Jk its just another thing";
+        dialouge[2, 2] = "";
+
+        dialouge[3, 0] = "|wTreeeeeeeeeeeeeeeee|w";
+        dialouge[3, 1] = "";
+
+        dialouge[4, 0] = "Door?";
+        dialouge[4, 1] = "";
+
+        dialouge[5, 0] = "|wWhat have we here?|w";
+        dialouge[5, 1] = "|c";
     }
 
     public string GetText(string ent, int page)
@@ -32,6 +48,12 @@ public class DialogueTexts : ScriptableObject
                 entIndex = e;
                 break;
             }
+        }
+
+        if (entIndex == -1)
+        {
+            Debug.Log("no ent found");
+            return "";
         }
 
         return dialouge[entIndex, page];

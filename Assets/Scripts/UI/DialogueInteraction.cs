@@ -6,22 +6,30 @@ public class DialogueInteraction : MonoBehaviour
 {
     public DiaManager diaManager;
     public DialogueAnimator diaAnimator;
-    public int page = 0;
+    public bool target;
     public string targetEnt = "name-area-instance";
 
     void OnEnable()
     {
         diaManager = GameObject.Find("DiaManager").GetComponent<DiaManager>();
-        diaAnimator.NewValues(diaManager.dia.GetText(targetEnt, page));
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Jump") || Input.GetButtonDown("Attack") || Input.GetButtonDown("Special"))
+        if(target && (Input.GetButtonDown("Attack") || Input.GetButtonDown("Special")))
         {
-            page++;
-            diaAnimator.NewValues(diaManager.dia.GetText(targetEnt, page));
+            diaAnimator.NewValues(diaManager.GetText(targetEnt));
+        }
+    }
+
+    public void InteractInput()
+    {
+        if(diaAnimator.enabled == false)
+        {
+            target = true;
+            diaAnimator.NewValues(diaManager.GetText(targetEnt));
+            diaAnimator.enabled = true;
         }
     }
 }

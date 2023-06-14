@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d9821555a42ec4cbe0b6977abd5bff, type: 3}
   m_Name: AllText
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   ents:
+  - name-area-instance
+  - test-object-01
+  - test-object-02
+  - test-object-03
+  - test-object-04
+  - test-enter-combat
   - 
   - 
   - 
@@ -107,9 +114,4 @@ MonoBehaviour:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  currentPage: 0
