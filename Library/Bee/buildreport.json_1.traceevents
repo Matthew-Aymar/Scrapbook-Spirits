@@ -1,0 +1,575 @@
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
+{ "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 0, "tid": 1, "ts": 1688563310203927, "dur": 11088435, "ph": "X", "name": "Build ScriptAssemblies", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1688563310205107, "dur": 22775, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1688563310228009, "dur": 31756, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1688563310259785, "dur": 1117970, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1688563311377758, "dur": 9904182, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1688563321281957, "dur": 10404, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1688563336896660, "dur": 908143, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1688563336896868, "dur": 1348, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1688563336898217, "dur": 21489, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1688563336919708, "dur": 520302, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1688563337440012, "dur": 362761, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1688563337802776, "dur": 2026, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1688563337805208, "dur": 23, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "netcorerun.dll" } },
+{ "pid": 35942, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-1" } },
+{ "pid": 35942, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 35942, "tid": 1, "ts": 1688563337301946, "dur": 125524, "ph": "X", "name": "BuildProgram", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1688563337302895, "dur": 36742, "ph": "X", "name": "BuildProgramContextConstructor", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1688563337413054, "dur": 3932, "ph": "X", "name": "OutputData.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1688563337416989, "dur": 10475, "ph": "X", "name": "Backend.Write", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1688563337417717, "dur": 8955, "ph": "X", "name": "JsonToString", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1688563337431717, "dur": 1410, "ph": "X", "name": "", "args": {} },
+{ "pid": 35942, "tid": 1, "ts": 1688563337430950, "dur": 2196, "ph": "X", "name": "Write chrome-trace events", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1688563337805334, "dur": 173, "ph": "X", "name": "buildprogram0.traceevents", "args": {} },
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1688563337478484, "dur":1123, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337479612, "dur":79, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1688563337479702, "dur":35, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1688563337479738, "dur":400, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1688563337480179, "dur":589, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337480768, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337793835, "dur":203, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794039, "dur":13, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794052, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794055, "dur":9, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794064, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794066, "dur":10, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794076, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794077, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794082, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794083, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794087, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794088, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794093, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794094, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794098, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794099, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794103, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794104, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794109, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794110, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794115, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794117, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794122, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794122, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794128, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794137, "dur":2, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337794152, "dur":1647, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1688563337480408, "dur":365, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337480775, "dur":4332, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337485115, "dur":0, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1688563337485118, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337486172, "dur":321, "ph":"X", "name": "WriteText",  "args": { "detail":"Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1688563337486497, "dur":49, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1688563337486548, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337486878, "dur":2593, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1688563337489474, "dur":203, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1688563337489681, "dur":39, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337492517, "dur":1202, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1688563337493770, "dur":106, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":1, "ts":1688563337493879, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337493923, "dur":1248, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":1, "ts":1688563337495218, "dur":6346, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337501569, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337501841, "dur":1389, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337503273, "dur":26351, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337529627, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337529805, "dur":952, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337530798, "dur":27729, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337558531, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337558537, "dur":1841, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337560431, "dur":23283, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337583720, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337583731, "dur":1361, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337585133, "dur":159, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337585295, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337585303, "dur":894, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337586245, "dur":27135, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337613385, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337613394, "dur":2009, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337615459, "dur":195, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337615679, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337615686, "dur":2009, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337617740, "dur":23322, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337641066, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337641073, "dur":2002, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337643117, "dur":23205, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337666327, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337666335, "dur":4269, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337670658, "dur":132, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337670793, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337670799, "dur":1903, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337672746, "dur":127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337672877, "dur":5, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337672888, "dur":2522, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337675452, "dur":179, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337675634, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337675641, "dur":2541, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337678223, "dur":68469, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Burst.Cecil.Rocks.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337746700, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1688563337746710, "dur":1222, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Burst.Cecil.Rocks.dll" }}
+,{ "pid":12345, "tid":1, "ts":1688563337747974, "dur":45852, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337480518, "dur":330, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337480848, "dur":4319, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337485167, "dur":13433, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":2, "ts":1688563337498604, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337498621, "dur":1655, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":2, "ts":1688563337500327, "dur":5168, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":2, "ts":1688563337505500, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337505531, "dur":7887, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":2, "ts":1688563337513532, "dur":26899, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337540439, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337540450, "dur":1369, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337541860, "dur":22750, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337564616, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337564625, "dur":1935, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337566615, "dur":28335, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337594955, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337594966, "dur":1840, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337596851, "dur":231, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337597086, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337597095, "dur":1109, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337598247, "dur":288, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337598539, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337598547, "dur":2166, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337600760, "dur":24946, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337625712, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337625723, "dur":1406, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337627181, "dur":30920, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337658105, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337658112, "dur":3320, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337661479, "dur":30527, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337692010, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337692017, "dur":1902, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337693960, "dur":170, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Runtime.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337694133, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337694139, "dur":2234, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Runtime.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337696433, "dur":286, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337696722, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337696729, "dur":1243, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337698017, "dur":316, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337698337, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337698344, "dur":1384, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337699776, "dur":2524, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337702304, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337702311, "dur":7277, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337709638, "dur":401, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337710042, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337710051, "dur":2491, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":2, "ts":1688563337712589, "dur":48, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":2, "ts":1688563337712640, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337712970, "dur":1150, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":2, "ts":1688563337714172, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":2, "ts":1688563337714268, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337714276, "dur":3781, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":2, "ts":1688563337718100, "dur":1458, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":2, "ts":1688563337719561, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337719567, "dur":1541, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":2, "ts":1688563337721157, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1688563337721296, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1688563337721302, "dur":1306, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1688563337722664, "dur":71159, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1688563337480444, "dur":333, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1688563337480777, "dur":4335, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1688563337485115, "dur":176, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":3, "ts":1688563337485294, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1688563337499356, "dur":1875, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":3, "ts":1688563337501272, "dur":213, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":3, "ts":1688563337501490, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1688563337503150, "dur":19116, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":3, "ts":1688563337522314, "dur":47951, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337570270, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1688563337570390, "dur":997, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337571429, "dur":38876, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337610311, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1688563337610321, "dur":1110, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337611479, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337611640, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1688563337611648, "dur":912, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337612602, "dur":27468, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337640076, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1688563337640139, "dur":2535, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337642720, "dur":23678, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337666402, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1688563337666410, "dur":3966, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337670420, "dur":142, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337670566, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1688563337670571, "dur":1070, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337671685, "dur":144, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337671832, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1688563337671840, "dur":2710, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337674597, "dur":132, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337674732, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1688563337674738, "dur":2543, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337677328, "dur":141, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337677472, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1688563337677479, "dur":2277, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337679806, "dur":100078, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Burst.Cecil.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337779889, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1688563337779898, "dur":1090, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Burst.Cecil.dll" }}
+,{ "pid":12345, "tid":3, "ts":1688563337781021, "dur":12814, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337480537, "dur":314, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337480851, "dur":4318, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337485169, "dur":471, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":4, "ts":1688563337485643, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337487022, "dur":5432, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":4, "ts":1688563337492505, "dur":17029, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1688563337509543, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337509559, "dur":1145, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1688563337510768, "dur":49040, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337559811, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337559839, "dur":5470, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337565449, "dur":355, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337565807, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337565815, "dur":1795, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337567654, "dur":178, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337567836, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337567843, "dur":1516, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337569406, "dur":206, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337569616, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337569624, "dur":945, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337570613, "dur":43161, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337613777, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337613784, "dur":1996, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337615823, "dur":281, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337616108, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337616114, "dur":1806, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337617959, "dur":22440, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337640403, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337640410, "dur":1851, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337642304, "dur":1353, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337643661, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337643669, "dur":1978, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337645696, "dur":201, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337645900, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337645907, "dur":997, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337646944, "dur":45837, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337692785, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337693021, "dur":7078, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337700147, "dur":1324, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337701476, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337701484, "dur":3902, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337705429, "dur":883, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337706316, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337706324, "dur":7751, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":4, "ts":1688563337714128, "dur":12089, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1688563337726224, "dur":6, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1688563337726238, "dur":55481, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":4, "ts":1688563337781751, "dur":12081, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1688563337480500, "dur":281, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1688563337480781, "dur":4355, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1688563337485136, "dur":167, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":5, "ts":1688563337485306, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1688563337499638, "dur":3928, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":5, "ts":1688563337503676, "dur":28227, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1688563337531906, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1688563337531912, "dur":1205, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1688563337533224, "dur":33960, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1688563337567189, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1688563337567208, "dur":2826, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1688563337570079, "dur":76465, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1688563337646547, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1688563337646554, "dur":1109, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1688563337647717, "dur":271, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1688563337647992, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1688563337648004, "dur":909, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1688563337648951, "dur":143820, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1688563337792776, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1688563337792803, "dur":960, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1688563337793799, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":5, "ts":1688563337793801, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1688563337480564, "dur":290, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1688563337480855, "dur":4259, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1688563337485114, "dur":173, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1688563337485290, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1688563337486977, "dur":4908, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1688563337491937, "dur":87, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1688563337492026, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1688563337492434, "dur":1332, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":6, "ts":1688563337493806, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":6, "ts":1688563337493890, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1688563337493922, "dur":1157, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":6, "ts":1688563337495130, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":6, "ts":1688563337495233, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1688563337495241, "dur":2621, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":6, "ts":1688563337497917, "dur":44296, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337542217, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1688563337542428, "dur":6620, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337549097, "dur":26337, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337575438, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1688563337575451, "dur":1624, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337577123, "dur":187, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337577314, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1688563337577322, "dur":916, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337578281, "dur":22942, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337601227, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1688563337601237, "dur":1039, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337602331, "dur":278, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337602634, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1688563337602642, "dur":1174, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337603862, "dur":41915, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337645781, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1688563337645794, "dur":1284, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337647156, "dur":24621, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337671781, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1688563337671787, "dur":4296, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337676130, "dur":872, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337677005, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1688563337677012, "dur":2701, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Mathematics.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337679760, "dur":99051, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Burst.Cecil.Mdb.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337778825, "dur":6, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1688563337778845, "dur":1107, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Burst.Cecil.Mdb.dll" }}
+,{ "pid":12345, "tid":6, "ts":1688563337779983, "dur":13835, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1688563337480586, "dur":273, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1688563337480860, "dur":4251, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1688563337485115, "dur":44357, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":7, "ts":1688563337529478, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1688563337529890, "dur":1433, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":7, "ts":1688563337531384, "dur":161, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1688563337531548, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1688563337531611, "dur":1180, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1688563337532856, "dur":25291, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1688563337558151, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1688563337558159, "dur":1701, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1688563337559907, "dur":96081, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1688563337655995, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1688563337656032, "dur":4308, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1688563337660394, "dur":66430, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1688563337726828, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1688563337726836, "dur":1660, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1688563337728561, "dur":65261, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337480653, "dur":216, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337480869, "dur":4298, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337485168, "dur":464, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1688563337485635, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337487238, "dur":4598, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":8, "ts":1688563337491881, "dur":16103, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":8, "ts":1688563337507990, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337508001, "dur":1847, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":8, "ts":1688563337509887, "dur":49220, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337559112, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337559119, "dur":1564, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337560724, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337560885, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337560893, "dur":1083, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337562024, "dur":186, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337562213, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337562222, "dur":1144, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337563519, "dur":1467, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337564990, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337564998, "dur":1870, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337566911, "dur":251, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337567166, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337567177, "dur":1094, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337568314, "dur":342, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337568659, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337568667, "dur":1058, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337569769, "dur":23965, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337593781, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337593792, "dur":1319, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337595181, "dur":24647, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337619833, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337619842, "dur":1046, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337620930, "dur":77875, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337698829, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337698882, "dur":1092, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337700018, "dur":159, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337700181, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337700189, "dur":4835, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337705077, "dur":376, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337705476, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337705485, "dur":6280, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":8, "ts":1688563337711813, "dur":161, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":8, "ts":1688563337711977, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337713108, "dur":3575, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":8, "ts":1688563337716745, "dur":195, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":8, "ts":1688563337716944, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337716955, "dur":1681, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":8, "ts":1688563337718676, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1688563337718720, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337718727, "dur":1547, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":8, "ts":1688563337720318, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":8, "ts":1688563337720363, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1688563337720369, "dur":2074, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":8, "ts":1688563337722490, "dur":71344, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337480606, "dur":255, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337480861, "dur":4252, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337485115, "dur":13802, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":9, "ts":1688563337498920, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337499030, "dur":1275, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":9, "ts":1688563337500373, "dur":43459, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits.exe" }}
+,{ "pid":12345, "tid":9, "ts":1688563337543836, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337543843, "dur":1605, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits.exe" }}
+,{ "pid":12345, "tid":9, "ts":1688563337545490, "dur":27731, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337573227, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337573243, "dur":1568, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337574934, "dur":28432, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337603370, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337603379, "dur":842, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337604279, "dur":24931, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337629318, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337629331, "dur":1491, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337630868, "dur":37225, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337668099, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337668110, "dur":3598, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337671749, "dur":137, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337671889, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337671894, "dur":3115, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337675056, "dur":134, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337675194, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337675200, "dur":2378, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337677628, "dur":399, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Burst.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337678030, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337678036, "dur":1902, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Burst.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337679982, "dur":243, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337680228, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337680236, "dur":4875, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337685159, "dur":163, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.2D.IK.Runtime.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337685325, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337685334, "dur":932, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.2D.IK.Runtime.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337686303, "dur":153, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.2D.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337686459, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337686467, "dur":908, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.2D.Common.Runtime.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337687414, "dur":157, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.2D.Animation.Runtime.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337687574, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337687582, "dur":868, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.2D.Animation.Runtime.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337688492, "dur":249, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337688744, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337688751, "dur":1067, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337689865, "dur":3359, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337693228, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337693235, "dur":3144, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337696428, "dur":264, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337696695, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337696704, "dur":1865, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337698615, "dur":2883, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337701501, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337701508, "dur":4073, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337705627, "dur":216, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337705846, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337705853, "dur":5572, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337711469, "dur":20560, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337732034, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1688563337732434, "dur":997, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Plugins/x86_64/lib_burst_generated.dll" }}
+,{ "pid":12345, "tid":9, "ts":1688563337733464, "dur":60360, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1688563337480633, "dur":231, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1688563337480864, "dur":4304, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1688563337485168, "dur":12878, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":10, "ts":1688563337498050, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1688563337498131, "dur":1135, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":10, "ts":1688563337499320, "dur":158633, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":10, "ts":1688563337657959, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1688563337657967, "dur":32747, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":10, "ts":1688563337690765, "dur":231, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":10, "ts":1688563337691000, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1688563337691009, "dur":846, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":10, "ts":1688563337691897, "dur":436, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":10, "ts":1688563337692336, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1688563337692343, "dur":6196, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":10, "ts":1688563337698586, "dur":828, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":10, "ts":1688563337699418, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1688563337699424, "dur":3451, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":10, "ts":1688563337702942, "dur":389, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":10, "ts":1688563337703335, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1688563337703344, "dur":7630, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":10, "ts":1688563337711029, "dur":200, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":10, "ts":1688563337711232, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1688563337711240, "dur":8051, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":10, "ts":1688563337719337, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/level0" }}
+,{ "pid":12345, "tid":10, "ts":1688563337719479, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1688563337719486, "dur":1382, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/level0" }}
+,{ "pid":12345, "tid":10, "ts":1688563337720913, "dur":44, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":10, "ts":1688563337720960, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1688563337720966, "dur":1450, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":10, "ts":1688563337722459, "dur":71362, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337480667, "dur":206, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337480873, "dur":4264, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337485137, "dur":167, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":11, "ts":1688563337485307, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337500495, "dur":3364, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":11, "ts":1688563337503904, "dur":53937, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337557848, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337557858, "dur":1924, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337559829, "dur":73585, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337633420, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337633430, "dur":1091, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337634563, "dur":141, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337634708, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337634715, "dur":879, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337635633, "dur":24093, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337659732, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337659744, "dur":3273, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337663062, "dur":245, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337663310, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337663320, "dur":1473, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337664833, "dur":747, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337665583, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337665592, "dur":4700, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337670358, "dur":191, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337670552, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337670561, "dur":1213, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337671817, "dur":173, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337671993, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337672000, "dur":2414, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337674464, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337674603, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337674612, "dur":2759, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337677417, "dur":129, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337677549, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337677555, "dur":2513, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Burst.Unsafe.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337680118, "dur":150, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.2D.PixelPerfect.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337680271, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337680277, "dur":11028, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.2D.PixelPerfect.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337691349, "dur":382, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337691734, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337691742, "dur":1675, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337693459, "dur":1012, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337694496, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337694504, "dur":2060, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337696608, "dur":155, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337696767, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337696774, "dur":1223, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337698098, "dur":533, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337698635, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337698641, "dur":7883, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337706568, "dur":5022, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337711594, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337711600, "dur":7182, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":11, "ts":1688563337718846, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/resources.assets" }}
+,{ "pid":12345, "tid":11, "ts":1688563337718884, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1688563337718890, "dur":2928, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/resources.assets" }}
+,{ "pid":12345, "tid":11, "ts":1688563337721863, "dur":71962, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1688563337480688, "dur":188, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1688563337480876, "dur":4241, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1688563337485118, "dur":14098, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":12, "ts":1688563337499219, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1688563337499233, "dur":2428, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":12, "ts":1688563337501722, "dur":84860, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1688563337586586, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1688563337586593, "dur":1296, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1688563337587927, "dur":27692, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1688563337615624, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1688563337615633, "dur":2518, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1688563337618200, "dur":164, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1688563337618368, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1688563337618375, "dur":2209, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1688563337620627, "dur":21706, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1688563337642336, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1688563337642345, "dur":1500, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1688563337643886, "dur":29231, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1688563337673120, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1688563337673126, "dur":2835, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1688563337676004, "dur":177, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":12, "ts":1688563337676184, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1688563337676190, "dur":2053, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":12, "ts":1688563337678287, "dur":51150, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Burst.Cecil.Pdb.dll" }}
+,{ "pid":12345, "tid":12, "ts":1688563337729443, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1688563337729456, "dur":1347, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/matta/Desktop/WispDemoBuild/Scrapbook Spirits_Data/Managed/Unity.Burst.Cecil.Pdb.dll" }}
+,{ "pid":12345, "tid":12, "ts":1688563337730849, "dur":62971, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1688563337796906, "dur":1618, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1688563337805559, "dur": 1169, "ph": "X", "name": "backend_profiler1.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1688563337805194, "dur": 1552, "ph": "X", "name": "Write chrome-trace events", "args": {} },

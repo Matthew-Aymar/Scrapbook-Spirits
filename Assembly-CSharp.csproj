@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Player\Attacks\Cards\BirghterBurn.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\Cards\BottledSpite.cs" />
     <Compile Include="Assets\Scripts\Managers\CardSelector.cs" />
+    <Compile Include="Assets\FireManager.cs" />
     <Compile Include="Assets\Scripts\Managers\DiaManager.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\Cards\MeteorShot.cs" />
     <Compile Include="Assets\Scripts\Player\Attacks\Cards\FirePillar.cs" />
